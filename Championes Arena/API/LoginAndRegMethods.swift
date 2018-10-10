@@ -14,7 +14,7 @@ class ApiMethodsREGandLOGIN {
             "phone" : phone
         ]
         var messageArray = [String?]()
-        print (parameters)
+        //print (parameters)
         Alamofire.request(registerURL, method: .post, parameters: parameters,encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
             switch response.result {
@@ -42,7 +42,7 @@ class ApiMethodsREGandLOGIN {
                  }
                  }
                  */
-                print("Successfully")
+                //print("Successfully")
                 let json = JSON(value)
                 print(json)
                 guard let status = json["status"].bool else { return }
@@ -53,6 +53,9 @@ class ApiMethodsREGandLOGIN {
                     if let api_token = json["api_token"].string {
                         print(api_token)
                         Helper.saveIPItoken(apistring: api_token)
+                        DispatchQueue.main.async {
+                            ApiMethodsREGandLOGIN.RegisterUserOn_OneSignal()
+                        }
                         //if let user = json["user"].dictionary {
                         let userModel = UserModel.init(List: json.dictionary!)
                         ReservationDetails.USERDATA = [userModel]
@@ -152,7 +155,9 @@ class ApiMethodsREGandLOGIN {
                      */
                     guard let api_Token = json["api_token"].string else { return }
                     Helper.saveIPItoken(apistring: api_Token)
-                    
+                    DispatchQueue.main.async {
+                        ApiMethodsREGandLOGIN.RegisterUserOn_OneSignal()
+                    }
                     let userModel = UserModel.init(List: json.dictionary!)
                     messageArray.append("Loged in successfully")
                     //userModel.api_token
@@ -161,16 +166,11 @@ class ApiMethodsREGandLOGIN {
                     complation(nil , status , messageArray as! [String]);
                     
                 }
-                
-                
             }
         }
     }
     
-    
-    
-    //
-    
+    // Update User Info
     class func UpdateUser(email : String , phone : String , userName : String , password : String , complation : @escaping (_ error : Error? , _ status : Bool? , _ messagesArray: [String] )->Void){
         let parameters: [String: String] = [
             "email": email,
@@ -179,7 +179,6 @@ class ApiMethodsREGandLOGIN {
             "phone" : phone,
             "api_token" : Helper.getAPIToken()!
         ]
-        //http://localhost/champile/public/api/users/profile/update?api_token=e8ed26d833da2fb30649f1c7e2972081cb0ca209986d5049e92d762a05be87d91223679c&email=mohamed-ali@gmail.com&password=123456&username=MohamedAli&phone=01541256369&birthday=1990-02-10
         var messageArray = [String?]()
         print (parameters)
         Alamofire.request(updateProfileURL, method: .post, parameters: parameters,encoding: JSONEncoding.default, headers: nil).responseJSON {
@@ -223,8 +222,8 @@ class ApiMethodsREGandLOGIN {
                     let userModel = UserModel.init(List: user)
                     ReservationDetails.USERDATA = [userModel]
                     print(userModel.email)
+
                     complation(nil, status, messageArray as! [String]);
-                    
                 }
                 else {
                     /*
@@ -256,6 +255,32 @@ class ApiMethodsREGandLOGIN {
                             } } }
                 }
                 complation(nil, status, messageArray as! [String]);
+            }
+        }
+    }
+
+    class func RegisterUserOn_OneSignal() {
+        let parameters: [String: String] = [
+            "api_token" : Helper.getAPIToken()!,
+            "player_id" : userToken_OneSignal
+        ]
+        print (parameters)
+        Alamofire.request(setUserOneSignalToketUrl, method: .post, parameters: parameters,encoding: JSONEncoding.default, headers: nil).responseJSON {
+            response in
+            switch response.result {
+            case .failure(let error) :
+                let json = JSON(error)
+                
+                print("failure", json)
+                
+                return
+            case .success(let value):
+                let json = JSON(value)
+                print(json)
+                guard let status = json["status"].bool else { return }
+                if status { return }
+                else { }
+                
             }
         }
     }

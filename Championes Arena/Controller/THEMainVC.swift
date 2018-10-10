@@ -15,7 +15,16 @@ class THEMainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       // LocalNotificationsPushing.shared.recuestAuth();
+        
+       // LocalNotificationsPushing.shared.sendLocalPush(in: 2)
     }
+    
+    
+    
+    
+    
+    
     
     @IBAction func newsCLK(_ sender: Any) {
         item = 1

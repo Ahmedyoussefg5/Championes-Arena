@@ -4,6 +4,7 @@ PODS:
   - IQKeyboardManagerSwift (6.1.1)
   - Kingfisher (4.8.1)
   - NewPopMenu (1.1.2)
+  - OneSignal (2.8.5)
   - PopupDialog (0.8.0):
     - DynamicBlurView (~> 2.0)
   - SwiftyJSON (4.1.0)
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - Kingfisher
   - NewPopMenu
+  - OneSignal (< 3.0, >= 2.6.2)
   - PopupDialog
   - SwiftyJSON
 
@@ -23,6 +25,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Kingfisher
     - NewPopMenu
+    - OneSignal
     - PopupDialog
     - SwiftyJSON
 
@@ -32,9 +35,10 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
   NewPopMenu: 42c2fbd46c7fcb7d7c1c3289c8675afd1877ffc8
+  OneSignal: 42dae269c7eca517aee34963820e1eb922390031
   PopupDialog: 11347197b6ac3e0548ac445d40ce68d1d407e9a0
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 9b62742c90e3e8ca48862e4c98e15133d7542e09
+PODFILE CHECKSUM: 4dfebb409cfdba47183b6e52ed567df23e4aec78
 
 COCOAPODS: 1.5.2

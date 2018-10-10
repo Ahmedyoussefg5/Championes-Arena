@@ -111,7 +111,7 @@ class ApiMethodsBook {
                     complation(nil, false, messageArray as? [String])
                     return
                 }
-                guard let status = json["status"].bool else { messageArray.append("Something gone wrong, please check your internet connection")
+                guard let status = json["status"].bool else { messageArray.append("Something gone wrong, please try again later")
                     complation(nil, false, messageArray as? [String])
                     return
                 }

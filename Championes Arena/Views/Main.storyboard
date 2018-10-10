@@ -273,7 +273,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZx-0e-P4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2254" y="-409"/>
+            <point key="canvasLocation" x="-2462" y="-412"/>
         </scene>
         <!--News DetailsVC-->
         <scene sceneID="Rrw-yt-gwd">
@@ -774,13 +774,13 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIy-jG-tsg">
-                                <rect key="frame" x="0.0" y="209.66666666666669" width="375" height="517.33333333333326"/>
+                                <rect key="frame" x="0.0" y="209.66666666666666" width="375" height="508.33333333333337"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05-News" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-Fd-VdM">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="517.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="508.33333333333331"/>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JJq-h0-Vf5">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="517.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="508.33333333333331"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
@@ -792,22 +792,22 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playerIMG" translatesAutoresizingMaskIntoConstraints="NO" id="Kmb-TI-JZc">
-                                                            <rect key="frame" x="45" y="31.000000000000007" width="307.33333333333331" height="119.66666666666669"/>
+                                                            <rect key="frame" x="45.000000000000007" y="31.000000000000007" width="112.66666666666669" height="119.66666666666669"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmed Hassan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZZ-di-b8a">
-                                                            <rect key="frame" x="362.33333333333331" y="31" width="641.66666666666674" height="27.666666666666671"/>
+                                                            <rect key="frame" x="167.66666666666663" y="31" width="187.33333333333337" height="27.666666666666671"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22-12-2019 - 22:33:01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc2-bO-7wl">
-                                                            <rect key="frame" x="362.33333333333331" y="63.666666666666664" width="641.66666666666674" height="27.333333333333336"/>
+                                                            <rect key="frame" x="167.66666666666663" y="63.666666666666664" width="187.33333333333337" height="27.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e74-0o-6pP">
-                                                            <rect key="frame" x="362.33333333333331" y="96" width="641.66666666666674" height="36"/>
+                                                            <rect key="frame" x="167.66666666666663" y="96" width="187.33333333333337" height="36"/>
                                                             <string key="text">All the latest breaking news on Ahmed Hassan. Browse The Independent's complete collection of articles and commentary on Ahmed Hassan.
 </string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -815,7 +815,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read more &gt;&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPg-gv-aFD">
-                                                            <rect key="frame" x="357.33333333333331" y="135" width="650.66666666666674" height="19"/>
+                                                            <rect key="frame" x="162.66666666666663" y="135" width="196.33333333333337" height="19"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="19" id="ROn-yA-C0V"/>
                                                             </constraints>
@@ -834,7 +834,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                                             <rect key="frame" x="16" y="15" width="3" height="144.66666666666666"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellshadow" translatesAutoresizingMaskIntoConstraints="NO" id="AFk-T5-XFk">
-                                                            <rect key="frame" x="25" y="11" width="999" height="160"/>
+                                                            <rect key="frame" x="25" y="11" width="350" height="160"/>
                                                         </imageView>
                                                     </subviews>
                                                     <constraints>
@@ -887,7 +887,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                         </connections>
                                     </tableView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downshadow" translatesAutoresizingMaskIntoConstraints="NO" id="eoF-uu-07T">
-                                        <rect key="frame" x="0.0" y="470.66666666666674" width="375" height="46.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="462.33333333333337" width="375" height="46"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -907,18 +907,18 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomBar" translatesAutoresizingMaskIntoConstraints="NO" id="V8g-fA-O2D">
-                                <rect key="frame" x="0.0" y="727" width="375" height="51"/>
+                                <rect key="frame" x="0.0" y="718" width="375" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="fTq-Wu-imx">
+                                    <constraint firstAttribute="height" constant="60" id="fTq-Wu-imx">
                                         <variation key="heightClass=regular-widthClass=regular" constant="70"/>
                                     </constraint>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Tlh-VW-wVF">
-                                <rect key="frame" x="47.333333333333343" y="733.66666666666663" width="281.33333333333326" height="38.333333333333371"/>
+                                <rect key="frame" x="47.333333333333343" y="725.66666666666663" width="281.33333333333326" height="45.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfD-g4-DZb">
-                                        <rect key="frame" x="0.0" y="0.0" width="60.333333333333336" height="38.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="60.333333333333336" height="45.333333333333336"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" backgroundImage="settings"/>
                                         <connections>
@@ -926,7 +926,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwQ-MM-W41">
-                                        <rect key="frame" x="110.33333333333333" y="0.0" width="60.666666666666671" height="38.333333333333336"/>
+                                        <rect key="frame" x="110.33333333333333" y="0.0" width="60.666666666666671" height="45.333333333333336"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" backgroundImage="calender"/>
                                         <connections>
@@ -934,7 +934,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQD-Zk-Ja2">
-                                        <rect key="frame" x="220.99999999999997" y="0.0" width="60.333333333333343" height="38.333333333333336"/>
+                                        <rect key="frame" x="220.99999999999997" y="0.0" width="60.333333333333343" height="45.333333333333336"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" backgroundImage="billImg"/>
                                         <connections>
@@ -998,7 +998,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                             </imageView>
                             <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="138-bl-LDm">
-                                <rect key="frame" x="18.666666666666657" y="144" width="337.66666666666674" height="30"/>
+                                <rect key="frame" x="18.666666666666657" y="74" width="337.66666666666674" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="h7A-B7-MnX"/>
                                 </constraints>
@@ -1007,25 +1007,25 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16b-6p-euX">
-                                <rect key="frame" x="18.666666666666657" y="181" width="337.66666666666674" height="29.666666666666657"/>
+                                <rect key="frame" x="18.666666666666657" y="111" width="337.66666666666674" height="29.666666666666657"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ilw-j6-JD2">
-                                <rect key="frame" x="18.666666666666657" y="217.66666666666666" width="337.66666666666674" height="29.333333333333343"/>
+                                <rect key="frame" x="18.666666666666657" y="147.66666666666666" width="337.66666666666674" height="29.333333333333343"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
                             </textField>
                             <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9K2-40-IjZ">
-                                <rect key="frame" x="18.666666666666657" y="253.99999999999997" width="337.66666666666674" height="29.666666666666657"/>
+                                <rect key="frame" x="18.666666666666657" y="184" width="337.66666666666674" height="29.666666666666657"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjO-Tp-16E">
-                                <rect key="frame" x="18.666666666666657" y="303.66666666666669" width="337.66666666666674" height="29.333333333333314"/>
+                                <rect key="frame" x="18.666666666666657" y="233.66666666666666" width="337.66666666666674" height="29.333333333333343"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Save" backgroundImage="button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1099,7 +1099,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                             <constraint firstItem="Jcc-En-myf" firstAttribute="width" secondItem="Whk-kp-Cr0" secondAttribute="width" id="YuN-vH-4ib"/>
                             <constraint firstItem="9K2-40-IjZ" firstAttribute="width" secondItem="138-bl-LDm" secondAttribute="width" id="Yvp-jf-usd"/>
                             <constraint firstItem="WQv-LD-CKk" firstAttribute="bottom" secondItem="Jcc-En-myf" secondAttribute="bottom" id="aaS-z4-FWG"/>
-                            <constraint firstItem="138-bl-LDm" firstAttribute="top" secondItem="WQv-LD-CKk" secondAttribute="top" constant="100" id="bIs-BB-TyP"/>
+                            <constraint firstItem="138-bl-LDm" firstAttribute="top" secondItem="WQv-LD-CKk" secondAttribute="top" constant="30" id="bIs-BB-TyP"/>
                             <constraint firstItem="Jcc-En-myf" firstAttribute="top" secondItem="WQv-LD-CKk" secondAttribute="top" id="bcp-2A-ZTL"/>
                             <constraint firstItem="raV-NF-YjK" firstAttribute="width" secondItem="Whk-kp-Cr0" secondAttribute="width" multiplier="0.9" id="kMN-rY-3Ij"/>
                             <constraint firstItem="raV-NF-YjK" firstAttribute="centerX" secondItem="WQv-LD-CKk" secondAttribute="centerX" id="lr5-9C-pgr"/>
@@ -1378,17 +1378,8 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                     <constraint firstAttribute="height" constant="180" id="6Z1-KQ-pv2"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read policy?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwd-ZA-euk">
-                                <rect key="frame" x="18.666666666666657" y="604.33333333333337" width="284.33333333333337" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.97551018680000001" blue="0.2281918906" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbQ-z8-LJM">
-                                <rect key="frame" x="308" y="599" width="51" height="31"/>
-                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAP-BM-Lj9">
-                                <rect key="frame" x="18.666666666666671" y="640" width="135.33333333333331" height="32.666666666666629"/>
+                                <rect key="frame" x="18.666666666666671" y="614" width="135.33333333333331" height="32.666666666666629"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Register" backgroundImage="smallBTN">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1398,7 +1389,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh4-gj-C8Y">
-                                <rect key="frame" x="221.66666666666663" y="640" width="135.33333333333337" height="32.666666666666629"/>
+                                <rect key="frame" x="221.66666666666663" y="614" width="135.33333333333337" height="32.666666666666629"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Cancel" backgroundImage="smallBTN">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1410,24 +1401,19 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bh4-gj-C8Y" firstAttribute="top" secondItem="fbQ-z8-LJM" secondAttribute="bottom" constant="10" id="6cq-jW-c6u"/>
-                            <constraint firstItem="fbQ-z8-LJM" firstAttribute="top" secondItem="iuo-3C-vRX" secondAttribute="bottom" constant="15" id="6t8-fe-VSU"/>
                             <constraint firstItem="bh4-gj-C8Y" firstAttribute="height" secondItem="hAP-BM-Lj9" secondAttribute="height" id="8AJ-6S-blj"/>
                             <constraint firstItem="iuo-3C-vRX" firstAttribute="centerX" secondItem="Ni3-4C-BFk" secondAttribute="centerX" id="8FG-fR-72L"/>
                             <constraint firstItem="bh4-gj-C8Y" firstAttribute="width" secondItem="hAP-BM-Lj9" secondAttribute="width" id="9Kp-pu-oUZ"/>
                             <constraint firstItem="Ni3-4C-BFk" firstAttribute="centerX" secondItem="H0r-we-dMp" secondAttribute="centerX" id="LVq-Lw-uAY"/>
                             <constraint firstItem="iuo-3C-vRX" firstAttribute="width" secondItem="Ni3-4C-BFk" secondAttribute="width" multiplier="0.9" id="Mlg-wV-IyQ"/>
+                            <constraint firstItem="hAP-BM-Lj9" firstAttribute="top" secondItem="iuo-3C-vRX" secondAttribute="bottom" constant="30" id="N9X-dk-zu3"/>
                             <constraint firstItem="hAP-BM-Lj9" firstAttribute="leading" secondItem="iuo-3C-vRX" secondAttribute="leading" id="Sfv-UQ-fqd"/>
                             <constraint firstItem="Ni3-4C-BFk" firstAttribute="width" secondItem="hfq-mO-G2a" secondAttribute="width" id="UcR-mK-DOU"/>
                             <constraint firstItem="hAP-BM-Lj9" firstAttribute="width" secondItem="iuo-3C-vRX" secondAttribute="width" multiplier="0.4" id="Y95-hf-eZL"/>
                             <constraint firstItem="Ni3-4C-BFk" firstAttribute="top" secondItem="hfq-mO-G2a" secondAttribute="top" id="ZW8-37-q0T"/>
                             <constraint firstItem="iuo-3C-vRX" firstAttribute="centerY" secondItem="Ni3-4C-BFk" secondAttribute="centerY" multiplier="1.27" id="cau-SI-g3N"/>
-                            <constraint firstItem="fwd-ZA-euk" firstAttribute="centerY" secondItem="fbQ-z8-LJM" secondAttribute="centerY" id="hGE-SP-MIg"/>
                             <constraint firstItem="hAP-BM-Lj9" firstAttribute="height" secondItem="wVU-iV-v9n" secondAttribute="height" multiplier="1.05" id="hLM-DT-cnW"/>
-                            <constraint firstItem="fwd-ZA-euk" firstAttribute="leading" secondItem="iuo-3C-vRX" secondAttribute="leading" id="iJn-M8-Icb"/>
-                            <constraint firstItem="fbQ-z8-LJM" firstAttribute="trailing" secondItem="iuo-3C-vRX" secondAttribute="trailing" id="san-Z4-R3c"/>
                             <constraint firstItem="bh4-gj-C8Y" firstAttribute="trailing" secondItem="iuo-3C-vRX" secondAttribute="trailing" id="uqy-mR-rhu"/>
-                            <constraint firstItem="fbQ-z8-LJM" firstAttribute="leading" secondItem="fwd-ZA-euk" secondAttribute="trailing" constant="5" id="x7A-m3-Afd"/>
                             <constraint firstItem="H0r-we-dMp" firstAttribute="bottom" secondItem="Ni3-4C-BFk" secondAttribute="bottom" id="yDB-0P-WWX"/>
                             <constraint firstItem="hAP-BM-Lj9" firstAttribute="centerY" secondItem="bh4-gj-C8Y" secondAttribute="centerY" id="yyg-95-hcm"/>
                         </constraints>
@@ -1436,7 +1422,6 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                     <connections>
                         <outlet property="emailTXT" destination="GpE-xu-6Mc" id="Lnv-RN-QbL"/>
                         <outlet property="mobileTXT" destination="FSr-Fa-5yr" id="y6K-50-xLu"/>
-                        <outlet property="my_switch" destination="fbQ-z8-LJM" id="FeO-Cm-Gl3"/>
                         <outlet property="nameTXT" destination="TN4-4j-Tan" id="TPQ-Sa-Li0"/>
                         <outlet property="pass1" destination="n7K-pH-rl8" id="Dt4-43-hYo"/>
                         <outlet property="pass2" destination="wVU-iV-v9n" id="cls-EE-5Im"/>

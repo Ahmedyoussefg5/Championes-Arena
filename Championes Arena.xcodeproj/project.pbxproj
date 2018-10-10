@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9A03BA876A03352F68AD8357 /* Pods_Championes_Arena.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A934B942968C2F86FD9DFDF /* Pods_Championes_Arena.framework */; };
+		CDFDF7D3B4D7BACD307752FC /* Pods_OneSignalNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A9C77D3E2C2A92368E3C48 /* Pods_OneSignalNotifications.framework */; };
+		E83320EE216E364700C4B2BE /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83320ED216E364700C4B2BE /* NotificationService.swift */; };
+		E83320F2216E364700C4B2BE /* OneSignalNotifications.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E83320EB216E364700C4B2BE /* OneSignalNotifications.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E83320F9216E592200C4B2BE /* OneSignalMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83320F8216E592200C4B2BE /* OneSignalMethods.swift */; };
+		E839A07B216D2A8400455E55 /* LocalNotificationsPushing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E839A07A216D2A8400455E55 /* LocalNotificationsPushing.swift */; };
 		E8446A96215BDB4B00ECF0BF /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E8446A93215BDB4A00ECF0BF /* ProgressHUD.bundle */; };
 		E8446A97215BDB4B00ECF0BF /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E8446A95215BDB4B00ECF0BF /* ProgressHUD.m */; };
 		E887FADF215AD5270071A15D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FADE215AD5270071A15D /* AppDelegate.swift */; };
@@ -44,7 +49,6 @@
 		E887FB33215AD8190071A15D /* THEMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB26215AD8190071A15D /* THEMainVC.swift */; };
 		E887FB47215AD81F0071A15D /* CellForHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB36215AD81F0071A15D /* CellForHistory.swift */; };
 		E887FB48215AD81F0071A15D /* CellForNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB37215AD81F0071A15D /* CellForNews.swift */; };
-		E887FB49215AD81F0071A15D /* CellForTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB38215AD81F0071A15D /* CellForTimes.swift */; };
 		E887FB4A215AD81F0071A15D /* CoutomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB3A215AD81F0071A15D /* CoutomAlert.swift */; };
 		E887FB4B215AD81F0071A15D /* PopupDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB3B215AD81F0071A15D /* PopupDatePicker.swift */; };
 		E887FB4C215AD81F0071A15D /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB3C215AD81F0071A15D /* SwiftNotice.swift */; };
@@ -54,10 +58,43 @@
 		E887FB50215AD81F0071A15D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB41215AD81F0071A15D /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E83320F0216E364700C4B2BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E887FAD3215AD5270071A15D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E83320EA216E364700C4B2BE;
+			remoteInfo = OneSignalNotifications;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E83320F6216E364700C4B2BE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E83320F2216E364700C4B2BE /* OneSignalNotifications.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		57A9C77D3E2C2A92368E3C48 /* Pods_OneSignalNotifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A934B942968C2F86FD9DFDF /* Pods_Championes_Arena.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Championes_Arena.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61352817E0567C6CE59C5087 /* Pods-OneSignalNotifications.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotifications.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotifications/Pods-OneSignalNotifications.debug.xcconfig"; sourceTree = "<group>"; };
 		82F859A318BC04DC76B4B879 /* Pods-Championes Arena.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Championes Arena.release.xcconfig"; path = "Pods/Target Support Files/Pods-Championes Arena/Pods-Championes Arena.release.xcconfig"; sourceTree = "<group>"; };
+		894B48C958D18376DD0EAEAC /* Pods-OneSignalNotifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotifications.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotifications/Pods-OneSignalNotifications.release.xcconfig"; sourceTree = "<group>"; };
 		9D2BDDA66F3BC6A3CA21B4F9 /* Pods-Championes Arena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Championes Arena.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Championes Arena/Pods-Championes Arena.debug.xcconfig"; sourceTree = "<group>"; };
+		E83320EB216E364700C4B2BE /* OneSignalNotifications.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotifications.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83320ED216E364700C4B2BE /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		E83320EF216E364700C4B2BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E83320F7216E3B7B00C4B2BE /* OneSignalNotifications.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotifications.entitlements; sourceTree = "<group>"; };
+		E83320F8216E592200C4B2BE /* OneSignalMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignalMethods.swift; sourceTree = "<group>"; };
+		E839A07A216D2A8400455E55 /* LocalNotificationsPushing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsPushing.swift; sourceTree = "<group>"; };
 		E8446A92215BDB4900ECF0BF /* Championes Arena-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Championes Arena-Bridging-Header.h"; sourceTree = "<group>"; };
 		E8446A93215BDB4A00ECF0BF /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		E8446A94215BDB4B00ECF0BF /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
@@ -98,7 +135,6 @@
 		E887FB26215AD8190071A15D /* THEMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THEMainVC.swift; sourceTree = "<group>"; };
 		E887FB36215AD81F0071A15D /* CellForHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellForHistory.swift; sourceTree = "<group>"; };
 		E887FB37215AD81F0071A15D /* CellForNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellForNews.swift; sourceTree = "<group>"; };
-		E887FB38215AD81F0071A15D /* CellForTimes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellForTimes.swift; sourceTree = "<group>"; };
 		E887FB3A215AD81F0071A15D /* CoutomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoutomAlert.swift; sourceTree = "<group>"; };
 		E887FB3B215AD81F0071A15D /* PopupDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDatePicker.swift; sourceTree = "<group>"; };
 		E887FB3C215AD81F0071A15D /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
@@ -106,9 +142,18 @@
 		E887FB3F215AD81F0071A15D /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		E887FB40215AD81F0071A15D /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
 		E887FB41215AD81F0071A15D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E8929E992161324800E81D97 /* Championes Arena.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Championes Arena.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E83320E8216E364700C4B2BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDFDF7D3B4D7BACD307752FC /* Pods_OneSignalNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E887FAD8215AD5270071A15D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -125,6 +170,8 @@
 			children = (
 				9D2BDDA66F3BC6A3CA21B4F9 /* Pods-Championes Arena.debug.xcconfig */,
 				82F859A318BC04DC76B4B879 /* Pods-Championes Arena.release.xcconfig */,
+				61352817E0567C6CE59C5087 /* Pods-OneSignalNotifications.debug.xcconfig */,
+				894B48C958D18376DD0EAEAC /* Pods-OneSignalNotifications.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -133,8 +180,19 @@
 			isa = PBXGroup;
 			children = (
 				5A934B942968C2F86FD9DFDF /* Pods_Championes_Arena.framework */,
+				57A9C77D3E2C2A92368E3C48 /* Pods_OneSignalNotifications.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E83320EC216E364700C4B2BE /* OneSignalNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				E83320F7216E3B7B00C4B2BE /* OneSignalNotifications.entitlements */,
+				E83320ED216E364700C4B2BE /* NotificationService.swift */,
+				E83320EF216E364700C4B2BE /* Info.plist */,
+			);
+			path = OneSignalNotifications;
 			sourceTree = "<group>";
 		};
 		E8446A8B215BD86300ECF0BF /* ProgressHUD */ = {
@@ -152,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				E887FADD215AD5270071A15D /* Championes Arena */,
+				E83320EC216E364700C4B2BE /* OneSignalNotifications */,
 				E887FADC215AD5270071A15D /* Products */,
 				791AB67DDBB8EC5E909A8BA0 /* Pods */,
 				B86CA7949FA753A04979846A /* Frameworks */,
@@ -162,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				E887FADB215AD5270071A15D /* Championes Arena.app */,
+				E83320EB216E364700C4B2BE /* OneSignalNotifications.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,6 +229,7 @@
 		E887FADD215AD5270071A15D /* Championes Arena */ = {
 			isa = PBXGroup;
 			children = (
+				E8929E992161324800E81D97 /* Championes Arena.entitlements */,
 				E887FAEA215AD5280071A15D /* Info.plist */,
 				E887FB0E215AD7FC0071A15D /* Support */,
 				E887FB03215AD7D60071A15D /* Model */,
@@ -213,6 +274,8 @@
 				E887FB0F215AD80C0071A15D /* Helper.swift */,
 				E887FB10215AD80C0071A15D /* PicinTitle.swift */,
 				E887FB12215AD80C0071A15D /* CustomButton.swift */,
+				E839A07A216D2A8400455E55 /* LocalNotificationsPushing.swift */,
+				E83320F8216E592200C4B2BE /* OneSignalMethods.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -270,7 +333,6 @@
 			children = (
 				E887FB36215AD81F0071A15D /* CellForHistory.swift */,
 				E887FB37215AD81F0071A15D /* CellForNews.swift */,
-				E887FB38215AD81F0071A15D /* CellForTimes.swift */,
 			);
 			path = "Cells For Table";
 			sourceTree = "<group>";
@@ -308,6 +370,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E83320EA216E364700C4B2BE /* OneSignalNotifications */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E83320F3216E364700C4B2BE /* Build configuration list for PBXNativeTarget "OneSignalNotifications" */;
+			buildPhases = (
+				4D5E3E74D4B5B0693306507F /* [CP] Check Pods Manifest.lock */,
+				E83320E7216E364700C4B2BE /* Sources */,
+				E83320E8216E364700C4B2BE /* Frameworks */,
+				E83320E9216E364700C4B2BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotifications;
+			productName = OneSignalNotifications;
+			productReference = E83320EB216E364700C4B2BE /* OneSignalNotifications.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E887FADA215AD5270071A15D /* Championes Arena */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E887FAED215AD5280071A15D /* Build configuration list for PBXNativeTarget "Championes Arena" */;
@@ -317,10 +397,12 @@
 				E887FAD8215AD5270071A15D /* Frameworks */,
 				E887FAD9215AD5270071A15D /* Resources */,
 				126489C530F85E137E39F1D1 /* [CP] Embed Pods Frameworks */,
+				E83320F6216E364700C4B2BE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E83320F1216E364700C4B2BE /* PBXTargetDependency */,
 			);
 			name = "Championes Arena";
 			productName = "Championes Arena";
@@ -337,9 +419,25 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Youssef;
 				TargetAttributes = {
+					E83320EA216E364700C4B2BE = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
 					E887FADA215AD5270071A15D = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -357,11 +455,19 @@
 			projectRoot = "";
 			targets = (
 				E887FADA215AD5270071A15D /* Championes Arena */,
+				E83320EA216E364700C4B2BE /* OneSignalNotifications */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E83320E9216E364700C4B2BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E887FAD9215AD5270071A15D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -407,6 +513,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Championes Arena/Pods-Championes Arena-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4D5E3E74D4B5B0693306507F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotifications-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D6ABB627D8A373ABFB514609 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,6 +552,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E83320E7216E364700C4B2BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E83320EE216E364700C4B2BE /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E887FAD7215AD5270071A15D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,10 +578,10 @@
 				E887FAFC215AD7690071A15D /* getTimesAPI.swift in Sources */,
 				E887FB31215AD8190071A15D /* ReservationDetails.swift in Sources */,
 				E887FB2C215AD8190071A15D /* NewsDetailsVC.swift in Sources */,
+				E839A07B216D2A8400455E55 /* LocalNotificationsPushing.swift in Sources */,
 				E887FB47215AD81F0071A15D /* CellForHistory.swift in Sources */,
 				E887FB4E215AD81F0071A15D /* RatingViewController.swift in Sources */,
 				E887FB4C215AD81F0071A15D /* SwiftNotice.swift in Sources */,
-				E887FB49215AD81F0071A15D /* CellForTimes.swift in Sources */,
 				E887FB2F215AD8190071A15D /* Rigister.swift in Sources */,
 				E887FB48215AD81F0071A15D /* CellForNews.swift in Sources */,
 				E887FAFB215AD7690071A15D /* GetData-TopBar.swift in Sources */,
@@ -461,6 +593,7 @@
 				E887FB4B215AD81F0071A15D /* PopupDatePicker.swift in Sources */,
 				E887FB4D215AD81F0071A15D /* CosmosDistrib.swift in Sources */,
 				E887FAFA215AD7690071A15D /* GetDataToButtomBar.swift in Sources */,
+				E83320F9216E592200C4B2BE /* OneSignalMethods.swift in Sources */,
 				E887FB2B215AD8190071A15D /* MAINVC.swift in Sources */,
 				E887FB2E215AD8190071A15D /* RegisterVC.swift in Sources */,
 				E887FB16215AD80C0071A15D /* CustomButton.swift in Sources */,
@@ -476,7 +609,59 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E83320F1216E364700C4B2BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E83320EA216E364700C4B2BE /* OneSignalNotifications */;
+			targetProxy = E83320F0216E364700C4B2BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E83320F4216E364700C4B2BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61352817E0567C6CE59C5087 /* Pods-OneSignalNotifications.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotifications/OneSignalNotifications.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5R27SH76MM;
+				INFOPLIST_FILE = OneSignalNotifications/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Youssef.Champions-arena.OneSignalNotifications";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E83320F5216E364700C4B2BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 894B48C958D18376DD0EAEAC /* Pods-OneSignalNotifications.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotifications/OneSignalNotifications.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5R27SH76MM;
+				INFOPLIST_FILE = OneSignalNotifications/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Youssef.Champions-arena.OneSignalNotifications";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E887FAEB215AD5280071A15D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -528,7 +713,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -582,7 +767,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -595,8 +780,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D2BDDA66F3BC6A3CA21B4F9 /* Pods-Championes Arena.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Championes Arena/Championes Arena.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5R27SH76MM;
 				INFOPLIST_FILE = "Championes Arena/Info.plist";
@@ -610,7 +797,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Championes Arena/Views/OutScorce/ProgressHUD/Championes Arena-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -618,8 +805,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82F859A318BC04DC76B4B879 /* Pods-Championes Arena.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Championes Arena/Championes Arena.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5R27SH76MM;
 				INFOPLIST_FILE = "Championes Arena/Info.plist";
@@ -632,13 +821,22 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Championes Arena/Views/OutScorce/ProgressHUD/Championes Arena-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E83320F3216E364700C4B2BE /* Build configuration list for PBXNativeTarget "OneSignalNotifications" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E83320F4216E364700C4B2BE /* Debug */,
+				E83320F5216E364700C4B2BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E887FAD6215AD5270071A15D /* Build configuration list for PBXProject "Championes Arena" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

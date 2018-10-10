@@ -62,7 +62,9 @@ class SettingsVC: UIViewController {
     func printData() {
         if !checkIfRegistered() {
             //Alert.showNotice(messagesArray: nil, stringMSG: "Your Are Not Signed in")
+            nameTXT.placeholder = "E-mail"
             mailTXT.placeholder = "Password"
+            mailTXT.isSecureTextEntry = true
             phoneTXT.isHidden = true
             passTXT.isHidden = true
             saveBTN.setTitle("Login", for: .normal)
@@ -93,9 +95,7 @@ class SettingsVC: UIViewController {
         mailTXT.text = def.object(forKey: "email") as? String
         phoneTXT.text = def.object(forKey: "phone") as? String
     }
-    
-
-    
+        
     func SaveNow() {
         if checkIfRegistered() {
             updateData()
@@ -208,7 +208,7 @@ class SettingsVC: UIViewController {
         let textView = UITextView(frame: CGRect(x: 20.0, y: 90.0, width: 250.0, height: 120.0))
         
         // Create the dialog
-        let popup = PopupDialog(title: title, message: message, image: nil, preferredWidth: 580)
+        let popup = PopupDialog(title: title, message: message, image: textView, preferredWidth: 580)
         popup.transitionStyle = .zoomIn
         
         
@@ -219,7 +219,7 @@ class SettingsVC: UIViewController {
         
         // Create second button
         let buttonThree = DefaultButton(title: "OK") { [weak self] in
-            //print(textView.text)
+            print(textView.text)
         }
         
         // Add buttons to dialog

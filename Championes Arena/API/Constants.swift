@@ -1,8 +1,12 @@
 import Foundation
 
 
-                        //http://tech.techno-hat.com/champions_arena/public/api/user/register?
-let ServerUrl = "http://tech.techno-hat.com/champions_arena/public/public/"
+// One Signal
+var userToken_OneSignal = ""
+
+
+//http://tech.techno-hat.com/champions_arena/public/api/user/register?
+let ServerUrl = "http://tech.techno-hat.com/champions_arena/public/"
 
 let MainUrl = ServerUrl + "api/"
 //////////////////////////////////////////////////////////////////
@@ -48,6 +52,8 @@ let getTheTimes = MainUrl + "times?"
 let bookTimesurl = MainUrl + "store_booking?"
 //http://tech.techno-hat.com/champions_arena/public/api/bookings_user?api_token=6de57f43895b2fd6bcb1bbdf52842b8db486702c78287af434ec132d527e22a501951f45
 let historyurl = MainUrl + "bookings_user?"
+//http://192.168.0.27/champile/public/api/update_playerid?api_token=fdf3e6d5a4e2bf0cfc9c5dbde7296f28c45c2b988a350025196b7aa5917035be31dad4df&player_id=dugfuyedgfiuwegfuiswegdfiuwdui
+let setUserOneSignalToketUrl = MainUrl + "update_playerid?"
 
 /*
  IMGES DOWNLOAD

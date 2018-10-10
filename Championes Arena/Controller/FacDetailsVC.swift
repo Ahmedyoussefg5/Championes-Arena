@@ -131,7 +131,7 @@ class FacDetailsVC: UIViewController, WKNavigationDelegate {
             let stringUrl = mainFileurl + FacDetailsVC.NewsAll[0].filesArray[4]
             self.openBrowser(url: stringUrl)
             
-            print("\(String(describing: action.title)) is tapped")
+            //print("\(String(describing: action.title)) is tapped")
         })
         
         if count == 4 {

@@ -138,7 +138,7 @@ class ReservationDetails: UIViewController {
                 else {
                     _ = SweetAlert().showAlert("Your are not member yet!", subTitle: "Join us now or sign in if allready registered.", style: AlertStyle.warning, buttonTitle:"Cancel", buttonColor:UIColor.colorFromRGB(0xD0D0D0) , otherButtonTitle:  "OK", otherButtonColor: UIColor.colorFromRGB(0x566C44)) { (isOtherButton) -> Void in
                         if isOtherButton == true {
-                            print("Cancel Button  Pressed ", terminator: "")
+                            //print("Cancel Button  Pressed ", terminator: "")
                         }
                         else {
                             self.goToLoginPage() } }

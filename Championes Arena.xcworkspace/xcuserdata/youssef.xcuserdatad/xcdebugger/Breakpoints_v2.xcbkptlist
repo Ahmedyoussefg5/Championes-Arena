@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Championes Arena/Controller/ReservationDetails.swift"
-            timestampString = "559669391.314545"
+            filePath = "Championes Arena/Controller/SettingsVC.swift"
+            timestampString = "560439233.934743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "Get_Times_Now()"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "showImageDialog(animated:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

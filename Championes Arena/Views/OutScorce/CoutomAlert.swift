@@ -16,12 +16,15 @@ public enum AlertStyle {
 }
 
 open class SweetAlert: UIViewController {
+//    let kAnimatedViewHeight: CGFloat = 85.0
+//    let kMaxHeight: CGFloat = 160.0
+    
     let kBakcgroundTansperancy: CGFloat = 0.7
     let kHeightMargin: CGFloat = 10.0
     let KTopMargin: CGFloat = 20.0
     let kWidthMargin: CGFloat = 10.0
-    let kAnimatedViewHeight: CGFloat = 85.0
-    let kMaxHeight: CGFloat = 160.0
+    let kAnimatedViewHeight: CGFloat = 70.0
+    let kMaxHeight: CGFloat = 300.0
     var kContentWidth: CGFloat = 300.0
     let kButtonHeight: CGFloat = 35.0
     var textViewHeight: CGFloat = 90.0
@@ -35,6 +38,7 @@ open class SweetAlert: UIViewController {
     var subTitleTextView = UITextView()
     var userAction:((_ isOtherButton: Bool) -> Void)? = nil
     let kFont = "Helvetica"
+
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -108,13 +112,14 @@ open class SweetAlert: UIViewController {
         }
         
         if imageView != nil {
-            imageView!.frame = CGRect(x: (kContentWidth - kAnimatedViewHeight) / 2.0, y: y, width: kAnimatedViewHeight, height: kAnimatedViewHeight)
+            imageView!.frame = CGRect(x: (kContentWidth - kAnimatedViewHeight) / 3.0, y: y, width: kAnimatedViewHeight * 2, height: kAnimatedViewHeight * 2)
             contentView.addSubview(imageView!)
             y += imageView!.frame.size.height + kHeightMargin
+            //imageView!.backgroundColor = UIColor.blue
+            imageView!.contentMode = UIViewContentMode.scaleAspectFit
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
             imageView?.isUserInteractionEnabled = true
             imageView?.addGestureRecognizer(tapGestureRecognizer)
-
         }
         
         

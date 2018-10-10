@@ -12,14 +12,14 @@ import SwiftyJSON
 
 
 class NewsModel {
-    
+
     var id : Int!
     var title : String!
     var content : String!
     var image : String!
     var created_at : String!
     var filesArray = [String]()
-    
+
     /*
      {
      "status": true,
@@ -91,9 +91,9 @@ class NewsModel {
      }
      }
      */
-    
+
     init(List : [String : JSON]) {
-        
+
         if let id = List["id"]?.int {
             self.id = id }
         if let title = List["title"]?.string {
@@ -110,12 +110,12 @@ class NewsModel {
                     if let filePath = file["file"]?.string {
                         self.filesArray.append(filePath);
                     }
-                    print(filesArray)
+                    //print(filesArray)
                 }
             }
         }
-        
-        
+
+
     }
 }
 

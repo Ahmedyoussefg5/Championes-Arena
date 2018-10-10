@@ -16,7 +16,6 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var pass1: UITextField!
     @IBOutlet weak var pass2: UITextField!
     
-    @IBOutlet weak var `my_switch`: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,16 +39,12 @@ class RegisterVC: UIViewController {
         guard let pass = pass1.text, !pass.isEmpty, pass.count > 5 else {
             Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Password" )
             return }
-        if !my_switch.isOn {
-            Alert.showNotice(messagesArray: nil, stringMSG: "You should read our  policy and agree to be able to register!" )
-            return }
         
         if pass == pass2.text {
             Rigister.online_Reg(name: name, email: email, phone: mobile, pass: pass)
         } else {
             Alert.showNotice(messagesArray: nil, stringMSG: "Password fildes are not equal" )
             return }
-        
     }
     
     // MARK: - BUTTON CANCEL

@@ -40,7 +40,9 @@ class Helper: NSObject{
     
     class func getAPIToken() -> String? {
         let def = UserDefaults.standard
-        return def.object(forKey: "api_token") as? String
+        if let apiTopken = def.object(forKey: "api_token") {
+            return apiTopken as? String }
+        else { return " "}
     }
     
     class func saveIPItoken(apistring: String) {
@@ -61,6 +63,8 @@ class Helper: NSObject{
     
     class func signOut(){
         UserDefaults.standard.removeObject(forKey: "api_token")
+        
+        OneSignalMethods.logoutEmail();
         restartAppHome()
     }
     
@@ -82,7 +86,7 @@ class Helper: NSObject{
             formatter.dateFormat = "yyyy-MM-dd"
             //formatter.dateFormat = "dd-MMM-yyyy"
             let myStringafd = formatter.string(from: Date!)
-            print("pik date is ", myStringafd)
+            //print("pik date is ", myStringafd)
         return myStringafd
         
     }
