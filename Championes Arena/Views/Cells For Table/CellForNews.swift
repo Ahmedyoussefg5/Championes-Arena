@@ -26,7 +26,7 @@ class CellForNews: UITableViewCell {
         lableDate.text = MAINVC.NewsAll[index].created_at
         
         guard let cont = MAINVC.NewsAll[index].content else { return }
-        let content = cont.replacingOccurrences(of: "<[^>]+>", with: "", options: String.CompareOptions.regularExpression, range: nil)
+        let content = cont.removeTags
         lableDetails.text = content //MAINVC.NewsAll[index].content
     }
     
@@ -38,7 +38,7 @@ class CellForNews: UITableViewCell {
         lableDate.text = ""
         
         guard let cont = MAINVC.NewsAll[index].content else { return }
-        let content = cont.replacingOccurrences(of: "<[^>]+>", with: "", options: String.CompareOptions.regularExpression, range: nil)
+        let content = cont.removeTags
         lableDetails.text = content //MAINVC.NewsAll[index].content
         
     }
@@ -47,12 +47,12 @@ class CellForNews: UITableViewCell {
             let imgUrl = imgURLfac + MAINVC.NewsAll[index].image
             let url = URL(string: imgUrl)
             img.kf.setImage(with: url)
-            print("-------", url!)
+            //print("-------", url!)
             lableName.text = MAINVC.NewsAll[index].title
             lableDate.text = ""
             
             guard let cont = MAINVC.NewsAll[index].content else { return }
-            let content = cont.replacingOccurrences(of: "<[^>]+>", with: "", options: String.CompareOptions.regularExpression, range: nil)
+            let content = cont.removeTags
             lableDetails.text = content //MAINVC.NewsAll[index].content
         }
 }

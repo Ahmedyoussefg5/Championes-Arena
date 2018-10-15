@@ -6,7 +6,7 @@
 //  Copyright © 2018 Youssef. All rights reserved.
 //
 
-class GetHistoryClass {
+extension ApiMethods {
     
     class func getHistory(complation : @escaping (_ error : Error? , _ status : Bool? , _ messagesArray: [String]? , _ availbleTimes: [Booking]?)->Void){
         

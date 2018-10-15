@@ -212,7 +212,7 @@ class MAINVC: UIViewController{
     } //getCurrentselectedBTN
     
     func gatDATA()  {
-        ApiMethodsTopBar.GETNEWS(x: currentSelectedButton) { (error, status) in
+        ApiMethods.GETNEWS(x: currentSelectedButton) { (error, status) in
             if error == nil {
                 if status == true {
                     self.tableForData.reloadData()

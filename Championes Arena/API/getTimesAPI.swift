@@ -11,7 +11,7 @@
 //   }
 //   task.resume()
 
-import Foundation
+//import Foundation
 
 struct Times: Codable {
     let status, apiTokenStatus: Bool
@@ -143,13 +143,12 @@ extension URLSession {
 
 
 
-class GetTimesClass {
-
+extension ApiMethods {
+    
     class func getTimes(playground_id: Int, date: String, complation : @escaping (_ error : Error? , _ status : Bool? , _ messagesArray: [String]? , _ availbleTimes: [String]?, _ unconfirmedTimes: [String]?  )->Void){
         
         let urll = "\(getTheTimes)playground_id=\(playground_id)&date=\(date)"
-        print(urll)
-///        let urll = "http://tech.techno-hat.com/champions_arena/public/api/times?playground_id=\(playground_id)&date=\(date)"
+        ///        let urll = "http://tech.techno-hat.com/champions_arena/public/api/times?playground_id=\(playground_id)&date=\(date)"
         var messageArray = [String?]()
         guard let url = URL(string: urll) else { return }
         print(url)
@@ -159,11 +158,11 @@ class GetTimesClass {
             {
                 let times = try JSONDecoder().decode(Times.self, from: data)
                 if times.status {
-                print(times.status)
-                complation(error , times.status , nil, times.availableTime , times.unconfirmed)
+                    //print(times.status)
+                    complation(error , times.status , nil, times.availableTime , times.unconfirmed)
                 }
                 else {
-                    print(times.status)
+                    //print(times.status)
                     messageArray.append(times.message?.date[0])
                     complation(error , false , messageArray as? [String] , nil, nil)
                 }
@@ -173,7 +172,6 @@ class GetTimesClass {
                 complation(error , false , messageArray as? [String] , nil, nil)
                 print("§§Error JSONSerialization ", jsonError)    }
             }.resume()
-        }
-        
     }
+}
 

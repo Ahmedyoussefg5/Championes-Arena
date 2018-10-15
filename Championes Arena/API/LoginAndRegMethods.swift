@@ -2,7 +2,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class ApiMethodsREGandLOGIN {
+class ApiMethods {
     
     // MARK: - API REGISTER
     //http://localhost/champile/public/api/users/register?email=ahmed@gmail.com&password=123456&username=Ahmed&phone=01041256369
@@ -44,7 +44,7 @@ class ApiMethodsREGandLOGIN {
                  */
                 //print("Successfully")
                 let json = JSON(value)
-                print(json)
+                //print(json)
                 guard let status = json["status"].bool else { return }
                 if status {
                     let message = json["message"].string
@@ -54,12 +54,12 @@ class ApiMethodsREGandLOGIN {
                         print(api_token)
                         Helper.saveIPItoken(apistring: api_token)
                         DispatchQueue.main.async {
-                            ApiMethodsREGandLOGIN.RegisterUserOn_OneSignal()
+                            ApiMethods.RegisterUserOn_OneSignal()
                         }
                         //if let user = json["user"].dictionary {
                         let userModel = UserModel.init(List: json.dictionary!)
                         ReservationDetails.USERDATA = [userModel]
-                        print(userModel.email, userModel.api_token)
+                        //print(userModel.email, userModel.api_token)
                         complation(nil, status, messageArray as! [String]);
                     } }
                 else {
@@ -79,7 +79,7 @@ class ApiMethodsREGandLOGIN {
                     if let message = json["message"].dictionary {
                         if let email = message["email"]?.array {
                             if let emailMessage = email[0].string {
-                                print(emailMessage)
+                                //print(emailMessage)
                                 messageArray.append(emailMessage)
                             } }
                         if let phone = message["phone"]?.array {
@@ -106,21 +106,21 @@ class ApiMethodsREGandLOGIN {
         ]
         var messageArray = [String?]()
         ////http://tech.techno-hat.com/champile/public/api/users/login?email=mohamed-ali@gmail.com&password=123456
-        print (parameters)
+        //print (parameters)
         Alamofire.request(loginURL, method: .post, parameters: parameters,encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
             switch response.result {
             case .failure(let error) :
                 let json = JSON(error)
                 let status = json["status"].bool
-                print("failure")
+                //print("failure")
                 messageArray.append("Something gone wrong, please check your internet connection")
                 complation(error , status , messageArray as! [String])
                 return
             case .success(let value):
-                print("success")
+                //print("success")
                 let json = JSON(value)
-                print(json);
+                //print(json);
                 guard let status = json["status"].bool else { return }
                 if !status {
                     /*
@@ -130,7 +130,7 @@ class ApiMethodsREGandLOGIN {
                      }
                      */
                     if let message = json["message"].string {
-                        print(message)
+                        //print(message)
                         messageArray.append(message);
                     }
                     complation(nil , status , messageArray as! [String]);
@@ -156,13 +156,13 @@ class ApiMethodsREGandLOGIN {
                     guard let api_Token = json["api_token"].string else { return }
                     Helper.saveIPItoken(apistring: api_Token)
                     DispatchQueue.main.async {
-                        ApiMethodsREGandLOGIN.RegisterUserOn_OneSignal()
+                        ApiMethods.RegisterUserOn_OneSignal()
                     }
                     let userModel = UserModel.init(List: json.dictionary!)
                     messageArray.append("Loged in successfully")
                     //userModel.api_token
                     ReservationDetails.USERDATA = [userModel]
-                    print(userModel.email, userModel.api_token)
+                    //print(userModel.email, userModel.api_token)
                     complation(nil , status , messageArray as! [String]);
                     
                 }
@@ -180,21 +180,21 @@ class ApiMethodsREGandLOGIN {
             "api_token" : Helper.getAPIToken()!
         ]
         var messageArray = [String?]()
-        print (parameters)
+        //print (parameters)
         Alamofire.request(updateProfileURL, method: .post, parameters: parameters,encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
             switch response.result {
             case .failure(let error) :
                 let json = JSON(error)
                 let status = json["status"].bool
-                print("failure", json)
+                //print("failure", json)
                 messageArray.append("Something gone wrong, please check your internet connection")
                 complation(error, status, messageArray as! [String])
                 return
             case .success(let value):
                 print("Successfully")
                 let json = JSON(value)
-                print(json)
+                //print(json)
                 guard let status = json["status"].bool else { return }
                 if status {
                     if let message = json["message"].string {
@@ -221,7 +221,7 @@ class ApiMethodsREGandLOGIN {
                     guard let user = json.dictionary else { return }
                     let userModel = UserModel.init(List: user)
                     ReservationDetails.USERDATA = [userModel]
-                    print(userModel.email)
+                    //print(userModel.email)
 
                     complation(nil, status, messageArray as! [String]);
                 }
@@ -242,7 +242,7 @@ class ApiMethodsREGandLOGIN {
                     if let message = json["message"].dictionary {
                         if let email = message["email"]?.array {
                             if let emailMessage = email[0].string {
-                                print(emailMessage)
+                                //print(emailMessage)
                                 messageArray.append(emailMessage)
                             } }
                         if let phone = message["phone"]?.array {
@@ -264,23 +264,23 @@ class ApiMethodsREGandLOGIN {
             "api_token" : Helper.getAPIToken()!,
             "player_id" : userToken_OneSignal
         ]
-        print (parameters)
+        //print (parameters)
         Alamofire.request(setUserOneSignalToketUrl, method: .post, parameters: parameters,encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
             switch response.result {
-            case .failure(let error) :
-                let json = JSON(error)
+            case .failure://(let error) :
+                //let json = JSON(error)
                 
-                print("failure", json)
+                //print("failure", json)
                 
                 return
-            case .success(let value):
-                let json = JSON(value)
-                print(json)
-                guard let status = json["status"].bool else { return }
-                if status { return }
-                else { }
-                
+            case .success://(let value):
+//                let json = JSON(value)
+//                //print(json)
+//                guard let status = json["status"].bool else { return }
+//                if status { return }
+//                else { }
+                return
             }
         }
     }

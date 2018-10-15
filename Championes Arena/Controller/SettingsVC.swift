@@ -43,7 +43,43 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func sendMsg(_ sender: Any) {
-        showImageDialog(animated: true)
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        let textView = UITextView()
+        textView.textColor = UIColor.white
+        textView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        let controller = UIViewController()
+        textView.frame = controller.view.frame
+        controller.view.addSubview(textView)
+        
+        alert.setValue(controller, forKey: "contentViewController")
+        
+        let send = UIAlertAction(title: "Send", style: .default) { (action) in
+            let mes = textView.text
+            if mes != "" {
+                self.sendMessage(messageE: mes!) }
+                else {
+                Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Message First.")
+            } }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            
+        }
+        
+        let height: NSLayoutConstraint = NSLayoutConstraint(item: alert.view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: view.frame.height * 0.6)
+        alert.view.addConstraint(height)
+        
+        alert.addAction(send)
+        alert.addAction(cancel)
+        
+        textView.backgroundColor = UIColor.darkGray
+        alert.view.tintColor = UIColor.yellow
+        
+        present(alert, animated: true, completion: nil)
+        if let visualEffectView = alert.view.searchVisualEffectsSubview()
+        {
+            visualEffectView.effect = UIBlurEffect(style: .dark)
+        }
     }
     
     @IBAction func saveBTN(_ sender: Any) {
@@ -75,19 +111,19 @@ class SettingsVC: UIViewController {
             saveconstrant.constant = -55
             
             /// Top stackHight.multiplier = 0.17
-//            var topConstraint: NSLayoutConstraint
-//            topConstraint = self.stackHight.constraintWithMultiplier(0.175)
-//            self.view!.removeConstraint(self.stackHight)
-//            self.view!.addConstraint(topConstraint)
+            //            var topConstraint: NSLayoutConstraint
+            //            topConstraint = self.stackHight.constraintWithMultiplier(0.175)
+            //            self.view!.removeConstraint(self.stackHight)
+            //            self.view!.addConstraint(topConstraint)
             //self.view!.layoutIfNeeded()
             
             
             /// buttomStack.multiplier = 0.145
-//            var bottomConstraint: NSLayoutConstraint
-//            bottomConstraint = self.buttomStack.constraintWithMultiplier(0.1)
-//            self.view!.removeConstraint(self.buttomStack)
-//            self.view!.addConstraint(bottomConstraint)
-//            self.view!.layoutIfNeeded()
+            //            var bottomConstraint: NSLayoutConstraint
+            //            bottomConstraint = self.buttomStack.constraintWithMultiplier(0.1)
+            //            self.view!.removeConstraint(self.buttomStack)
+            //            self.view!.addConstraint(bottomConstraint)
+            //            self.view!.layoutIfNeeded()
             return }
         
         let def = UserDefaults.standard
@@ -95,7 +131,7 @@ class SettingsVC: UIViewController {
         mailTXT.text = def.object(forKey: "email") as? String
         phoneTXT.text = def.object(forKey: "phone") as? String
     }
-        
+    
     func SaveNow() {
         if checkIfRegistered() {
             updateData()
@@ -135,7 +171,7 @@ class SettingsVC: UIViewController {
             return;
         }
         
-        ApiMethodsREGandLOGIN.UpdateUser(email: email, phone: mobile, userName: name, password: pass) { (error, status, messagesArray) in
+        ApiMethods.UpdateUser(email: email, phone: mobile, userName: name, password: pass) { (error, status, messagesArray) in
             if error == nil {
                 if status == true {
                     Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)
@@ -152,7 +188,6 @@ class SettingsVC: UIViewController {
     
     func login_now()
     {
-        
         guard let mailORuser = nameTXT.text, !mailORuser.isEmpty, Helper.isValidEmail(usermail: mailORuser) else {
             Alert.showNotice(messagesArray: nil, stringMSG: "Enter A Valid E-Mail")
             return }
@@ -160,78 +195,76 @@ class SettingsVC: UIViewController {
             Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Password")
             return;
         }
-        
         LoginVC.online_Login(emailorphone: mailORuser, password: pass)
     }
     
-    /*!
-     Displays a custom view controller instead of the default view.
-     Buttons can be still added, if needed
-     */
     func showCustomDialog(animated: Bool = true) {
-        //self.pleaseWait()
-        
-        // Create a custom view controller
         let ratingVC = RatingViewController(nibName: "RatingViewController", bundle: nil)
-        
-        // Create the dialog
         let popup = PopupDialog(viewController: ratingVC,
                                 buttonAlignment: .horizontal,
                                 transitionStyle: .zoomIn,
                                 tapGestureDismissal: true,
                                 panGestureDismissal: true)
         
-        // Create first button
-        let buttonOne = CancelButton(title: "CANCEL", height: 60) {
-            //self.label.text = "You canceled the rating dialog"
+        let buttonOne = CancelButton(title: "CANCEL", height: 50) {
+            //"You canceled the rating dialog"
         }
-        
-        // Create second button
-        let buttonTwo = DefaultButton(title: "RATE", height: 60) {
-            //self.label.text = "You rated \(ratingVC.cosmosStarRating.rating) stars"
+        let buttonTwo = DefaultButton(title: "RATE", height: 50) {
+            self.submitRate(rate: Int(ratingVC.cosmosStarRating.rating), comment: ratingVC.commentTextField.text!)
         }
-        
-        // Add buttons to dialog
         popup.addButtons([buttonOne, buttonTwo])
         
-        // Present dialog
         present(popup, animated: animated, completion: nil)
-        //self.clearAllNotice()
     }
     
-    func showImageDialog(animated: Bool = true) {
-        
-        // Prepare the popup assets
-        let title = "Send a message"
-        let message = "Thanks for feedback, This will help us to improve our services"
-        //let image = UIImage(named: "colorful")
-        let textView = UITextView(frame: CGRect(x: 20.0, y: 90.0, width: 250.0, height: 120.0))
-        
-        // Create the dialog
-        let popup = PopupDialog(title: title, message: message, image: textView, preferredWidth: 580)
-        popup.transitionStyle = .zoomIn
-        
-        
-        // Create first button
-        let buttonOne = CancelButton(title: "CANCEL") { [weak self] in
-            //self?.label.text = "You canceled the image dialog"
-        }
-        
-        // Create second button
-        let buttonThree = DefaultButton(title: "OK") { [weak self] in
-            print(textView.text)
-        }
-        
-        // Add buttons to dialog
-        popup.addButtons([buttonThree, buttonOne])
-        
-        // Present dialog
-        self.present(popup, animated: animated, completion: nil)
+    func submitRate(rate: Int, comment: String)
+    {
+        ApiMethods.rate_(rate: rate, comment: comment) { (error, status, messageArray) in
+            if error == nil {
+                if status! {
+                    Alert.showNotice(messagesArray: nil, stringMSG: "Successfully submitted.")
+                } else {
+                    Alert.showNotice(messagesArray: nil, stringMSG: "Error Happened, Try Again Later.")
+                } }
+            else {
+                Alert.showNotice(messagesArray: nil, stringMSG: "Error Happened, Try Again Later.") } }
     }
     
+    func sendMessage(messageE: String)
+    {
+        ApiMethods.sendMessage(message: messageE) { (error, status, messageArray) in
+            if error == nil {
+                if status! {
+                    Alert.showNotice(messagesArray: nil, stringMSG: "Successfully submitted.")
+                } else {
+                    Alert.showNotice(messagesArray: nil, stringMSG: "Error Happened, Try Again Later.")
+                } }
+            else {
+                Alert.showNotice(messagesArray: nil, stringMSG: "Error Happened, Try Again Later.") } }
+    }
 }
 extension NSLayoutConstraint {
     func constraintWithMultiplier(_ multiplier: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: self.firstItem!, attribute: self.firstAttribute, relatedBy: self.relation, toItem: self.secondItem, attribute: self.secondAttribute, multiplier: multiplier, constant: self.constant)
+    }
+}
+
+extension UIView
+{
+    func searchVisualEffectsSubview() -> UIVisualEffectView?
+    {
+        if let visualEffectView = self as? UIVisualEffectView
+        {
+            return visualEffectView
+        }
+        else
+        {
+            for subview in subviews
+            {
+                if let found = subview.searchVisualEffectsSubview()
+                {
+                    return found
+                } } }
+        return nil
     }
 }

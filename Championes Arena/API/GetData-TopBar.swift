@@ -5,11 +5,11 @@
 //  Created by Youssef on 9/17/18.
 //  Copyright © 2018 Youssef. All rights reserved.
 //
-import UIKit
+
 import Alamofire
 import SwiftyJSON
 
-class ApiMethodsTopBar {
+extension ApiMethods {
     
     // MARK: - API GET NEWS
     class func GETNEWS(x: Int, complation : @escaping (_ error : Error?, _ status : Bool?)->Void) {
@@ -43,9 +43,9 @@ class ApiMethodsTopBar {
                     /*
                      
                      */
-                    if let message = json["message"].string {
-                        print(message)
-                    }
+//                    if let message = json["message"].string {
+//                        print(message)
+//                    }
                     /*
 
                      */

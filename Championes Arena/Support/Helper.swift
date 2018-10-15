@@ -64,7 +64,7 @@ class Helper: NSObject{
     class func signOut(){
         UserDefaults.standard.removeObject(forKey: "api_token")
         
-        OneSignalMethods.logoutEmail();
+        //OneSignalMethods.logoutEmail();
         restartAppHome()
     }
     

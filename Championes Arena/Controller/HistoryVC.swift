@@ -39,7 +39,7 @@ class HistoryVC: UIViewController {
     
     func Get_History_Now()
     {
-        GetHistoryClass.getHistory() { (error, status, messagesArray, history) in
+        ApiMethods.getHistory() { (error, status, messagesArray, history) in
             if error == nil {
                 if status == true {
                     self.dataModel = history!

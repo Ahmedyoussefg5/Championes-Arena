@@ -16,7 +16,7 @@ extension LoginVC {
     
     class func online_Login(emailorphone: String, password: String)
     {
-        ApiMethodsREGandLOGIN.LoginUser(password: password, email: emailorphone) { (error, status, messagesArray) in
+        ApiMethods.LoginUser(password: password, email: emailorphone) { (error, status, messagesArray) in
             if error == nil {
                 if status == true {
                     Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)

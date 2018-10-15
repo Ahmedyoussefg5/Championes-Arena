@@ -56,7 +56,8 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func createAccBTN(_ sender: Any) {
-        let VC2 = self.storyboard!.instantiateViewController(withIdentifier: "registerVC") as! RegisterVC
+        let loginSP = UIStoryboard.init(name: "Login_Regster_SB", bundle: nil)
+        let VC2 = loginSP.instantiateViewController(withIdentifier: "registerVC") as! RegisterVC
         self.navigationController!.pushViewController(VC2, animated: true)
     }
     

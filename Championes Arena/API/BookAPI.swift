@@ -7,10 +7,9 @@
 //
 
 import Alamofire
-//import Foundation
 import SwiftyJSON
 
-class ApiMethodsBook {
+extension ApiMethods {
 
     class func GetTimes(id : Int, date : String, complation : @escaping (_ error : Error? , _ status : Bool? , _ messagesArray: [String]? , _ available_time: [String]? , _ unconfirmed: [String]? )->Void) {
         let parameterss: [String: Any] = [
@@ -19,14 +18,14 @@ class ApiMethodsBook {
         ]
         //Get available times and unconfirmed times http://tech.techno-hat.com/champions_arena/public/api/times?playground_id=2&date=2018-09-19
         var messageArray = [String?]()
-        print (parameterss)
+        //print (parameterss)
         Alamofire.request(getTheTimes, method: .get, parameters: parameterss, encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
             switch response.result {
             case .failure(let error) :
                 let json = JSON(error.localizedDescription)
                 let status = json["status"].bool
-                print("failure", json)
+                //print("failure", json)
                 messageArray.append("Something gone wrong, please check your internet connection")
                 complation(error, status, messageArray as? [String], nil, nil)
                 return
@@ -51,8 +50,8 @@ class ApiMethodsBook {
                      */
                     guard let available_time = json["available_time"].arrayObject else { return }
                     guard let unconfirmed = json["unconfirmed"].arrayObject else { return }
-                    print(available_time)
-                    print(unconfirmed)
+                    //print(available_time)
+                    //print(unconfirmed)
                     //ReservationDetails.USERDATA = [userModel]
                     complation(nil, status, messageArray as? [String], available_time as? [String], unconfirmed as? [String]);
                 }
@@ -71,7 +70,7 @@ class ApiMethodsBook {
                     if let message = json["message"].dictionary {
                         if let date = message["date"]?.array {
                             if let dateMessage = date[0].string {
-                                print(dateMessage)
+                                //print(dateMessage)
                                 messageArray.append(dateMessage)
                             } } }
                 }
@@ -90,21 +89,21 @@ class ApiMethodsBook {
             "times" : times
         ]
         var messageArray = [String?]()
-        print (parameters)
+        //print (parameters)
         Alamofire.request(bookTimesurl, method: .post, parameters: parameters,encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
             switch response.result {
             case .failure(let error) :
                 let json = JSON(error)
                 let status = json["status"].bool
-                print("failure", json)
+                //print("failure", json)
                 messageArray.append("Something gone wrong, please check your internet connection")
                 complation(error, status, messageArray as? [String])
                 return
             case .success(let value):
                 print("Successfully")
                 let json = JSON(value)
-                print(json)
+                //print(json)
                 guard let api_token_status = json["api_token_status"].bool, api_token_status == true else {
                     Helper.signOut()
                     messageArray.append("Something gone wrong, please check your internet connection")

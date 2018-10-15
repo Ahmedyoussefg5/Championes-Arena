@@ -12,17 +12,17 @@ import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         IQKeyboardManager.shared.enable = true
- 
+        
         /*
-            /////////////
-        */
+         /////////////
+         */
         let appID = "b204d604-f22b-4f18-b1e2-d702afafe12c"
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
         
@@ -40,11 +40,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             print("User accepted notifications: \(accepted)")
         })
-
-        OneSignalMethods.getUserIdOneSignal()
+        
+        AppDelegate.getUserIdOneSignal()
         
         // Override point for customization after application launch.
         return true
+    }
+    
+    class func getUserIdOneSignal(){
+        let status: OSPermissionSubscriptionState = OneSignal.getPermissionSubscriptionState()
+        let userID = status.subscriptionStatus.userId
+        print("userID = \(userID ?? "None")")
+        
+        userToken_OneSignal = userID ?? "None"
     }
 }
 

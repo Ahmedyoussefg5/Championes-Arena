@@ -11,7 +11,6 @@
 		CDFDF7D3B4D7BACD307752FC /* Pods_OneSignalNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A9C77D3E2C2A92368E3C48 /* Pods_OneSignalNotifications.framework */; };
 		E83320EE216E364700C4B2BE /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83320ED216E364700C4B2BE /* NotificationService.swift */; };
 		E83320F2216E364700C4B2BE /* OneSignalNotifications.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E83320EB216E364700C4B2BE /* OneSignalNotifications.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E83320F9216E592200C4B2BE /* OneSignalMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83320F8216E592200C4B2BE /* OneSignalMethods.swift */; };
 		E839A07B216D2A8400455E55 /* LocalNotificationsPushing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E839A07A216D2A8400455E55 /* LocalNotificationsPushing.swift */; };
 		E8446A96215BDB4B00ECF0BF /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E8446A93215BDB4A00ECF0BF /* ProgressHUD.bundle */; };
 		E8446A97215BDB4B00ECF0BF /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E8446A95215BDB4B00ECF0BF /* ProgressHUD.m */; };
@@ -28,7 +27,6 @@
 		E887FB02215AD7C90071A15D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E887FB01215AD7C90071A15D /* LaunchScreen.storyboard */; };
 		E887FB09215AD7D60071A15D /* APIMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB04215AD7D60071A15D /* APIMethods.swift */; };
 		E887FB0A215AD7D60071A15D /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB05215AD7D60071A15D /* HistoryModel.swift */; };
-		E887FB0B215AD7D60071A15D /* NewsDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB06215AD7D60071A15D /* NewsDetailsModel.swift */; };
 		E887FB0C215AD7D60071A15D /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB07215AD7D60071A15D /* NewsModel.swift */; };
 		E887FB0D215AD7D60071A15D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB08215AD7D60071A15D /* UserModel.swift */; };
 		E887FB13215AD80C0071A15D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB0F215AD80C0071A15D /* Helper.swift */; };
@@ -56,6 +54,9 @@
 		E887FB4E215AD81F0071A15D /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB3F215AD81F0071A15D /* RatingViewController.swift */; };
 		E887FB4F215AD81F0071A15D /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E887FB40215AD81F0071A15D /* RatingViewController.xib */; };
 		E887FB50215AD81F0071A15D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB41215AD81F0071A15D /* ViewController.swift */; };
+		E8B65E80216EDA30008BBD3B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B65E7F216EDA30008BBD3B /* StringExtension.swift */; };
+		E8BAC614217497B300B83F52 /* Login_Regster_SB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8BAC613217497B300B83F52 /* Login_Regster_SB.storyboard */; };
+		E8CC2D292173DCA000221278 /* Rate and send Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CC2D282173DCA000221278 /* Rate and send Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,7 +115,6 @@
 		E887FB01215AD7C90071A15D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E887FB04215AD7D60071A15D /* APIMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMethods.swift; sourceTree = "<group>"; };
 		E887FB05215AD7D60071A15D /* HistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
-		E887FB06215AD7D60071A15D /* NewsDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailsModel.swift; sourceTree = "<group>"; };
 		E887FB07215AD7D60071A15D /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		E887FB08215AD7D60071A15D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E887FB0F215AD80C0071A15D /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -143,6 +143,9 @@
 		E887FB40215AD81F0071A15D /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
 		E887FB41215AD81F0071A15D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E8929E992161324800E81D97 /* Championes Arena.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Championes Arena.entitlements"; sourceTree = "<group>"; };
+		E8B65E7F216EDA30008BBD3B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E8BAC613217497B300B83F52 /* Login_Regster_SB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login_Regster_SB.storyboard; sourceTree = "<group>"; };
+		E8CC2D282173DCA000221278 /* Rate and send Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate and send Message.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,9 +235,10 @@
 				E8929E992161324800E81D97 /* Championes Arena.entitlements */,
 				E887FAEA215AD5280071A15D /* Info.plist */,
 				E887FB0E215AD7FC0071A15D /* Support */,
-				E887FB03215AD7D60071A15D /* Model */,
 				E887FAF0215AD7680071A15D /* API */,
+				E887FB03215AD7D60071A15D /* Model */,
 				E887FB34215AD81F0071A15D /* Views */,
+				E887FAE5215AD5280071A15D /* Assets.xcassets */,
 				E887FB17215AD8190071A15D /* Controller */,
 			);
 			path = "Championes Arena";
@@ -250,6 +254,7 @@
 				E887FAF6215AD7680071A15D /* GetData-BottomBar.swift */,
 				E887FAF5215AD7680071A15D /* getTimesAPI.swift */,
 				E887FAF1215AD7680071A15D /* BookAPI.swift */,
+				E8CC2D282173DCA000221278 /* Rate and send Message.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -257,9 +262,7 @@
 		E887FB03215AD7D60071A15D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E887FB04215AD7D60071A15D /* APIMethods.swift */,
 				E887FB05215AD7D60071A15D /* HistoryModel.swift */,
-				E887FB06215AD7D60071A15D /* NewsDetailsModel.swift */,
 				E887FB07215AD7D60071A15D /* NewsModel.swift */,
 				E887FB08215AD7D60071A15D /* UserModel.swift */,
 			);
@@ -276,6 +279,7 @@
 				E887FB12215AD80C0071A15D /* CustomButton.swift */,
 				E839A07A216D2A8400455E55 /* LocalNotificationsPushing.swift */,
 				E83320F8216E592200C4B2BE /* OneSignalMethods.swift */,
+				E8B65E7F216EDA30008BBD3B /* StringExtension.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -319,8 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				E887FAFF215AD7990071A15D /* Main.storyboard */,
+				E8BAC613217497B300B83F52 /* Login_Regster_SB.storyboard */,
 				E887FB01215AD7C90071A15D /* LaunchScreen.storyboard */,
-				E887FAE5215AD5280071A15D /* Assets.xcassets */,
 				E887FB35215AD81F0071A15D /* Cells For Table */,
 				E887FB39215AD81F0071A15D /* OutScorce */,
 				E887FB3D215AD81F0071A15D /* Rate */,
@@ -362,6 +366,7 @@
 		E8E35729215CFAE300087165 /* old */ = {
 			isa = PBXGroup;
 			children = (
+				E887FB04215AD7D60071A15D /* APIMethods.swift */,
 				E887FAF3215AD7680071A15D /* GetDataToButtomBar.swift */,
 			);
 			path = old;
@@ -474,6 +479,7 @@
 			files = (
 				E8446A96215BDB4B00ECF0BF /* ProgressHUD.bundle in Resources */,
 				E887FB02215AD7C90071A15D /* LaunchScreen.storyboard in Resources */,
+				E8BAC614217497B300B83F52 /* Login_Regster_SB.storyboard in Resources */,
 				E887FB4F215AD81F0071A15D /* RatingViewController.xib in Resources */,
 				E887FAE6215AD5280071A15D /* Assets.xcassets in Resources */,
 				E887FB00215AD7990071A15D /* Main.storyboard in Resources */,
@@ -587,13 +593,11 @@
 				E887FAFB215AD7690071A15D /* GetData-TopBar.swift in Sources */,
 				E887FB50215AD81F0071A15D /* ViewController.swift in Sources */,
 				E887FB29215AD8190071A15D /* Login.swift in Sources */,
-				E887FB0B215AD7D60071A15D /* NewsDetailsModel.swift in Sources */,
 				E887FB0A215AD7D60071A15D /* HistoryModel.swift in Sources */,
 				E887FB27215AD8190071A15D /* FacDetailsVC.swift in Sources */,
 				E887FB4B215AD81F0071A15D /* PopupDatePicker.swift in Sources */,
 				E887FB4D215AD81F0071A15D /* CosmosDistrib.swift in Sources */,
 				E887FAFA215AD7690071A15D /* GetDataToButtomBar.swift in Sources */,
-				E83320F9216E592200C4B2BE /* OneSignalMethods.swift in Sources */,
 				E887FB2B215AD8190071A15D /* MAINVC.swift in Sources */,
 				E887FB2E215AD8190071A15D /* RegisterVC.swift in Sources */,
 				E887FB16215AD80C0071A15D /* CustomButton.swift in Sources */,
@@ -601,7 +605,9 @@
 				E887FB33215AD8190071A15D /* THEMainVC.swift in Sources */,
 				E887FAF9215AD7690071A15D /* Constants.swift in Sources */,
 				E887FB32215AD8190071A15D /* SettingsVC.swift in Sources */,
+				E8B65E80216EDA30008BBD3B /* StringExtension.swift in Sources */,
 				E887FB4A215AD81F0071A15D /* CoutomAlert.swift in Sources */,
+				E8CC2D292173DCA000221278 /* Rate and send Message.swift in Sources */,
 				E887FB15215AD80C0071A15D /* Alert.swift in Sources */,
 				E887FAFD215AD7690071A15D /* GetData-BottomBar.swift in Sources */,
 			);

@@ -30,7 +30,7 @@ class FacDetailsVC: UIViewController, WKNavigationDelegate {
         
         titleTXT.text = FacDetailsVC.NewsAll[0].title
         guard let cont = FacDetailsVC.NewsAll[0].content else { return }
-        let content = cont.replacingOccurrences(of: "<[^>]+>", with: "", options: String.CompareOptions.regularExpression, range: nil)
+        let content = cont.removeTags
         contentTXT.text = content
         
         addBTNs()

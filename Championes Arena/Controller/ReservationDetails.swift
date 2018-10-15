@@ -84,7 +84,7 @@ class ReservationDetails: UIViewController {
     func Get_Times_Now()
     {
         guard let id = ReservationDetails.NewsAll[0].id else { return }
-        GetTimesClass.getTimes(playground_id: id, date: Helper.getDatecomponents(date: day)) { (error, status, messagesArray, availbleTimes, unconfirmedTimes) in
+        ApiMethods.getTimes(playground_id: id, date: Helper.getDatecomponents(date: day)) { (error, status, messagesArray, availbleTimes, unconfirmedTimes) in
             if error == nil {
                 if status == true {
                     self.availableTimes = availbleTimes!
@@ -130,19 +130,15 @@ class ReservationDetails: UIViewController {
                 if self.checkIfRegistered ()
                 {
                     self.book_Times_Now ();
-                    
-                    
                     self.Get_Times_Now ();
-                    
                 }
                 else {
                     _ = SweetAlert().showAlert("Your are not member yet!", subTitle: "Join us now or sign in if allready registered.", style: AlertStyle.warning, buttonTitle:"Cancel", buttonColor:UIColor.colorFromRGB(0xD0D0D0) , otherButtonTitle:  "OK", otherButtonColor: UIColor.colorFromRGB(0x566C44)) { (isOtherButton) -> Void in
                         if isOtherButton == true {
-                            //print("Cancel Button  Pressed ", terminator: "")
                         }
                         else {
-                            self.goToLoginPage() } }
-                } // else
+                            self.goToLoginPage()
+                        } } } // else
             }
         }
     }
@@ -153,7 +149,7 @@ class ReservationDetails: UIViewController {
         let api = Helper.getAPIToken()
         guard let id = ReservationDetails.NewsAll[0].id else { return }
         
-        ApiMethodsBook.BookTimes(api_token: api!, date: Helper.getDatecomponents(date: day), playground_id: id, times: selectedTimes) { (error, status, messagesArray)  in
+        ApiMethods.BookTimes(api_token: api!, date: Helper.getDatecomponents(date: day), playground_id: id, times: selectedTimes) { (error, status, messagesArray)  in
             if error == nil {
                 if status == true {
                     selectedCells11.removeAllIndexes();
@@ -179,7 +175,8 @@ class ReservationDetails: UIViewController {
     }
     
     func goToLoginPage () {
-        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "loginVC") as! LoginVC
+        let loginSP = UIStoryboard.init(name: "Login_Regster_SB", bundle: nil)
+        let VC1 = loginSP.instantiateViewController(withIdentifier: "loginVC") as! LoginVC
         self.navigationController!.pushViewController(VC1, animated: true)
     }
     

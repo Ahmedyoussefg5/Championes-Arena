@@ -13,7 +13,7 @@ class Rigister {
     
    class func online_Reg(name: String, email: String, phone: String, pass: String)
     {
-        ApiMethodsREGandLOGIN.RegisterUser(name: name, email: email, phone: phone, password: pass) { (error, status, messagesArray) in
+        ApiMethods.RegisterUser(name: name, email: email, phone: phone, password: pass) { (error, status, messagesArray) in
             if error == nil {
                 if status == true {
                     //self.toVerify();

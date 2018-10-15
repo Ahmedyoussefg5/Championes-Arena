@@ -18,21 +18,21 @@ class CellForHistory: UITableViewCell {
     
     func ConfigureCellforHistory(data: Booking)  {
         title.text = "Booking:#" + String(data.id) + " playground #" + String(data.playgroundID)
-        dayT.text = data.date  //"1-9-2018"
-        timeT.text = data.timeFrom + " - " + data.timeTo //"10:00 AM - 11:00 AM"
+        dayT.text = data.date
+        timeT.text = data.timeFrom + " - " + data.timeTo
         timeT.textAlignment = .center
-        status.text = data.status //"Confirmed"
+        status.text = data.status
         let imgStat = data.status
         switch imgStat {
         case "wait":
             img.image = UIImage(named: "wait")
         case "cancel":
             img.image = UIImage(named: "cancel")
-        case "confirmed":
+        case "done":
             img.image = UIImage(named: "confirmed")
         default:
             return
-        }
+        } // wait, cancel, done
     }
 
     func ConfigureCellforNot(index: Int) {

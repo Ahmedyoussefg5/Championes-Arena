@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BGG-TK-Mz6">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,14 +17,14 @@
             <objects>
                 <viewController storyboardIdentifier="themainVC" id="BGG-TK-Mz6" customClass="THEMainVC" customModule="Championes_Arena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iFN-iC-sej">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001-Home-After-Splash" translatesAutoresizingMaskIntoConstraints="NO" id="u93-NH-r0S">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thd-4x-R1l">
-                                <rect key="frame" x="18.666666666666657" y="728" width="337.66666666666674" height="30"/>
+                                <rect key="frame" x="20.666666666666657" y="686" width="372.66666666666674" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ZJD-rf-e2s"/>
                                 </constraints>
@@ -37,21 +37,22 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FLl-ur-nuJ">
-                                <rect key="frame" x="131.66666666666666" y="231.66666666666663" width="113" height="107"/>
+                                <rect key="frame" x="151.33333333333334" y="205" width="113.00000000000003" height="107"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" red="0.78823529410000004" green="0.59607843140000005" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="BookHome"/>
                                 <connections>
                                     <action selector="bookCLK:" destination="BGG-TK-Mz6" eventType="touchUpInside" id="NZk-5q-qkb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6H-at-piH">
-                                <rect key="frame" x="166.66666666666666" y="343.66666666666669" width="43" height="20"/>
+                                <rect key="frame" x="186.33333333333334" y="317" width="43" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Book your field now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XJ-Bd-qhh">
-                                <rect key="frame" x="136.66666666666666" y="366.66666666666669" width="102" height="10"/>
+                                <rect key="frame" x="156.33333333333334" y="340" width="102.00000000000003" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="rhw-50-zVT"/>
                                 </constraints>
@@ -60,13 +61,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facilities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0T-gp-8uZ">
-                                <rect key="frame" x="32.000000000000007" y="630.33333333333337" width="72.666666666666686" height="20"/>
+                                <rect key="frame" x="32.000000000000007" y="577" width="72.666666666666686" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Check our prime facilities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gni-yF-4fQ">
-                                <rect key="frame" x="3.6666666666666714" y="653.33333333333337" width="129" height="10"/>
+                                <rect key="frame" x="3.6666666666666714" y="600" width="129" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="rs6-gM-nLw"/>
                                 </constraints>
@@ -75,7 +76,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Check our latest news" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K72-7R-hXb">
-                                <rect key="frame" x="245" y="653.33333333333337" width="113" height="10"/>
+                                <rect key="frame" x="284" y="600" width="113" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="1Ye-t2-V0D"/>
                                 </constraints>
@@ -84,22 +85,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEe-JF-dgw">
-                                <rect key="frame" x="279" y="630.33333333333337" width="45.666666666666686" height="20"/>
+                                <rect key="frame" x="318" y="577" width="45.666666666666686" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oy6-y1-JPs">
-                                <rect key="frame" x="30" y="512.33333333333337" width="76" height="113"/>
+                                <rect key="frame" x="30" y="459" width="76" height="113"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" red="0.78823529410000004" green="0.59607843140000005" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="FacHome"/>
                                 <connections>
                                     <action selector="facCLK:" destination="BGG-TK-Mz6" eventType="touchUpInside" id="qiu-KF-GFO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vTg-9j-U0n">
-                                <rect key="frame" x="258" y="512.33333333333337" width="87" height="113"/>
+                                <rect key="frame" x="297" y="459" width="87" height="113"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" red="0.78823529410000004" green="0.59607843140000005" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="NewsHome"/>
                                 <connections>
                                     <action selector="newsCLK:" destination="BGG-TK-Mz6" eventType="touchUpInside" id="SeU-w4-hvp"/>
@@ -143,128 +146,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="po8-G2-ifV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2252" y="-1122"/>
-        </scene>
-        <!--LoginVC-->
-        <scene sceneID="Noc-GV-yBB">
-            <objects>
-                <viewController storyboardIdentifier="loginVC" id="B3l-Xr-xtX" customClass="LoginVC" customModule="Championes_Arena" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tBW-Dc-Bej">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="002-Login" translatesAutoresizingMaskIntoConstraints="NO" id="fVd-G9-Tke">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="lEo-Pl-ANj">
-                                <rect key="frame" x="18.666666666666657" y="419" width="337.66666666666674" height="66.333333333333314"/>
-                                <subviews>
-                                    <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2jw-Qq-J6p">
-                                        <rect key="frame" x="0.0" y="0.0" width="337.66666666666669" height="29.666666666666668"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                    </textField>
-                                    <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebe-k1-1cm">
-                                        <rect key="frame" x="0.0" y="36.666666666666686" width="337.66666666666669" height="29.666666666666671"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66.5" id="mNf-2h-DtH"/>
-                                </constraints>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqT-a6-ZG5">
-                                <rect key="frame" x="19.333333333333329" y="590.33333333333337" width="150" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="rpJ-qW-oDK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Forgot password">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="forgetBTN:" destination="B3l-Xr-xtX" eventType="touchUpInside" id="Q1K-vL-1FO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGu-6k-qJZ">
-                                <rect key="frame" x="19.333333333333329" y="628.33333333333337" width="150" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="Xdf-nf-Xlm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Create an account">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="createAccBTN:" destination="B3l-Xr-xtX" eventType="touchUpInside" id="O39-rh-qdD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-6e-g69">
-                                <rect key="frame" x="19.333333333333343" y="505.33333333333331" width="337.33333333333326" height="30.333333333333314"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Login" backgroundImage="button">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginBTN:" destination="B3l-Xr-xtX" eventType="touchUpInside" id="Sbl-jB-8hd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFd-vx-Icw">
-                                <rect key="frame" x="19.333333333333343" y="540.66666666666663" width="337.33333333333326" height="29.666666666666629"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Cancel" backgroundImage="button">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelBTN:" destination="B3l-Xr-xtX" eventType="touchUpInside" id="QoI-sw-u0Z"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="9kn-6e-g69" firstAttribute="top" secondItem="lEo-Pl-ANj" secondAttribute="bottom" constant="20" id="0Ep-77-r5a"/>
-                            <constraint firstItem="lEo-Pl-ANj" firstAttribute="width" secondItem="tBW-Dc-Bej" secondAttribute="width" multiplier="0.9" id="6PH-X6-8hi"/>
-                            <constraint firstItem="9kn-6e-g69" firstAttribute="width" secondItem="lEo-Pl-ANj" secondAttribute="width" id="6YW-C4-PdF"/>
-                            <constraint firstItem="DFd-vx-Icw" firstAttribute="width" secondItem="9kn-6e-g69" secondAttribute="width" id="83d-Kj-Lr6"/>
-                            <constraint firstItem="DFd-vx-Icw" firstAttribute="top" secondItem="9kn-6e-g69" secondAttribute="bottom" constant="5" id="9DJ-aU-lel"/>
-                            <constraint firstItem="cjl-ey-lju" firstAttribute="bottom" secondItem="fVd-G9-Tke" secondAttribute="bottom" id="ArM-m0-wLd"/>
-                            <constraint firstItem="lEo-Pl-ANj" firstAttribute="centerY" secondItem="cjl-ey-lju" secondAttribute="centerY" multiplier="1.1" id="DPw-Mb-n40"/>
-                            <constraint firstItem="DFd-vx-Icw" firstAttribute="height" secondItem="9kn-6e-g69" secondAttribute="height" id="E9E-sk-BLj"/>
-                            <constraint firstItem="qqT-a6-ZG5" firstAttribute="top" secondItem="DFd-vx-Icw" secondAttribute="bottom" constant="20" id="Eco-Ql-sNL"/>
-                            <constraint firstItem="9kn-6e-g69" firstAttribute="height" secondItem="ebe-k1-1cm" secondAttribute="height" id="EzW-bv-xaG"/>
-                            <constraint firstItem="fVd-G9-Tke" firstAttribute="centerX" secondItem="cjl-ey-lju" secondAttribute="centerX" id="Kaa-rs-eOw"/>
-                            <constraint firstItem="DFd-vx-Icw" firstAttribute="centerX" secondItem="9kn-6e-g69" secondAttribute="centerX" id="PgR-Bs-CZZ"/>
-                            <constraint firstItem="ZGu-6k-qJZ" firstAttribute="height" secondItem="qqT-a6-ZG5" secondAttribute="height" id="UUb-dH-xZQ"/>
-                            <constraint firstItem="9kn-6e-g69" firstAttribute="centerX" secondItem="fVd-G9-Tke" secondAttribute="centerX" id="c3l-np-1Td"/>
-                            <constraint firstItem="qqT-a6-ZG5" firstAttribute="width" secondItem="ZGu-6k-qJZ" secondAttribute="width" id="iSm-Lb-5gw"/>
-                            <constraint firstItem="qqT-a6-ZG5" firstAttribute="leading" secondItem="9kn-6e-g69" secondAttribute="leading" id="n64-4z-spb"/>
-                            <constraint firstItem="fVd-G9-Tke" firstAttribute="top" secondItem="tBW-Dc-Bej" secondAttribute="top" id="peL-V1-CJe"/>
-                            <constraint firstItem="fVd-G9-Tke" firstAttribute="width" secondItem="tBW-Dc-Bej" secondAttribute="width" id="sGU-xQ-mjd"/>
-                            <constraint firstItem="ZGu-6k-qJZ" firstAttribute="leading" secondItem="qqT-a6-ZG5" secondAttribute="leading" id="tse-q9-IvW"/>
-                            <constraint firstItem="ZGu-6k-qJZ" firstAttribute="top" secondItem="qqT-a6-ZG5" secondAttribute="bottom" constant="5" id="uX9-xc-DUD"/>
-                            <constraint firstItem="lEo-Pl-ANj" firstAttribute="centerX" secondItem="cjl-ey-lju" secondAttribute="centerX" id="ysw-ys-6n7"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="cjl-ey-lju"/>
-                    </view>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <connections>
-                        <outlet property="mainORuser" destination="2jw-Qq-J6p" id="c1W-5p-qkU"/>
-                        <outlet property="pass" destination="ebe-k1-1cm" id="VwW-jZ-KuT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VeK-sm-5tV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2252" y="-1875.1124437781111"/>
+            <point key="canvasLocation" x="-2462" y="-1123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Syw-RM-ZR8">
             <objects>
                 <navigationController storyboardIdentifier="Nav" id="SWV-6k-nJ6" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ozS-bf-feA">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -273,27 +162,27 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZx-0e-P4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2462" y="-412"/>
+            <point key="canvasLocation" x="-2462" y="-428"/>
         </scene>
         <!--News DetailsVC-->
         <scene sceneID="Rrw-yt-gwd">
             <objects>
                 <viewController storyboardIdentifier="newsDetails" id="pCH-qe-SKI" customClass="NewsDetailsVC" customModule="Championes_Arena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wev-lY-8ZW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cyq-Hm-8zD">
-                                <rect key="frame" x="0.0" y="5" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="10" width="414" height="736"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05-News" translatesAutoresizingMaskIntoConstraints="NO" id="TjJ-Gm-0lU">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insideIMG" translatesAutoresizingMaskIntoConstraints="NO" id="dqq-VR-o2u">
-                                        <rect key="frame" x="37.666666666666657" y="40" width="299.66666666666674" height="162.33333333333334"/>
+                                        <rect key="frame" x="41.666666666666657" y="40" width="330.66666666666674" height="147"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpM-4D-RPj">
-                                        <rect key="frame" x="37.666666666666657" y="212.33333333333334" width="299.66666666666674" height="21"/>
+                                        <rect key="frame" x="41.666666666666657" y="197" width="330.66666666666674" height="21"/>
                                         <string key="text">Ahmed Hassan Parsons Green
 </string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
@@ -301,13 +190,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22-12-2019 - 22:33:01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cm8-F3-bja">
-                                        <rect key="frame" x="37.666666666666657" y="243.33333333333334" width="299.66666666666674" height="21.000000000000028"/>
+                                        <rect key="frame" x="41.666666666666657" y="228" width="330.66666666666674" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGf-PD-jAm">
-                                        <rect key="frame" x="37.666666666666657" y="274.33333333333331" width="299.66666666666674" height="405.99999999999994"/>
+                                        <rect key="frame" x="41.666666666666657" y="259" width="330.66666666666674" height="368"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Experts considered removing the Parsons Green Tube bomber from a list of extremists 10 days before he carried out the attack, a review has found.
 
@@ -460,7 +349,7 @@ Security Minister Ben Wallace said: "The internal review into how the Parsons Gr
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title=" Choose your day" image="selectday">
-                                                    <color key="titleColor" red="1" green="0.97551018680000001" blue="0.2281918906" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.78823529411764703" green="0.59607843137254901" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="selectDateBTNCLK:" destination="Udf-4i-Edf" eventType="touchUpInside" id="mX6-Wk-vuT"/>
@@ -480,6 +369,7 @@ Free for booking</string>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d0D-c0-xDh">
                                                 <rect key="frame" x="41.333333333333343" y="451" width="331" height="200"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.78823529411764703" green="0.59607843137254901" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="G8M-fS-QwX"/>
                                                 </constraints>
@@ -506,6 +396,7 @@ Free for booking</string>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="POV-vZ-FdR">
                                                 <rect key="frame" x="41.333333333333343" y="702" width="331" height="200"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.78823529410000004" green="0.59607843140000005" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="TBd-vr-Mi2"/>
                                                 </constraints>
@@ -605,33 +496,33 @@ Free for booking</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ecr-69-4G4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-744" y="-235"/>
+            <point key="canvasLocation" x="-746" y="-381"/>
         </scene>
         <!--Fac DetailsVC-->
         <scene sceneID="o9J-QI-MPz">
             <objects>
                 <viewController storyboardIdentifier="facDetails" id="Og8-Q9-jc1" customClass="FacDetailsVC" customModule="Championes_Arena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rQ6-in-ajF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zle-S7-Ytc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05-News" translatesAutoresizingMaskIntoConstraints="NO" id="zkZ-po-p5z">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insideIMG" translatesAutoresizingMaskIntoConstraints="NO" id="jQe-IR-Oqz">
-                                        <rect key="frame" x="37.666666666666657" y="40" width="299.66666666666674" height="162.33333333333334"/>
+                                        <rect key="frame" x="41.666666666666657" y="40" width="330.66666666666674" height="147"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On the Run (convenience store)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kul-fh-YzG">
-                                        <rect key="frame" x="37.666666666666657" y="212.33333333333334" width="299.66666666666674" height="21"/>
+                                        <rect key="frame" x="41.666666666666657" y="197" width="330.66666666666674" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiS-Al-qqy">
-                                        <rect key="frame" x="37.666666666666657" y="243.33333333333334" width="299.66666666666674" height="508.66666666666663"/>
+                                        <rect key="frame" x="41.666666666666657" y="228" width="330.66666666666674" height="448"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">On the Run is a flagship convenience store brand developed by ExxonMobil, used at Exxon and Mobil stations in the United States, and at Esso and Mobil stations internationally. Alimentation Couche-Tard acquired the On the Run trademark and franchise network in the U.S. in 2009; ExxonMobil retains full ownership of the brand in the rest of the world.
 
@@ -644,13 +535,13 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" calendarEvent="YES"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGT-bQ-NmK">
-                                        <rect key="frame" x="37.666666666666657" y="767" width="299.66666666666674" height="30"/>
+                                        <rect key="frame" x="41.666666666666657" y="691" width="330.66666666666674" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="B7J-wb-dcJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Show Price List">
-                                            <color key="titleColor" red="1" green="0.97551018680000001" blue="0.2281918906" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.78823529411764703" green="0.59607843137254901" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="downloadBTN:" destination="Og8-Q9-jc1" eventType="touchUpInside" id="OxU-Jj-eVK"/>
@@ -705,20 +596,20 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
             <objects>
                 <viewController storyboardIdentifier="mainVC" id="29A-5S-te7" customClass="MAINVC" customModule="Championes_Arena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2yV-r3-lde">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenTop" translatesAutoresizingMaskIntoConstraints="NO" id="TdD-MJ-HJg">
-                                <rect key="frame" x="0.0" y="88" width="375" height="121.66666666666669"/>
+                                <rect key="frame" x="0.0" y="63.999999999999993" width="414" height="110.33333333333331"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kCM-3R-GaM">
-                                <rect key="frame" x="9.3333333333333428" y="94.333333333333314" width="357" height="109"/>
+                                <rect key="frame" x="10.333333333333343" y="69.666666666666671" width="394" height="99.000000000000014"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dA9-OU-2Vv">
-                                        <rect key="frame" x="0.0" y="0.0" width="99" height="109"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="99"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdg-9y-7Ie">
-                                                <rect key="frame" x="0.0" y="0.0" width="99" height="88.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="78.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" backgroundImage="News"/>
                                                 <connections>
@@ -726,7 +617,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZq-uq-JIw">
-                                                <rect key="frame" x="0.0" y="88.666666666666671" width="99" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="78.666666666666671" width="111.33333333333333" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -734,10 +625,10 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Alc-UJ-xhV">
-                                        <rect key="frame" x="129" y="0.0" width="99" height="109"/>
+                                        <rect key="frame" x="141.33333333333331" y="0.0" width="111.33333333333331" height="99"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zb5-eI-Fld">
-                                                <rect key="frame" x="0.0" y="0.0" width="99" height="88.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="78.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" backgroundImage="Book"/>
                                                 <connections>
@@ -745,7 +636,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdj-KX-EQS">
-                                                <rect key="frame" x="0.0" y="88.666666666666671" width="99" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="78.666666666666671" width="111.33333333333333" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -753,10 +644,10 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Ng-DG-zug">
-                                        <rect key="frame" x="258" y="0.0" width="99" height="109"/>
+                                        <rect key="frame" x="282.66666666666669" y="0.0" width="111.33333333333331" height="99"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ra6-L8-fKS">
-                                                <rect key="frame" x="0.0" y="0.0" width="99" height="88.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="78.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" backgroundImage="Fac"/>
                                                 <connections>
@@ -764,7 +655,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facilities" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsK-Oq-0uM">
-                                                <rect key="frame" x="0.0" y="88.666666666666671" width="99" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="78.666666666666671" width="111.33333333333333" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -774,40 +665,40 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIy-jG-tsg">
-                                <rect key="frame" x="0.0" y="209.66666666666666" width="375" height="508.33333333333337"/>
+                                <rect key="frame" x="0.0" y="174.33333333333334" width="414" height="501.66666666666663"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05-News" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-Fd-VdM">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="508.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="501.66666666666669"/>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JJq-h0-Vf5">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="508.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="501.66666666666669"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellForNews" rowHeight="160" id="dnK-B2-mw0" userLabel="cellForNews" customClass="CellForNews" customModule="Championes_Arena" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="160"/>
+                                                <rect key="frame" x="0.0" y="28" width="414" height="160"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dnK-B2-mw0" id="W2p-Rh-shi">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="159.66666666666666"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="159.66666666666666"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playerIMG" translatesAutoresizingMaskIntoConstraints="NO" id="Kmb-TI-JZc">
                                                             <rect key="frame" x="45.000000000000007" y="31.000000000000007" width="112.66666666666669" height="119.66666666666669"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmed Hassan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZZ-di-b8a">
-                                                            <rect key="frame" x="167.66666666666663" y="31" width="187.33333333333337" height="27.666666666666671"/>
+                                                            <rect key="frame" x="167.66666666666663" y="31" width="182.33333333333337" height="27.666666666666671"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22-12-2019 - 22:33:01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc2-bO-7wl">
-                                                            <rect key="frame" x="167.66666666666663" y="63.666666666666664" width="187.33333333333337" height="27.333333333333336"/>
+                                                            <rect key="frame" x="167.66666666666663" y="63.666666666666664" width="182.33333333333337" height="27.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e74-0o-6pP">
-                                                            <rect key="frame" x="167.66666666666663" y="96" width="187.33333333333337" height="36"/>
+                                                            <rect key="frame" x="167.66666666666663" y="96" width="182.33333333333337" height="36"/>
                                                             <string key="text">All the latest breaking news on Ahmed Hassan. Browse The Independent's complete collection of articles and commentary on Ahmed Hassan.
 </string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -815,7 +706,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read more &gt;&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPg-gv-aFD">
-                                                            <rect key="frame" x="162.66666666666663" y="135" width="196.33333333333337" height="19"/>
+                                                            <rect key="frame" x="162.66666666666663" y="135" width="191.33333333333337" height="19"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="19" id="ROn-yA-C0V"/>
                                                             </constraints>
@@ -887,7 +778,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                         </connections>
                                     </tableView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downshadow" translatesAutoresizingMaskIntoConstraints="NO" id="eoF-uu-07T">
-                                        <rect key="frame" x="0.0" y="462.33333333333337" width="375" height="46"/>
+                                        <rect key="frame" x="0.0" y="456.33333333333326" width="414" height="45.333333333333314"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -907,7 +798,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomBar" translatesAutoresizingMaskIntoConstraints="NO" id="V8g-fA-O2D">
-                                <rect key="frame" x="0.0" y="718" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="676" width="414" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="fTq-Wu-imx">
                                         <variation key="heightClass=regular-widthClass=regular" constant="70"/>
@@ -915,27 +806,30 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Tlh-VW-wVF">
-                                <rect key="frame" x="47.333333333333343" y="725.66666666666663" width="281.33333333333326" height="45.333333333333371"/>
+                                <rect key="frame" x="52.333333333333343" y="683.66666666666663" width="310.33333333333326" height="45.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfD-g4-DZb">
-                                        <rect key="frame" x="0.0" y="0.0" width="60.333333333333336" height="45.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="45.333333333333336"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="tintColor" red="0.78823529410000004" green="0.59607843140000005" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" backgroundImage="settings"/>
                                         <connections>
                                             <action selector="settingsCLK:" destination="29A-5S-te7" eventType="touchUpInside" id="YYp-6a-vuR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwQ-MM-W41">
-                                        <rect key="frame" x="110.33333333333333" y="0.0" width="60.666666666666671" height="45.333333333333336"/>
+                                        <rect key="frame" x="120" y="0.0" width="70.333333333333314" height="45.333333333333336"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="tintColor" red="0.78823529410000004" green="0.59607843140000005" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" backgroundImage="calender"/>
                                         <connections>
                                             <action selector="calCLK:" destination="29A-5S-te7" eventType="touchUpInside" id="DGi-rx-Cov"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQD-Zk-Ja2">
-                                        <rect key="frame" x="220.99999999999997" y="0.0" width="60.333333333333343" height="45.333333333333336"/>
+                                        <rect key="frame" x="240.33333333333337" y="0.0" width="70" height="45.333333333333336"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="tintColor" red="0.78823529410000004" green="0.59607843140000005" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" backgroundImage="billImg"/>
                                         <connections>
                                             <action selector="billCLK:" destination="29A-5S-te7" eventType="touchUpInside" id="QgV-ER-VQ3"/>
@@ -991,14 +885,14 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
             <objects>
                 <viewController storyboardIdentifier="settingsVC" id="NQz-iE-XcA" customClass="SettingsVC" customModule="Championes_Arena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Whk-kp-Cr0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05-News" translatesAutoresizingMaskIntoConstraints="NO" id="Jcc-En-myf">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                             </imageView>
                             <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="138-bl-LDm">
-                                <rect key="frame" x="18.666666666666657" y="74" width="337.66666666666674" height="30"/>
+                                <rect key="frame" x="20.666666666666657" y="50" width="372.66666666666674" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="h7A-B7-MnX"/>
                                 </constraints>
@@ -1007,48 +901,49 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16b-6p-euX">
-                                <rect key="frame" x="18.666666666666657" y="111" width="337.66666666666674" height="29.666666666666657"/>
+                                <rect key="frame" x="20.666666666666657" y="87" width="372.66666666666674" height="29.666666666666671"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ilw-j6-JD2">
-                                <rect key="frame" x="18.666666666666657" y="147.66666666666666" width="337.66666666666674" height="29.333333333333343"/>
+                                <rect key="frame" x="20.666666666666657" y="123.66666666666667" width="372.66666666666674" height="29.333333333333329"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
                             </textField>
                             <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9K2-40-IjZ">
-                                <rect key="frame" x="18.666666666666657" y="184" width="337.66666666666674" height="29.666666666666657"/>
+                                <rect key="frame" x="20.666666666666657" y="160" width="372.66666666666674" height="29.666666666666657"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjO-Tp-16E">
-                                <rect key="frame" x="18.666666666666657" y="233.66666666666666" width="337.66666666666674" height="29.333333333333343"/>
+                                <rect key="frame" x="20.666666666666657" y="209.66666666666666" width="372.66666666666674" height="29.333333333333343"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Save" backgroundImage="button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="saveBTN:" destination="NQz-iE-XcA" eventType="touchUpInside" id="are-Kf-2s1"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="raV-NF-YjK">
-                                <rect key="frame" x="18.666666666666657" y="611.33333333333337" width="337.66666666666674" height="146.66666666666663"/>
+                                <rect key="frame" x="20.666666666666657" y="573" width="372.66666666666674" height="143"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWB-DU-gy3">
-                                        <rect key="frame" x="0.0" y="0.0" width="337.66666666666669" height="29.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="28.333333333333332"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Contact Us">
-                                            <color key="titleColor" red="0.7879183292388916" green="0.59670126438140869" blue="0.026558404788374901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.78823529411764703" green="0.59607843137254901" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="contactUsBTN:" destination="NQz-iE-XcA" eventType="touchUpInside" id="laW-b5-g7j"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb5-Em-yaj">
-                                        <rect key="frame" x="0.0" y="39.333333333333258" width="337.66666666666669" height="29"/>
+                                        <rect key="frame" x="0.0" y="38.333333333333371" width="372.66666666666669" height="28.333333333333329"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Send Us Msg">
                                             <color key="titleColor" red="0.78791832920000004" green="0.59670126440000004" blue="0.02655840479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1058,7 +953,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vci-89-UMz">
-                                        <rect key="frame" x="0.0" y="78.333333333333258" width="337.66666666666669" height="29.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="76.666666666666629" width="372.66666666666669" height="28"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Rate Us">
                                             <color key="titleColor" red="0.7879183292388916" green="0.59670126438140869" blue="0.026558404788374901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1068,7 +963,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlf-82-QL9">
-                                        <rect key="frame" x="0.0" y="117.66666666666663" width="337.66666666666669" height="29"/>
+                                        <rect key="frame" x="0.0" y="114.66666666666661" width="372.66666666666669" height="28.333333333333329"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Sign Out">
                                             <color key="titleColor" red="0.78791832920000004" green="0.59670126440000004" blue="0.02655840479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1140,28 +1035,28 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
             <objects>
                 <viewController storyboardIdentifier="historyVC" id="Uac-5Y-GJo" customClass="HistoryVC" customModule="Championes_Arena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iCS-5N-NoB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcd-8f-6q1">
-                                <rect key="frame" x="0.0" y="5" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="10" width="414" height="736"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05-News" translatesAutoresizingMaskIntoConstraints="NO" id="tws-5f-zbY">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RD7-n7-XNx">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellforhistory" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellforhistory" rowHeight="140" id="51g-At-A4T" customClass="CellForHistory" customModule="Championes_Arena" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="140"/>
+                                                <rect key="frame" x="0.0" y="28" width="414" height="140"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="51g-At-A4T" id="PU2-s4-XNJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139.66666666666666"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="139.66666666666666"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking #1001: palyground #1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLj-hW-Ohv">
-                                                            <rect key="frame" x="25.000000000000014" y="21" width="230.33333333333337" height="21"/>
+                                                            <rect key="frame" x="30.000000000000014" y="21" width="230.33333333333337" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1173,13 +1068,13 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1-9-2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5i-KQ-YCq">
-                                                            <rect key="frame" x="25.000000000000014" y="47" width="230.33333333333337" height="21"/>
+                                                            <rect key="frame" x="30.000000000000014" y="47" width="230.33333333333337" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00 AM - 11:00 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHa-JE-JGf">
-                                                            <rect key="frame" x="25.000000000000014" y="73" width="230.33333333333337" height="21"/>
+                                                            <rect key="frame" x="30.000000000000014" y="73" width="230.33333333333337" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1224,7 +1119,7 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
                                         </connections>
                                     </tableView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downshadow" translatesAutoresizingMaskIntoConstraints="NO" id="bL2-XB-Ngk">
-                                        <rect key="frame" x="0.0" y="739.33333333333337" width="375" height="72.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="670.33333333333337" width="414" height="65.666666666666629"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1261,180 +1156,33 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
             </objects>
             <point key="canvasLocation" x="1309" y="-409"/>
         </scene>
-        <!--Pass Reset-->
-        <scene sceneID="d2c-z8-4iE">
+        <!--forgetPassVC-->
+        <scene sceneID="k3P-A2-ZGp">
             <objects>
-                <viewController storyboardIdentifier="forgetPassVC" id="snU-08-Ikl" customClass="PassReset" customModule="Championes_Arena" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="N8c-7l-qEm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="002-Login" translatesAutoresizingMaskIntoConstraints="NO" id="BaV-8g-Te6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSV-vO-I1O">
-                                <rect key="frame" x="18.666666666666657" y="503.00000000000006" width="338.33333333333337" height="30.666666666666686"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Cancel" backgroundImage="button">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelBTN:" destination="snU-08-Ikl" eventType="touchUpInside" id="Fez-gn-Mxg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dM4-tv-4PX">
-                                <rect key="frame" x="18.666666666666657" y="458" width="338.33333333333337" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Send reset code" backgroundImage="button">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail or phone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qfa-eW-ccQ">
-                                <rect key="frame" x="18.666666666666657" y="413" width="338.33333333333337" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="eKM-x9-Mvj"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="SSV-vO-I1O" firstAttribute="width" secondItem="dM4-tv-4PX" secondAttribute="width" id="0Or-mP-Prl"/>
-                            <constraint firstItem="BaV-8g-Te6" firstAttribute="top" secondItem="N8c-7l-qEm" secondAttribute="top" id="5V4-aF-bnn"/>
-                            <constraint firstItem="HVY-ja-yJi" firstAttribute="bottom" secondItem="BaV-8g-Te6" secondAttribute="bottom" id="D2S-0H-WNB"/>
-                            <constraint firstItem="BaV-8g-Te6" firstAttribute="width" secondItem="N8c-7l-qEm" secondAttribute="width" id="FVu-ea-kKh"/>
-                            <constraint firstItem="SSV-vO-I1O" firstAttribute="centerX" secondItem="dM4-tv-4PX" secondAttribute="centerX" id="Hbf-7l-5oi"/>
-                            <constraint firstItem="dM4-tv-4PX" firstAttribute="centerX" secondItem="BaV-8g-Te6" secondAttribute="centerX" id="LGK-y0-f10"/>
-                            <constraint firstItem="Qfa-eW-ccQ" firstAttribute="centerX" secondItem="BaV-8g-Te6" secondAttribute="centerX" id="YmP-Hh-ABd"/>
-                            <constraint firstItem="BaV-8g-Te6" firstAttribute="centerX" secondItem="HVY-ja-yJi" secondAttribute="centerX" id="aje-fq-moh"/>
-                            <constraint firstItem="SSV-vO-I1O" firstAttribute="top" secondItem="dM4-tv-4PX" secondAttribute="bottom" constant="15" id="ihO-Nf-fUx"/>
-                            <constraint firstItem="BaV-8g-Te6" firstAttribute="width" secondItem="N8c-7l-qEm" secondAttribute="width" id="lZD-4C-WHQ"/>
-                            <constraint firstItem="dM4-tv-4PX" firstAttribute="top" secondItem="Qfa-eW-ccQ" secondAttribute="bottom" constant="15" id="rEO-3t-0Ua"/>
-                            <constraint firstItem="Qfa-eW-ccQ" firstAttribute="width" secondItem="BaV-8g-Te6" secondAttribute="width" multiplier="0.9" id="sgi-zR-FZd"/>
-                            <constraint firstItem="dM4-tv-4PX" firstAttribute="height" secondItem="Qfa-eW-ccQ" secondAttribute="height" id="stj-Rr-pOV"/>
-                            <constraint firstItem="Qfa-eW-ccQ" firstAttribute="centerY" secondItem="BaV-8g-Te6" secondAttribute="centerY" multiplier="1.1" id="v3S-iZ-GGl"/>
-                            <constraint firstItem="dM4-tv-4PX" firstAttribute="width" secondItem="BaV-8g-Te6" secondAttribute="width" multiplier="0.9" id="wSO-Ka-fFR"/>
-                            <constraint firstItem="SSV-vO-I1O" firstAttribute="height" secondItem="dM4-tv-4PX" secondAttribute="height" id="yha-xG-bEn"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="HVY-ja-yJi"/>
-                    </view>
-                    <connections>
-                        <outlet property="cancelBTN" destination="SSV-vO-I1O" id="SLQ-2c-bfo"/>
-                        <outlet property="resetBTN" destination="dM4-tv-4PX" id="Tbd-k1-yjZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vyi-8B-IFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="forgetPassVC" storyboardName="Login_Regster_SB" referencedIdentifier="forgetPassVC" id="WLa-Zt-yOa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DaR-Rw-bCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3124" y="-1875"/>
         </scene>
-        <!--RegisterVC-->
-        <scene sceneID="tY7-Z1-u5Q">
+        <!--registerVC-->
+        <scene sceneID="YpO-cq-e57">
             <objects>
-                <viewController storyboardIdentifier="registerVC" id="IKT-w8-SoE" customClass="RegisterVC" customModule="Championes_Arena" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hfq-mO-G2a">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="002-Login" translatesAutoresizingMaskIntoConstraints="NO" id="Ni3-4C-BFk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="iuo-3C-vRX">
-                                <rect key="frame" x="18.666666666666657" y="404" width="338.33333333333337" height="180"/>
-                                <subviews>
-                                    <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TN4-4j-Tan">
-                                        <rect key="frame" x="0.0" y="0.0" width="338.33333333333331" height="30.333333333333332"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GpE-xu-6Mc">
-                                        <rect key="frame" x="0.0" y="37.333333333333314" width="338.33333333333331" height="30.333333333333329"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Moble" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSr-Fa-5yr">
-                                        <rect key="frame" x="0.0" y="74.666666666666686" width="338.33333333333331" height="30.666666666666671"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n7K-pH-rl8">
-                                        <rect key="frame" x="0.0" y="112.33333333333337" width="338.33333333333331" height="30.333333333333343"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                    <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Passaword" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVU-iV-v9n">
-                                        <rect key="frame" x="0.0" y="149.66666666666663" width="338.33333333333331" height="30.333333333333343"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="6Z1-KQ-pv2"/>
-                                </constraints>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAP-BM-Lj9">
-                                <rect key="frame" x="18.666666666666671" y="614" width="135.33333333333331" height="32.666666666666629"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Register" backgroundImage="smallBTN">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="registerBTN:" destination="IKT-w8-SoE" eventType="touchUpInside" id="Z8O-hk-PWh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh4-gj-C8Y">
-                                <rect key="frame" x="221.66666666666663" y="614" width="135.33333333333337" height="32.666666666666629"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Cancel" backgroundImage="smallBTN">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelBTN:" destination="IKT-w8-SoE" eventType="touchUpInside" id="iVH-t8-7QX"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="bh4-gj-C8Y" firstAttribute="height" secondItem="hAP-BM-Lj9" secondAttribute="height" id="8AJ-6S-blj"/>
-                            <constraint firstItem="iuo-3C-vRX" firstAttribute="centerX" secondItem="Ni3-4C-BFk" secondAttribute="centerX" id="8FG-fR-72L"/>
-                            <constraint firstItem="bh4-gj-C8Y" firstAttribute="width" secondItem="hAP-BM-Lj9" secondAttribute="width" id="9Kp-pu-oUZ"/>
-                            <constraint firstItem="Ni3-4C-BFk" firstAttribute="centerX" secondItem="H0r-we-dMp" secondAttribute="centerX" id="LVq-Lw-uAY"/>
-                            <constraint firstItem="iuo-3C-vRX" firstAttribute="width" secondItem="Ni3-4C-BFk" secondAttribute="width" multiplier="0.9" id="Mlg-wV-IyQ"/>
-                            <constraint firstItem="hAP-BM-Lj9" firstAttribute="top" secondItem="iuo-3C-vRX" secondAttribute="bottom" constant="30" id="N9X-dk-zu3"/>
-                            <constraint firstItem="hAP-BM-Lj9" firstAttribute="leading" secondItem="iuo-3C-vRX" secondAttribute="leading" id="Sfv-UQ-fqd"/>
-                            <constraint firstItem="Ni3-4C-BFk" firstAttribute="width" secondItem="hfq-mO-G2a" secondAttribute="width" id="UcR-mK-DOU"/>
-                            <constraint firstItem="hAP-BM-Lj9" firstAttribute="width" secondItem="iuo-3C-vRX" secondAttribute="width" multiplier="0.4" id="Y95-hf-eZL"/>
-                            <constraint firstItem="Ni3-4C-BFk" firstAttribute="top" secondItem="hfq-mO-G2a" secondAttribute="top" id="ZW8-37-q0T"/>
-                            <constraint firstItem="iuo-3C-vRX" firstAttribute="centerY" secondItem="Ni3-4C-BFk" secondAttribute="centerY" multiplier="1.27" id="cau-SI-g3N"/>
-                            <constraint firstItem="hAP-BM-Lj9" firstAttribute="height" secondItem="wVU-iV-v9n" secondAttribute="height" multiplier="1.05" id="hLM-DT-cnW"/>
-                            <constraint firstItem="bh4-gj-C8Y" firstAttribute="trailing" secondItem="iuo-3C-vRX" secondAttribute="trailing" id="uqy-mR-rhu"/>
-                            <constraint firstItem="H0r-we-dMp" firstAttribute="bottom" secondItem="Ni3-4C-BFk" secondAttribute="bottom" id="yDB-0P-WWX"/>
-                            <constraint firstItem="hAP-BM-Lj9" firstAttribute="centerY" secondItem="bh4-gj-C8Y" secondAttribute="centerY" id="yyg-95-hcm"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="H0r-we-dMp"/>
-                    </view>
-                    <connections>
-                        <outlet property="emailTXT" destination="GpE-xu-6Mc" id="Lnv-RN-QbL"/>
-                        <outlet property="mobileTXT" destination="FSr-Fa-5yr" id="y6K-50-xLu"/>
-                        <outlet property="nameTXT" destination="TN4-4j-Tan" id="TPQ-Sa-Li0"/>
-                        <outlet property="pass1" destination="n7K-pH-rl8" id="Dt4-43-hYo"/>
-                        <outlet property="pass2" destination="wVU-iV-v9n" id="cls-EE-5Im"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8HB-Yv-eT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="registerVC" storyboardName="Login_Regster_SB" referencedIdentifier="registerVC" id="fFr-wn-DEa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEP-mb-PUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1540" y="-1875"/>
+        </scene>
+        <!--loginVC-->
+        <scene sceneID="vnY-S2-b0n">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="loginVC" storyboardName="Login_Regster_SB" referencedIdentifier="loginVC" id="gga-SF-5O1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DcE-d0-SaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2252" y="-1875.1124437781111"/>
         </scene>
     </scenes>
     <resources>
         <image name="001-Home-After-Splash" width="640" height="1136"/>
-        <image name="002-Login" width="640" height="1136"/>
         <image name="05-News" width="640" height="711"/>
         <image name="Book" width="127" height="93"/>
         <image name="BookHome" width="113" height="107"/>
@@ -1455,7 +1203,6 @@ The name "On the Run" is used, untranslated, around the world. Locations in the 
         <image name="playerIMG" width="123" height="146"/>
         <image name="selectday" width="30" height="30"/>
         <image name="settings" width="97" height="72"/>
-        <image name="smallBTN" width="256" height="57"/>
         <image name="vline" width="5" height="559"/>
     </resources>
 </document>

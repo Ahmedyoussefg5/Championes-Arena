@@ -31,7 +31,7 @@ class NewsDetailsVC: UIViewController {
         //content.text = NewsDetailsVC.NewsAll[0].content
         
         guard let cont = NewsDetailsVC.NewsAll[0].content else { return }
-        let contentt = cont.replacingOccurrences(of: "<[^>]+>", with: "", options: String.CompareOptions.regularExpression, range: nil)
+        let contentt = cont.removeTags
         content.text = contentt
     }
 
