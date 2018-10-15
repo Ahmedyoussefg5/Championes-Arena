@@ -96,7 +96,7 @@ extension ApiMethods {
             case .failure(let error) :
                 let json = JSON(error)
                 let status = json["status"].bool
-                //print("failure", json)
+                print("failure", json)
                 messageArray.append("Something gone wrong, please check your internet connection")
                 complation(error, status, messageArray as? [String])
                 return

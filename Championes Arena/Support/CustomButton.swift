@@ -21,6 +21,27 @@ extension UIView {
         self.layer.insertSublayer(gradient, at: 0)
     }
 }
+
+extension UIView //color for alert
+{
+    func searchVisualEffectsSubview() -> UIVisualEffectView?
+    {
+        if let visualEffectView = self as? UIVisualEffectView
+        {
+            return visualEffectView
+        }
+        else
+        {
+            for subview in subviews
+            {
+                if let found = subview.searchVisualEffectsSubview()
+                {
+                    return found
+                } } }
+        return nil
+    }
+}
+
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {
         assert(red >= 0 && red <= 255, "Invalid red component")
@@ -38,4 +59,3 @@ extension UIColor {
         )
     }
 }
-

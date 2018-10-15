@@ -6,7 +6,8 @@ var userToken_OneSignal = ""
 
 
 //http://tech.techno-hat.com/champions_arena/public/api/user/register?
-let ServerUrl = "http://tech.techno-hat.com/champions_arena/public/"
+//let ServerUrl = "http://tech.techno-hat.com/champions_arena/public/"
+let ServerUrl = "http://192.168.0.27/champile/public/"
 
 let MainUrl = ServerUrl + "api/"
 //////////////////////////////////////////////////////////////////
@@ -57,7 +58,7 @@ let historyurl = MainUrl + "bookings_user?"
 let notificationsUrl = MainUrl + "notifications?"
 
 //http://localhost/champile/public/api/notifications/get_data?api_token=5d4856c929ffb44e&type=news&type_id=1
-//let rateUrl = MainUrl + "rate?"
+let notificationClickURL = MainUrl + "notifications/get_data?"
 
 
 //http://192.168.0.27/champile/public/api/update_playerid?api_token=2b988a350025196b7aa5917035be31dad4df&player_id=dugfuyedgfiuwegfuiswegdfiuwdui
@@ -75,6 +76,7 @@ let imgURLnews = mainIMGurl + "news/"
 let imgURLplay = mainIMGurl + "playgrounds/"
 let imgURLfac = mainIMGurl + "facilities/"
 
+var currentSelectedButton: Int = 0
 var selectedCells11 = NSMutableIndexSet()
 var selectedCells22 = NSMutableIndexSet()
 var dayToday: Date = Date()

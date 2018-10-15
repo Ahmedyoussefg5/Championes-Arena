@@ -49,7 +49,7 @@ class THEMainVC: UIViewController {
     func goToMain (cat: Int) {
         
         let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "mainVC") as! MAINVC
-        homeVC.currentSelectedButton = cat
+        currentSelectedButton = cat
         let navigationController = UINavigationController(rootViewController: homeVC)
         self.present(navigationController, animated: true, completion: nil)
     }

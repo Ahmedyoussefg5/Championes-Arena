@@ -48,7 +48,7 @@ class ReservationDetails: UIViewController {
         
         print(day)
         
-        selectDateBTN.setTitle(Helper.getDatecomponents(date: day), for: .normal)
+        selectDateBTN.setTitle(DateConverter.getDateToString(date: day), for: .normal)
         Get_Times_Now()
     }
     
@@ -63,19 +63,19 @@ class ReservationDetails: UIViewController {
         dateComponents.month = 1
         let threeMonth = Calendar.current.date(byAdding: dateComponents, to: currentDate)
         
-        let datePicker = DatePickerDialog(textColor: UIColor.colorFromRGB(0x000000),
-                                          buttonColor: UIColor.colorFromRGB(0xFBBE00),
+        let datePicker = DatePickerDialog(textColor: UIColor.init(red: 201, green: 152, blue: 7),
+                                          buttonColor: UIColor.init(red: 201, green: 152, blue: 7),
                                           font: UIFont.boldSystemFont(ofSize: 17),
                                           showCancelButton: true)
         datePicker.show("Pickup your day",
-                        doneButtonTitle: "Done",
+                        doneButtonTitle: "Pick",
                         cancelButtonTitle: "Cancel",
                         minimumDate: currentDate,
                         maximumDate: threeMonth,
                         datePickerMode: .date) { (date) in
                             if let dt = date {
                                 self.day = dt
-                                self.selectDateBTN.titleLabel?.text = Helper.getDatecomponents(date: dt)
+                                self.selectDateBTN.titleLabel?.text = DateConverter.getDateToString(date: dt)
                                 dayToday = self.day
                                 self.Get_Times_Now()
                                 print("dt", self.day , dt)
@@ -84,7 +84,7 @@ class ReservationDetails: UIViewController {
     func Get_Times_Now()
     {
         guard let id = ReservationDetails.NewsAll[0].id else { return }
-        ApiMethods.getTimes(playground_id: id, date: Helper.getDatecomponents(date: day)) { (error, status, messagesArray, availbleTimes, unconfirmedTimes) in
+        ApiMethods.getTimes(playground_id: id, date: DateConverter.getDateToString(date: day)) { (error, status, messagesArray, availbleTimes, unconfirmedTimes) in
             if error == nil {
                 if status == true {
                     self.availableTimes = availbleTimes!
@@ -149,7 +149,7 @@ class ReservationDetails: UIViewController {
         let api = Helper.getAPIToken()
         guard let id = ReservationDetails.NewsAll[0].id else { return }
         
-        ApiMethods.BookTimes(api_token: api!, date: Helper.getDatecomponents(date: day), playground_id: id, times: selectedTimes) { (error, status, messagesArray)  in
+        ApiMethods.BookTimes(api_token: api!, date: DateConverter.getDateToString(date: day), playground_id: id, times: selectedTimes) { (error, status, messagesArray)  in
             if error == nil {
                 if status == true {
                     selectedCells11.removeAllIndexes();

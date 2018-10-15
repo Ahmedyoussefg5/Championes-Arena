@@ -268,15 +268,15 @@ class ApiMethods {
         Alamofire.request(setUserOneSignalToketUrl, method: .post, parameters: parameters,encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
             switch response.result {
-            case .failure://(let error) :
-                //let json = JSON(error)
+            case .failure(let error) :
+                let json = JSON(error)
                 
-                //print("failure", json)
+                print("failure", json)
                 
                 return
-            case .success://(let value):
-//                let json = JSON(value)
-//                //print(json)
+            case .success(let value):
+                let json = JSON(value)
+                print(json)
 //                guard let status = json["status"].bool else { return }
 //                if status { return }
 //                else { }

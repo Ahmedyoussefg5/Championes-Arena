@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News DetailsVC-->
+        <scene sceneID="Rrw-yt-gwd">
+            <objects>
+                <viewController storyboardIdentifier="newsDetails" id="pCH-qe-SKI" customClass="NewsDetailsVC" customModule="Championes_Arena" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wev-lY-8ZW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cyq-Hm-8zD">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05-News" translatesAutoresizingMaskIntoConstraints="NO" id="TjJ-Gm-0lU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insideIMG" translatesAutoresizingMaskIntoConstraints="NO" id="dqq-VR-o2u">
+                                        <rect key="frame" x="38" y="40" width="299" height="133"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpM-4D-RPj">
+                                        <rect key="frame" x="38" y="183" width="299" height="21"/>
+                                        <string key="text">Ahmed Hassan Parsons Green
+</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22-12-2019 - 22:33:01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cm8-F3-bja">
+                                        <rect key="frame" x="38" y="214" width="299" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGf-PD-jAm">
+                                        <rect key="frame" x="38" y="245" width="299" height="333.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Experts considered removing the Parsons Green Tube bomber from a list of extremists 10 days before he carried out the attack, a review has found.
+
+Ahmed Hassan, 18, took a bomb onto the Tube last September after more than 18 months of concerns that he had been radicalised by the Islamic State group.
+
+A review into how much police and other authorities knew of Hassan has been published on Monday.
+
+It reveals a series of errors made by police and Surrey County Council.
+
+In a letter to the Commons Home Affairs Select Committee, the errors outlined include failing to take into account the full risks to the public posed by his suspected mental health problems, failing to bring in a national de-radicalisation expert and an apparent lack of a plan to closely monitor the teenager's progress.
+
+Ahmed Hassan arrived in the UK in October 2015 as an unaccompanied child migrant and he was placed in the care of Surrey County Council.
+
+
+Media captionCCTV of Parson's Green Tube bomb fireball
+The following January, he told an immigration official that he had been trained to kill in Iraq by IS fighters.
+
+This was a key piece of evidence at his trial but it is not mentioned in the Home Office letter to MPs.
+
+In a further interview, he told officials he had been groomed to fight and also disclosed that he was struggling with mental illness.
+
+Despite these early warnings that Hassan could pose a risk, police and council officials running Surrey's Preventing Violent Extremism programme did not formally discuss how to de-radicalise him until June 2016.
+
+At that point, Surrey County Council placed Hassan on the government's flagship "Channel" programme, which aims to turn around the most dangerous potential terrorists in the UK. But it never asked the Home Office for a nationally-recognised expert mentor to work with Hassan.
+
+Ron and Penny Jones, his foster carers, have separately told the BBC that Surrey only asked them to join a course in preventing extremism after the bombing had happened.
+
+
+Media captionBomber's foster parent Penny Jones: "We feel betrayed"
+Hassan repeatedly went missing while under Surrey County Council's care and the letter says police Prevent officers, and therefore the Channel panel, failed to "fully consider these absences further" as part of the overall pattern of Hassan's behaviour.
+
+When the Channel panel once more considered whether Hassan had made progress in the summer of 2017, it relied on reports from a college tutor and Mr and Mrs Jones. Both repeatedly raised concerns about the teenager's behaviour and state of mind - but the letter says the panel "did not clearly resolve" these fears.
+
+And on 5 September, 10 days before the attack, the same panel considered that Hassan's case could soon be closed.
+
+Image copyrightMET POLICE
+Image caption
+Hassan left his bomb in the carriage and left the train
+"The Channel panel were unable to establish a holistic overview taking into account the entirety of Hassan's turbulent background, mental health concerns, and ongoing behaviour and remarks," the letter says.
+
+"National Channel Practitioners Guidance was not fully followed in this case with regard to record keeping, frequency of vulnerability assessments and intelligence developments along with the regular Channel panel meetings," says the letter.
+
+"Channel panels will be reminded of the need for structured support plans in each case, and the need to regularly review progress in open cases."
+
+The letter does not suggest that either Hassan's foster carers or college tutors should carry any blame for failing to stop the bombing.
+
+In a statement, Surrey County Council said: "We fully acknowledge that our work with other agencies in this case wasn't as good as it should have been," and added that it had "told Mr and Mrs Jones about Hassan's background at the time he was placed with them".
+
+However, Mrs Jones has told the BBC that the county's risk assessment on Hassan, which she received hours before his arrival, did not detail the teenager's admissions of terrorism training.
+
+Security Minister Ben Wallace said: "The internal review into how the Parsons Green case was handled allowed the Home Office, Surrey County Council and the police to take swift action to address the issues raised.
+
+"The Home Office and partner organisations have accepted the majority of the recommendations and following this case we had already put in place processes to ensure better communication between immigration and Prevent partners, as well as reviewing how Channel procedures are monitored.
+
+"We should not allow this case to undermine all the good work taking place across the country."</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="iGf-PD-jAm" firstAttribute="height" secondItem="dqq-VR-o2u" secondAttribute="height" multiplier="2.5" id="04u-aW-QDC"/>
+                                    <constraint firstItem="TjJ-Gm-0lU" firstAttribute="centerX" secondItem="Cyq-Hm-8zD" secondAttribute="centerX" id="2QI-rx-x2P"/>
+                                    <constraint firstItem="dqq-VR-o2u" firstAttribute="width" secondItem="TjJ-Gm-0lU" secondAttribute="width" multiplier="0.8" id="2Tl-e0-exI"/>
+                                    <constraint firstItem="dqq-VR-o2u" firstAttribute="centerX" secondItem="TjJ-Gm-0lU" secondAttribute="centerX" id="3fl-y1-R71"/>
+                                    <constraint firstItem="TjJ-Gm-0lU" firstAttribute="centerY" secondItem="Cyq-Hm-8zD" secondAttribute="centerY" id="743-id-MMv"/>
+                                    <constraint firstItem="Cm8-F3-bja" firstAttribute="width" secondItem="tpM-4D-RPj" secondAttribute="width" id="BVN-wQ-Fh7"/>
+                                    <constraint firstItem="TjJ-Gm-0lU" firstAttribute="width" secondItem="Cyq-Hm-8zD" secondAttribute="width" id="HuJ-cI-T6U"/>
+                                    <constraint firstItem="TjJ-Gm-0lU" firstAttribute="height" secondItem="Cyq-Hm-8zD" secondAttribute="height" id="IJF-bb-9bG"/>
+                                    <constraint firstItem="iGf-PD-jAm" firstAttribute="top" secondItem="Cm8-F3-bja" secondAttribute="bottom" constant="10" id="P76-K2-O1c"/>
+                                    <constraint firstItem="dqq-VR-o2u" firstAttribute="height" secondItem="TjJ-Gm-0lU" secondAttribute="height" multiplier="0.2" id="Qc5-ob-Vu4"/>
+                                    <constraint firstItem="iGf-PD-jAm" firstAttribute="centerX" secondItem="Cm8-F3-bja" secondAttribute="centerX" id="RGN-nq-prC"/>
+                                    <constraint firstItem="tpM-4D-RPj" firstAttribute="top" secondItem="dqq-VR-o2u" secondAttribute="bottom" constant="10" id="X5Q-Mw-vyC"/>
+                                    <constraint firstItem="tpM-4D-RPj" firstAttribute="centerX" secondItem="dqq-VR-o2u" secondAttribute="centerX" id="X9N-3d-TIh"/>
+                                    <constraint firstItem="tpM-4D-RPj" firstAttribute="width" secondItem="dqq-VR-o2u" secondAttribute="width" id="acK-Rb-pH0"/>
+                                    <constraint firstItem="Cm8-F3-bja" firstAttribute="centerX" secondItem="tpM-4D-RPj" secondAttribute="centerX" id="bf2-SK-PVX"/>
+                                    <constraint firstItem="Cm8-F3-bja" firstAttribute="top" secondItem="tpM-4D-RPj" secondAttribute="bottom" constant="10" id="dMU-iP-89c"/>
+                                    <constraint firstItem="iGf-PD-jAm" firstAttribute="width" secondItem="Cm8-F3-bja" secondAttribute="width" id="dzU-j2-qk1"/>
+                                    <constraint firstItem="dqq-VR-o2u" firstAttribute="top" secondItem="Cyq-Hm-8zD" secondAttribute="top" multiplier="2" constant="40" id="goR-yB-Eqy"/>
+                                    <constraint firstItem="Cm8-F3-bja" firstAttribute="height" secondItem="tpM-4D-RPj" secondAttribute="height" id="raG-m4-Th1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Cyq-Hm-8zD" firstAttribute="width" secondItem="wev-lY-8ZW" secondAttribute="width" id="4XF-YU-veG"/>
+                            <constraint firstItem="Cyq-Hm-8zD" firstAttribute="centerY" secondItem="cjG-0P-1v1" secondAttribute="centerY" id="7dm-5f-Yvb"/>
+                            <constraint firstItem="Cyq-Hm-8zD" firstAttribute="height" secondItem="wev-lY-8ZW" secondAttribute="height" id="9Vd-9q-Gs4"/>
+                            <constraint firstItem="Cyq-Hm-8zD" firstAttribute="centerX" secondItem="cjG-0P-1v1" secondAttribute="centerX" id="AXi-uR-CmE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cjG-0P-1v1"/>
+                    </view>
+                    <connections>
+                        <outlet property="content" destination="iGf-PD-jAm" id="48r-Gp-cuU"/>
+                        <outlet property="date" destination="Cm8-F3-bja" id="b12-fH-WPf"/>
+                        <outlet property="img" destination="dqq-VR-o2u" id="Lcm-fX-mla"/>
+                        <outlet property="titleTXT" destination="tpM-4D-RPj" id="VBe-Iw-Hda"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bqp-hF-h2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34" y="-411"/>
+        </scene>
+        <!--Reservation Details-->
+        <scene sceneID="9a7-c0-CLT">
+            <objects>
+                <viewController storyboardIdentifier="bookDetails" id="Udf-4i-Edf" customClass="ReservationDetails" customModule="Championes_Arena" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r7O-3U-4cL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05-News" translatesAutoresizingMaskIntoConstraints="NO" id="fre-8q-Emm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAG-Pm-tZj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3y4-2w-rUr">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insideIMG" translatesAutoresizingMaskIntoConstraints="NO" id="0fc-0J-zcQ">
+                                                <rect key="frame" x="41.5" y="40" width="331" height="180"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlayGround" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZN-DH-EP8">
+                                                <rect key="frame" x="41.5" y="235" width="331" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOOK NOW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwe-Sz-uhv">
+                                                <rect key="frame" x="41.5" y="266" width="331" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose date to view available times" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TV4-Nw-Hth">
+                                                <rect key="frame" x="41.5" y="302" width="331" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="M5k-c2-nPt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPj-2K-zch">
+                                                <rect key="frame" x="41.5" y="338" width="331" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="hTD-4b-ucK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title=" Choose your day" image="selectday">
+                                                    <color key="titleColor" red="0.78823529411764703" green="0.59607843137254901" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectDateBTNCLK:" destination="Udf-4i-Edf" eventType="touchUpInside" id="mX6-Wk-vuT"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPO-JH-PQc">
+                                                <rect key="frame" x="41.5" y="389" width="331" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="TQS-fY-yp9"/>
+                                                </constraints>
+                                                <string key="text">Times:-
+Free for booking</string>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d0D-c0-xDh">
+                                                <rect key="frame" x="41.5" y="451" width="331" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.78823529411764703" green="0.59607843137254901" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="G8M-fS-QwX"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellforTimes1" editingAccessoryType="checkmark" id="Xri-nB-1xT" customClass="CellForTimes" customModule="Championes_Arena" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="331" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xri-nB-1xT" id="q7J-NL-Wak">
+                                                            <rect key="frame" x="0.0" y="0.0" width="331" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unconfirmed booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzy-cM-Q04">
+                                                <rect key="frame" x="41.5" y="661" width="331" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="ogt-8l-qWh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="POV-vZ-FdR">
+                                                <rect key="frame" x="41.5" y="702" width="331" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.78823529410000004" green="0.59607843140000005" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="TBd-vr-Mi2"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellforTimes2" focusStyle="custom" id="eJG-VI-APK" customClass="CellForTimes" customModule="Championes_Arena" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="331" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eJG-VI-APK" id="vbJ-xt-mp0">
+                                                            <rect key="frame" x="0.0" y="0.0" width="331" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBi-Qy-fXa">
+                                                <rect key="frame" x="41.5" y="922" width="331" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="Dmm-fV-cjw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="Book">
+                                                    <color key="titleColor" red="0.78823529410000004" green="0.59607843140000005" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelAndConfirm:" destination="Udf-4i-Edf" eventType="touchUpInside" id="rnJ-Ru-mAS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="sBi-Qy-fXa" firstAttribute="centerX" secondItem="POV-vZ-FdR" secondAttribute="centerX" id="01j-qy-Rya"/>
+                                            <constraint firstItem="0ZN-DH-EP8" firstAttribute="top" secondItem="0fc-0J-zcQ" secondAttribute="bottom" constant="15" id="0wS-oo-jzj"/>
+                                            <constraint firstItem="0ZN-DH-EP8" firstAttribute="width" secondItem="0fc-0J-zcQ" secondAttribute="width" id="66t-m8-Hlc"/>
+                                            <constraint firstItem="TV4-Nw-Hth" firstAttribute="width" secondItem="0fc-0J-zcQ" secondAttribute="width" id="8Fp-q3-dw2"/>
+                                            <constraint firstItem="PPO-JH-PQc" firstAttribute="top" secondItem="fPj-2K-zch" secondAttribute="bottom" constant="15" id="Cns-kH-rUy"/>
+                                            <constraint firstItem="lwe-Sz-uhv" firstAttribute="width" secondItem="0fc-0J-zcQ" secondAttribute="width" id="DS9-ld-2pa"/>
+                                            <constraint firstItem="PPO-JH-PQc" firstAttribute="centerX" secondItem="0fc-0J-zcQ" secondAttribute="centerX" id="FIN-xk-i2K"/>
+                                            <constraint firstItem="sBi-Qy-fXa" firstAttribute="top" secondItem="POV-vZ-FdR" secondAttribute="bottom" constant="20" id="HBk-BJ-rIt"/>
+                                            <constraint firstItem="Vzy-cM-Q04" firstAttribute="width" secondItem="0fc-0J-zcQ" secondAttribute="width" id="K5p-f4-xiS"/>
+                                            <constraint firstItem="d0D-c0-xDh" firstAttribute="centerX" secondItem="0fc-0J-zcQ" secondAttribute="centerX" id="LPd-Lf-TFd"/>
+                                            <constraint firstItem="d0D-c0-xDh" firstAttribute="top" secondItem="PPO-JH-PQc" secondAttribute="bottom" constant="20" id="NME-Yu-qqo"/>
+                                            <constraint firstItem="Vzy-cM-Q04" firstAttribute="top" secondItem="d0D-c0-xDh" secondAttribute="bottom" constant="10" id="PBV-HF-M7e"/>
+                                            <constraint firstItem="POV-vZ-FdR" firstAttribute="centerX" secondItem="0fc-0J-zcQ" secondAttribute="centerX" id="QKJ-gL-BoJ"/>
+                                            <constraint firstItem="POV-vZ-FdR" firstAttribute="top" secondItem="Vzy-cM-Q04" secondAttribute="bottom" constant="20" id="Sdm-hL-jMS"/>
+                                            <constraint firstItem="PPO-JH-PQc" firstAttribute="width" secondItem="0fc-0J-zcQ" secondAttribute="width" id="TeF-kY-leK"/>
+                                            <constraint firstItem="Vzy-cM-Q04" firstAttribute="centerX" secondItem="0fc-0J-zcQ" secondAttribute="centerX" id="W2t-T2-FW1"/>
+                                            <constraint firstItem="fPj-2K-zch" firstAttribute="width" secondItem="0fc-0J-zcQ" secondAttribute="width" id="W7r-xO-XHX"/>
+                                            <constraint firstItem="TV4-Nw-Hth" firstAttribute="centerX" secondItem="0fc-0J-zcQ" secondAttribute="centerX" id="axI-qp-C4h"/>
+                                            <constraint firstItem="POV-vZ-FdR" firstAttribute="width" secondItem="0fc-0J-zcQ" secondAttribute="width" id="cBm-Xq-9b2"/>
+                                            <constraint firstItem="sBi-Qy-fXa" firstAttribute="width" secondItem="POV-vZ-FdR" secondAttribute="width" id="cGr-XA-Naa"/>
+                                            <constraint firstItem="0fc-0J-zcQ" firstAttribute="width" secondItem="3y4-2w-rUr" secondAttribute="width" multiplier="0.8" id="eC5-Yi-lbX"/>
+                                            <constraint firstItem="0ZN-DH-EP8" firstAttribute="centerX" secondItem="0fc-0J-zcQ" secondAttribute="centerX" id="flR-4Y-HPZ"/>
+                                            <constraint firstAttribute="height" constant="900" id="g5i-ll-JV4"/>
+                                            <constraint firstItem="lwe-Sz-uhv" firstAttribute="top" secondItem="0ZN-DH-EP8" secondAttribute="bottom" constant="10" id="js2-UF-JWy"/>
+                                            <constraint firstItem="0fc-0J-zcQ" firstAttribute="top" secondItem="3y4-2w-rUr" secondAttribute="top" constant="40" id="l7z-Sy-C9T"/>
+                                            <constraint firstItem="TV4-Nw-Hth" firstAttribute="top" secondItem="lwe-Sz-uhv" secondAttribute="bottom" constant="15" id="oTM-7a-o3E"/>
+                                            <constraint firstItem="d0D-c0-xDh" firstAttribute="width" secondItem="0fc-0J-zcQ" secondAttribute="width" id="rtB-u6-gTr"/>
+                                            <constraint firstItem="fPj-2K-zch" firstAttribute="centerX" secondItem="0fc-0J-zcQ" secondAttribute="centerX" id="vIJ-PI-2Mc"/>
+                                            <constraint firstItem="0fc-0J-zcQ" firstAttribute="centerX" secondItem="3y4-2w-rUr" secondAttribute="centerX" id="vWQ-5e-UT9"/>
+                                            <constraint firstItem="lwe-Sz-uhv" firstAttribute="centerX" secondItem="0fc-0J-zcQ" secondAttribute="centerX" id="vYk-3G-DmP"/>
+                                            <constraint firstItem="fPj-2K-zch" firstAttribute="top" secondItem="TV4-Nw-Hth" secondAttribute="bottom" constant="15" id="weQ-4p-I0h"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3y4-2w-rUr" firstAttribute="width" secondItem="cAG-Pm-tZj" secondAttribute="width" id="Rn1-OJ-yAF"/>
+                                    <constraint firstAttribute="bottom" secondItem="3y4-2w-rUr" secondAttribute="bottom" id="Tb2-S6-AJB"/>
+                                    <constraint firstItem="3y4-2w-rUr" firstAttribute="leading" secondItem="cAG-Pm-tZj" secondAttribute="leading" id="VU5-fL-rLt"/>
+                                    <constraint firstItem="3y4-2w-rUr" firstAttribute="top" secondItem="cAG-Pm-tZj" secondAttribute="top" id="VfT-RS-HNq"/>
+                                    <constraint firstAttribute="trailing" secondItem="3y4-2w-rUr" secondAttribute="trailing" id="Y9c-wr-HeV"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cAG-Pm-tZj" firstAttribute="centerX" secondItem="r7O-3U-4cL" secondAttribute="centerX" id="8bs-kW-DeH"/>
+                            <constraint firstItem="0fc-0J-zcQ" firstAttribute="height" secondItem="fre-8q-Emm" secondAttribute="height" multiplier="0.2" id="9p6-Mf-vHV"/>
+                            <constraint firstItem="fre-8q-Emm" firstAttribute="width" secondItem="r7O-3U-4cL" secondAttribute="width" id="Ks6-O3-ZiG"/>
+                            <constraint firstItem="fre-8q-Emm" firstAttribute="centerX" secondItem="dyF-Gs-ccz" secondAttribute="centerX" id="Qko-lZ-xzY"/>
+                            <constraint firstItem="cAG-Pm-tZj" firstAttribute="height" secondItem="r7O-3U-4cL" secondAttribute="height" id="aOA-ea-Rad"/>
+                            <constraint firstItem="cAG-Pm-tZj" firstAttribute="centerY" secondItem="r7O-3U-4cL" secondAttribute="centerY" id="bO0-mr-Alg"/>
+                            <constraint firstItem="cAG-Pm-tZj" firstAttribute="width" secondItem="r7O-3U-4cL" secondAttribute="width" id="cP6-OO-JjM"/>
+                            <constraint firstItem="fre-8q-Emm" firstAttribute="top" secondItem="r7O-3U-4cL" secondAttribute="top" id="hv0-Ac-Uef"/>
+                            <constraint firstAttribute="bottom" secondItem="fre-8q-Emm" secondAttribute="bottom" id="oyR-Kv-TzN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dyF-Gs-ccz"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="900"/>
+                    <connections>
+                        <outlet property="img" destination="0fc-0J-zcQ" id="SD0-Jt-wKT"/>
+                        <outlet property="selectDateBTN" destination="fPj-2K-zch" id="IhT-36-ZyY"/>
+                        <outlet property="tableForTimes" destination="d0D-c0-xDh" id="JbP-qb-sYd"/>
+                        <outlet property="tableForTimes2" destination="POV-vZ-FdR" id="nlG-if-0Qp"/>
+                        <outlet property="titleTXT" destination="0ZN-DH-EP8" id="49w-vb-Mqw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ecr-69-4G4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-746" y="-381"/>
+        </scene>
+        <!--Fac DetailsVC-->
+        <scene sceneID="o9J-QI-MPz">
+            <objects>
+                <viewController storyboardIdentifier="facDetails" id="Og8-Q9-jc1" customClass="FacDetailsVC" customModule="Championes_Arena" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rQ6-in-ajF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zle-S7-Ytc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05-News" translatesAutoresizingMaskIntoConstraints="NO" id="zkZ-po-p5z">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insideIMG" translatesAutoresizingMaskIntoConstraints="NO" id="jQe-IR-Oqz">
+                                        <rect key="frame" x="38" y="40" width="299" height="133"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On the Run (convenience store)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kul-fh-YzG">
+                                        <rect key="frame" x="38" y="183" width="299" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiS-Al-qqy">
+                                        <rect key="frame" x="38" y="214" width="299" height="393"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">On the Run is a flagship convenience store brand developed by ExxonMobil, used at Exxon and Mobil stations in the United States, and at Esso and Mobil stations internationally. Alimentation Couche-Tard acquired the On the Run trademark and franchise network in the U.S. in 2009; ExxonMobil retains full ownership of the brand in the rest of the world.
+
+On the Run stores are described as larger and having more products than older-model convenience stores, featuring "fresh snacks, fill-in groceries, health &amp; beauty supplies, plus quick meal options".[1]
+
+The name "On the Run" is used, untranslated, around the world. Locations in the Canadian province of Quebec utilize similar branding as Marché Express; Imperial Oil faced criticism in 2007 when it planned to rebrand the locations as On the Run (beginning with a new location at a Mount Royal Esso station), but threats of boycotts by the Saint-Jean-Baptiste Society, as well as sanctions from the Office québécois de la langue française (which enforces legal protections of the French language), caused the company to backtrack on this decision.[2]</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" calendarEvent="YES"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGT-bQ-NmK">
+                                        <rect key="frame" x="38" y="622" width="299" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="B7J-wb-dcJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Show Price List">
+                                            <color key="titleColor" red="0.78823529411764703" green="0.59607843137254901" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="downloadBTN:" destination="Og8-Q9-jc1" eventType="touchUpInside" id="OxU-Jj-eVK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="jQe-IR-Oqz" firstAttribute="top" secondItem="Zle-S7-Ytc" secondAttribute="top" multiplier="2" constant="40" id="0qw-b6-mHb"/>
+                                    <constraint firstItem="jQe-IR-Oqz" firstAttribute="centerX" secondItem="zkZ-po-p5z" secondAttribute="centerX" id="1mq-kA-3gR"/>
+                                    <constraint firstItem="zkZ-po-p5z" firstAttribute="centerY" secondItem="Zle-S7-Ytc" secondAttribute="centerY" id="4BW-gm-ECy"/>
+                                    <constraint firstItem="zkZ-po-p5z" firstAttribute="centerX" secondItem="Zle-S7-Ytc" secondAttribute="centerX" id="6hZ-1p-6nb"/>
+                                    <constraint firstItem="kul-fh-YzG" firstAttribute="width" secondItem="jQe-IR-Oqz" secondAttribute="width" id="7Gh-6j-HFV"/>
+                                    <constraint firstItem="kul-fh-YzG" firstAttribute="top" secondItem="jQe-IR-Oqz" secondAttribute="bottom" constant="10" id="84y-Qp-6wf"/>
+                                    <constraint firstItem="zkZ-po-p5z" firstAttribute="height" secondItem="Zle-S7-Ytc" secondAttribute="height" id="8yY-X5-9Hd"/>
+                                    <constraint firstItem="HGT-bQ-NmK" firstAttribute="width" secondItem="jQe-IR-Oqz" secondAttribute="width" id="C1o-Zx-wue"/>
+                                    <constraint firstItem="GiS-Al-qqy" firstAttribute="width" secondItem="jQe-IR-Oqz" secondAttribute="width" id="M95-mw-n3V"/>
+                                    <constraint firstAttribute="bottom" secondItem="HGT-bQ-NmK" secondAttribute="bottom" constant="15" id="Qh7-hE-4ed"/>
+                                    <constraint firstItem="GiS-Al-qqy" firstAttribute="top" secondItem="kul-fh-YzG" secondAttribute="bottom" constant="10" id="cNr-5W-X6T"/>
+                                    <constraint firstItem="GiS-Al-qqy" firstAttribute="centerX" secondItem="jQe-IR-Oqz" secondAttribute="centerX" id="erT-G2-hdH"/>
+                                    <constraint firstItem="HGT-bQ-NmK" firstAttribute="centerX" secondItem="jQe-IR-Oqz" secondAttribute="centerX" id="nHi-FM-yWg"/>
+                                    <constraint firstItem="kul-fh-YzG" firstAttribute="centerX" secondItem="jQe-IR-Oqz" secondAttribute="centerX" id="qnP-MT-OJd"/>
+                                    <constraint firstItem="jQe-IR-Oqz" firstAttribute="width" secondItem="zkZ-po-p5z" secondAttribute="width" multiplier="0.8" id="r89-O7-oMk"/>
+                                    <constraint firstItem="jQe-IR-Oqz" firstAttribute="height" secondItem="zkZ-po-p5z" secondAttribute="height" multiplier="0.2" id="u2d-6d-LOT"/>
+                                    <constraint firstItem="HGT-bQ-NmK" firstAttribute="top" secondItem="GiS-Al-qqy" secondAttribute="bottom" constant="15" id="uYo-XO-vfy"/>
+                                    <constraint firstItem="zkZ-po-p5z" firstAttribute="width" secondItem="Zle-S7-Ytc" secondAttribute="width" id="vAw-Y9-HoJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Zle-S7-Ytc" secondAttribute="bottom" id="Bjm-vq-p2f"/>
+                            <constraint firstItem="Zle-S7-Ytc" firstAttribute="centerX" secondItem="Acc-LF-Bf7" secondAttribute="centerX" id="M2g-MR-FgU"/>
+                            <constraint firstItem="Zle-S7-Ytc" firstAttribute="width" secondItem="rQ6-in-ajF" secondAttribute="width" id="NV9-D7-PSq"/>
+                            <constraint firstItem="Zle-S7-Ytc" firstAttribute="top" secondItem="rQ6-in-ajF" secondAttribute="top" id="ndo-CX-arJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Acc-LF-Bf7"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentTXT" destination="GiS-Al-qqy" id="I9Z-K1-ocD"/>
+                        <outlet property="fileBTN" destination="HGT-bQ-NmK" id="baC-rU-awo"/>
+                        <outlet property="img" destination="jQe-IR-Oqz" id="tY6-PS-y3b"/>
+                        <outlet property="titleTXT" destination="kul-fh-YzG" id="xAT-e0-wfG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BsE-6K-euH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1483" y="-409"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="05-News" width="640" height="711"/>
+        <image name="insideIMG" width="548" height="201"/>
+        <image name="selectday" width="30" height="30"/>
+    </resources>
+</document>

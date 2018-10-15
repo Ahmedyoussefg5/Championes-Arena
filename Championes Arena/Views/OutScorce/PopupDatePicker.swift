@@ -36,7 +36,7 @@ open class DatePickerDialog: UIView {
     // MARK: - Dialog initialization
     public init(textColor: UIColor = UIColor.black,
                 buttonColor: UIColor = UIColor.blue,
-                font: UIFont = .boldSystemFont(ofSize: 15),
+                font: UIFont = .boldSystemFont(ofSize: 16),
                 locale: Locale? = nil,
                 showCancelButton: Bool = true) {
         let size = UIScreen.main.bounds.size
@@ -46,6 +46,7 @@ open class DatePickerDialog: UIView {
         self.font = font
         self.showCancelButton = showCancelButton
         self.locale = locale
+        
         setupView()
     }
     
@@ -66,7 +67,7 @@ open class DatePickerDialog: UIView {
         self.dialogView!.layer.transform = CATransform3DMakeScale(1.3, 1.3, 1)
         
         self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
-        
+        //datePicker.backgroundColor = UIColor.init(red: 201, green: 152, blue: 7)
         self.addSubview(self.dialogView!)
     }
     
@@ -180,7 +181,6 @@ open class DatePickerDialog: UIView {
         let cornerRadius = kCornerRadius
         gradient.cornerRadius = cornerRadius
         container.layer.insertSublayer(gradient, at: 0)
-        
         container.layer.cornerRadius = cornerRadius
         container.layer.borderColor = UIColor(red: 198/255, green: 198/255, blue: 198/255, alpha: 1).cgColor
         container.layer.borderWidth = 1

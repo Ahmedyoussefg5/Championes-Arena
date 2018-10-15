@@ -56,6 +56,9 @@
 		E887FB50215AD81F0071A15D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB41215AD81F0071A15D /* ViewController.swift */; };
 		E8B65E80216EDA30008BBD3B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B65E7F216EDA30008BBD3B /* StringExtension.swift */; };
 		E8BAC614217497B300B83F52 /* Login_Regster_SB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8BAC613217497B300B83F52 /* Login_Regster_SB.storyboard */; };
+		E8BAC6162174B77200B83F52 /* DetailsVCsStoryB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8BAC6152174B77200B83F52 /* DetailsVCsStoryB.storyboard */; };
+		E8BAC6182174DB5B00B83F52 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BAC6172174DB5B00B83F52 /* Notifications.swift */; };
+		E8BAC61A2175036B00B83F52 /* Date Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BAC6192175036B00B83F52 /* Date Converter.swift */; };
 		E8CC2D292173DCA000221278 /* Rate and send Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CC2D282173DCA000221278 /* Rate and send Message.swift */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +148,9 @@
 		E8929E992161324800E81D97 /* Championes Arena.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Championes Arena.entitlements"; sourceTree = "<group>"; };
 		E8B65E7F216EDA30008BBD3B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E8BAC613217497B300B83F52 /* Login_Regster_SB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login_Regster_SB.storyboard; sourceTree = "<group>"; };
+		E8BAC6152174B77200B83F52 /* DetailsVCsStoryB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailsVCsStoryB.storyboard; sourceTree = "<group>"; };
+		E8BAC6172174DB5B00B83F52 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		E8BAC6192175036B00B83F52 /* Date Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Converter.swift"; sourceTree = "<group>"; };
 		E8CC2D282173DCA000221278 /* Rate and send Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate and send Message.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,7 +244,6 @@
 				E887FAF0215AD7680071A15D /* API */,
 				E887FB03215AD7D60071A15D /* Model */,
 				E887FB34215AD81F0071A15D /* Views */,
-				E887FAE5215AD5280071A15D /* Assets.xcassets */,
 				E887FB17215AD8190071A15D /* Controller */,
 			);
 			path = "Championes Arena";
@@ -255,6 +260,7 @@
 				E887FAF5215AD7680071A15D /* getTimesAPI.swift */,
 				E887FAF1215AD7680071A15D /* BookAPI.swift */,
 				E8CC2D282173DCA000221278 /* Rate and send Message.swift */,
+				E8BAC6172174DB5B00B83F52 /* Notifications.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				E887FADE215AD5270071A15D /* AppDelegate.swift */,
 				E887FB11215AD80C0071A15D /* Alert.swift */,
 				E887FB0F215AD80C0071A15D /* Helper.swift */,
+				E8BAC6192175036B00B83F52 /* Date Converter.swift */,
 				E887FB10215AD80C0071A15D /* PicinTitle.swift */,
 				E887FB12215AD80C0071A15D /* CustomButton.swift */,
 				E839A07A216D2A8400455E55 /* LocalNotificationsPushing.swift */,
@@ -323,8 +330,10 @@
 			isa = PBXGroup;
 			children = (
 				E887FAFF215AD7990071A15D /* Main.storyboard */,
+				E8BAC6152174B77200B83F52 /* DetailsVCsStoryB.storyboard */,
 				E8BAC613217497B300B83F52 /* Login_Regster_SB.storyboard */,
 				E887FB01215AD7C90071A15D /* LaunchScreen.storyboard */,
+				E887FAE5215AD5280071A15D /* Assets.xcassets */,
 				E887FB35215AD81F0071A15D /* Cells For Table */,
 				E887FB39215AD81F0071A15D /* OutScorce */,
 				E887FB3D215AD81F0071A15D /* Rate */,
@@ -483,6 +492,7 @@
 				E887FB4F215AD81F0071A15D /* RatingViewController.xib in Resources */,
 				E887FAE6215AD5280071A15D /* Assets.xcassets in Resources */,
 				E887FB00215AD7990071A15D /* Main.storyboard in Resources */,
+				E8BAC6162174B77200B83F52 /* DetailsVCsStoryB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +599,7 @@
 				E887FB4E215AD81F0071A15D /* RatingViewController.swift in Sources */,
 				E887FB4C215AD81F0071A15D /* SwiftNotice.swift in Sources */,
 				E887FB2F215AD8190071A15D /* Rigister.swift in Sources */,
+				E8BAC6182174DB5B00B83F52 /* Notifications.swift in Sources */,
 				E887FB48215AD81F0071A15D /* CellForNews.swift in Sources */,
 				E887FAFB215AD7690071A15D /* GetData-TopBar.swift in Sources */,
 				E887FB50215AD81F0071A15D /* ViewController.swift in Sources */,
@@ -604,6 +615,7 @@
 				E887FB2D215AD8190071A15D /* PassReset.swift in Sources */,
 				E887FB33215AD8190071A15D /* THEMainVC.swift in Sources */,
 				E887FAF9215AD7690071A15D /* Constants.swift in Sources */,
+				E8BAC61A2175036B00B83F52 /* Date Converter.swift in Sources */,
 				E887FB32215AD8190071A15D /* SettingsVC.swift in Sources */,
 				E8B65E80216EDA30008BBD3B /* StringExtension.swift in Sources */,
 				E887FB4A215AD81F0071A15D /* CoutomAlert.swift in Sources */,

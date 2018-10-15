@@ -15,7 +15,7 @@ class Helper: NSObject{
 
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let homeVC = sb.instantiateViewController(withIdentifier: "mainVC") as! MAINVC
-        homeVC.currentSelectedButton = 2
+        currentSelectedButton = 2
         let navigationController = UINavigationController(rootViewController: homeVC)
         //self.present(navigationController, animated: true, completion: nil)
         
@@ -75,21 +75,7 @@ class Helper: NSObject{
         return emailTest.evaluate(with: usermail)
     }
     
-    class func getDatecomponents (date: Date) -> String
-    {
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        
-            let myString = formatter.string(from: date)
-            let Date = formatter.date(from: myString)
-            formatter.dateFormat = "yyyy-MM-dd"
-            //formatter.dateFormat = "dd-MMM-yyyy"
-            let myStringafd = formatter.string(from: Date!)
-            //print("pik date is ", myStringafd)
-        return myStringafd
-        
-    }
+
 }
 
 

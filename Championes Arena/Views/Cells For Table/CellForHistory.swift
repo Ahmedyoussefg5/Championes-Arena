@@ -9,7 +9,7 @@
 import UIKit
 
 class CellForHistory: UITableViewCell {
-
+    
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var dayT: UILabel!
     @IBOutlet weak var timeT: UILabel!
@@ -24,29 +24,31 @@ class CellForHistory: UITableViewCell {
         status.text = data.status
         let imgStat = data.status
         switch imgStat {
-        case "wait":
+        case "unconfirmed":
             img.image = UIImage(named: "wait")
-        case "cancel":
+        case "canceled":
             img.image = UIImage(named: "cancel")
-        case "done":
+        case "confirmed":
             img.image = UIImage(named: "confirmed")
         default:
             return
-        } // wait, cancel, done
+        } //"Status Booking:
+      //  unconfirmed, canceled, confirmed"
     }
+    
+    func ConfigureCellforNot(data: Datum) {
+        
+        title.text = data.title
+        dayT.text = data.content
+        img.image = drawRectangleOnImage(image: img.image!)
+        
+        let d = DateConverter.getDateFromString(myDate: data.createdAt!)
+        
 
-    func ConfigureCellforNot(index: Int) {
-        title.text = "Your booking #1001: is confimed in "
-        dayT.text = "Playgroung #1";
-        timeT.text = "1-9-2018"
         timeT.textAlignment = .left
-        status.text = "10:00 AM - 11:00 AM"
-
-        //img.image = nil
+        timeT.text = DateConverter.getTimeFromDate(D: d!)
+        status.text = DateConverter.getDateFromDate(D: d!)
         
-       let newIMG = drawRectangleOnImage(image: img.image!)
-        
-        img.image = newIMG
     }
     
     func drawRectangleOnImage(image: UIImage) -> UIImage {
@@ -67,4 +69,6 @@ class CellForHistory: UITableViewCell {
         UIGraphicsEndImageContext()
         return newImage!
     }
+    
+
 }

@@ -10,7 +10,6 @@ import UIKit
 
 class MAINVC: UIViewController{
     
-    var currentSelectedButton: Int = 0
     
     @IBOutlet weak var newsBTN: UIButton!
     @IBOutlet weak var bookBTN: UIButton!
@@ -130,8 +129,7 @@ class MAINVC: UIViewController{
                 viewContoller.willMove(toParentViewController: nil)
                 viewContoller.view.removeFromSuperview()
                 viewContoller.removeFromParentViewController()
-            }
-        }
+            } }
         gatDATA()
     }
     
@@ -139,31 +137,29 @@ class MAINVC: UIViewController{
     func toNewsDetails_Settings(i: Int)
     {
         let NewsDetails: UIViewController
-        
+        let detailsVCsStoryB = UIStoryboard.init(name: "DetailsVCsStoryB", bundle: nil)
         switch currentSelectedButton {
         case 1:
-            NewsDetails = storyboard!.instantiateViewController(withIdentifier: "newsDetails") as! NewsDetailsVC
+            NewsDetails = detailsVCsStoryB.instantiateViewController(withIdentifier: "newsDetails") as! NewsDetailsVC
             NewsDetailsVC.NewsAll.removeAll()
             NewsDetailsVC.NewsAll.append(MAINVC.NewsAll[i])
             //print(a.indexx)
         case 2:
-            NewsDetails = (storyboard?.instantiateViewController(withIdentifier: "bookDetails"))! as! ReservationDetails
+            NewsDetails = detailsVCsStoryB.instantiateViewController(withIdentifier: "bookDetails") as! ReservationDetails
             ReservationDetails.NewsAll.removeAll()
             ReservationDetails.NewsAll.append(MAINVC.NewsAll[i])
             ReservationDetails.id = i
         case 3:
-            NewsDetails = (storyboard?.instantiateViewController(withIdentifier: "facDetails"))! as! FacDetailsVC
+            NewsDetails = detailsVCsStoryB.instantiateViewController(withIdentifier: "facDetails") as! FacDetailsVC
             FacDetailsVC.NewsAll.removeAll()
             FacDetailsVC.NewsAll.append(MAINVC.NewsAll[i])
         case 4:
             NewsDetails = (storyboard?.instantiateViewController(withIdentifier: "settingsVC"))! //as! TableViewVC
         default:
-            return
-        }
+            return }
         
         addChildViewController(NewsDetails)
         self.mainV.addSubview(NewsDetails.view)
-        NewsDetails.view.frame = view.bounds
         NewsDetails.view.frame = mainV.bounds
         NewsDetails.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         NewsDetails.didMove(toParentViewController: self)
@@ -183,10 +179,8 @@ class MAINVC: UIViewController{
                 historyVC.type = 2
             default:
                 return
-            }
-        }
-        else {
-            historyVC.type = 0 }
+            } }
+        else { historyVC.type = 0 }
         
         if currentSelectedButton != 6 || currentSelectedButton != 5 {
             addChildViewController(historyVC)
@@ -195,8 +189,7 @@ class MAINVC: UIViewController{
             historyVC.view.frame = mainV.bounds
             historyVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             historyVC.didMove(toParentViewController: self)
-        }
-    } //getHistory
+        } } //getHistory
     
     func getCurrentselectedBTN() {
         switch currentSelectedButton {
@@ -208,8 +201,7 @@ class MAINVC: UIViewController{
             facilitiesBTN.setBackgroundImage(UIImage(named: "Facse.png"), for: .normal);
         default:
             return
-        }
-    } //getCurrentselectedBTN
+        } } //getCurrentselectedBTN
     
     func gatDATA()  {
         ApiMethods.GETNEWS(x: currentSelectedButton) { (error, status) in

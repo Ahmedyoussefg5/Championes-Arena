@@ -59,7 +59,7 @@ class SettingsVC: UIViewController {
             if mes != "" {
                 self.sendMessage(messageE: mes!) }
                 else {
-                Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Message First.")
+                ProgressHUD.showError("Enter Your Message First.")
             } }
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
@@ -72,8 +72,8 @@ class SettingsVC: UIViewController {
         alert.addAction(send)
         alert.addAction(cancel)
         
-        textView.backgroundColor = UIColor.darkGray
-        alert.view.tintColor = UIColor.yellow
+        textView.backgroundColor = UIColor.darkGray //0.00, 0.24, 0.97, 0.21
+        alert.view.tintColor = UIColor.init(red: 201, green: 152, blue: 7)
         
         present(alert, animated: true, completion: nil)
         if let visualEffectView = alert.view.searchVisualEffectsSubview()
@@ -138,8 +138,7 @@ class SettingsVC: UIViewController {
             return }
         else {
             login_now()
-        }
-    }
+        } }
     
     func checkIfRegistered () -> Bool {
         
@@ -210,6 +209,7 @@ class SettingsVC: UIViewController {
             //"You canceled the rating dialog"
         }
         let buttonTwo = DefaultButton(title: "RATE", height: 50) {
+            
             self.submitRate(rate: Int(ratingVC.cosmosStarRating.rating), comment: ratingVC.commentTextField.text!)
         }
         popup.addButtons([buttonOne, buttonTwo])
@@ -219,52 +219,45 @@ class SettingsVC: UIViewController {
     
     func submitRate(rate: Int, comment: String)
     {
-        ApiMethods.rate_(rate: rate, comment: comment) { (error, status, messageArray) in
+        ApiMethods.rate_(rate: rate, comment: comment) { (error, status, done) in
             if error == nil {
                 if status! {
-                    Alert.showNotice(messagesArray: nil, stringMSG: "Successfully submitted.")
+                    if done {
+                        //Alert.showNotice(messagesArray: nil, stringMSG: "Successfully Submitted.")
+                        ProgressHUD.showSuccess("Successfully Submitted.")
+                    }
+                    else {
+                       // Alert.showNotice(messagesArray: nil, stringMSG: ")
+                        ProgressHUD.showSuccess("You Have Submitted Before.")
+
+                    }
+                    }
+                else {
+                    ProgressHUD.showError("Error Happened, Try Again Later.") }
                 } else {
-                    Alert.showNotice(messagesArray: nil, stringMSG: "Error Happened, Try Again Later.")
-                } }
-            else {
-                Alert.showNotice(messagesArray: nil, stringMSG: "Error Happened, Try Again Later.") } }
-    }
+                    //Alert.showNotice(messagesArray: nil, stringMSG: "Error Happened, Try Again Later.") }
+                ProgressHUD.showError("Error Happened, Try Again Later.")
+            } } }
     
     func sendMessage(messageE: String)
     {
         ApiMethods.sendMessage(message: messageE) { (error, status, messageArray) in
             if error == nil {
                 if status! {
-                    Alert.showNotice(messagesArray: nil, stringMSG: "Successfully submitted.")
+                    ProgressHUD.showSuccess("Successfully Submitted.")
                 } else {
-                    Alert.showNotice(messagesArray: nil, stringMSG: "Error Happened, Try Again Later.")
-                } }
+                    ProgressHUD.showError("Error Happened, Try Again Later.") }
+                }
             else {
-                Alert.showNotice(messagesArray: nil, stringMSG: "Error Happened, Try Again Later.") } }
-    }
+                ProgressHUD.showError("Error Happened, Try Again Later.")
+            } } }
+    
 }
+
 extension NSLayoutConstraint {
     func constraintWithMultiplier(_ multiplier: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: self.firstItem!, attribute: self.firstAttribute, relatedBy: self.relation, toItem: self.secondItem, attribute: self.secondAttribute, multiplier: multiplier, constant: self.constant)
     }
 }
 
-extension UIView
-{
-    func searchVisualEffectsSubview() -> UIVisualEffectView?
-    {
-        if let visualEffectView = self as? UIVisualEffectView
-        {
-            return visualEffectView
-        }
-        else
-        {
-            for subview in subviews
-            {
-                if let found = subview.searchVisualEffectsSubview()
-                {
-                    return found
-                } } }
-        return nil
-    }
-}
+
