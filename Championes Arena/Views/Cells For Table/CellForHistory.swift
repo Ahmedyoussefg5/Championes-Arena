@@ -16,7 +16,12 @@ class CellForHistory: UITableViewCell {
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var img: UIImageView!
     
+    @IBOutlet var topConsterin: NSLayoutConstraint!
+    
     func ConfigureCellforHistory(data: Booking)  {
+        
+        topConsterin.constant = 15
+        
         title.text = "Booking:#" + String(data.id) + " playground #" + String(data.playgroundID)
         dayT.text = data.date
         timeT.text = data.timeFrom + " - " + data.timeTo
@@ -37,6 +42,8 @@ class CellForHistory: UITableViewCell {
     }
     
     func ConfigureCellforNot(data: Datum) {
+        
+        topConsterin.constant = 2
         
         title.text = data.title
         dayT.text = data.content

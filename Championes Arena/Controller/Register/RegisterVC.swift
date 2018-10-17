@@ -28,22 +28,27 @@ class RegisterVC: UIViewController {
     @IBAction func registerBTN(_ sender: Any) {
         
         guard let name = nameTXT.text, !name.isEmpty else {
-            Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Name" )
+            ProgressHUD.showError("Enter Your Name")
+            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Name" )
             return }
         guard let email = emailTXT.text, !email.isEmpty, Helper.isValidEmail(usermail: email) else {
-            Alert.showNotice(messagesArray: nil, stringMSG: "Enter Valid E-Mail" )
+            ProgressHUD.showError("Enter Valid E-Mail")
+            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter Valid E-Mail" )
             return }
         guard let mobile = mobileTXT.text, !mobile.isEmpty else {
-            Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Mobile" )
+            ProgressHUD.showError("Enter Your Mobile")
+            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Mobile" )
             return }
         guard let pass = pass1.text, !pass.isEmpty, pass.count > 5 else {
-            Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Password" )
+            ProgressHUD.showError("Enter Your Password")
+            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Password" )
             return }
         
         if pass == pass2.text {
             Rigister.online_Reg(name: name, email: email, phone: mobile, pass: pass)
         } else {
-            Alert.showNotice(messagesArray: nil, stringMSG: "Password fildes are not equal" )
+            ProgressHUD.showError("Password Fildes Are Not Equal")
+            //Alert.showNotice(messagesArray: nil, stringMSG: "Password Fildes Are Not Equal" )
             return }
     }
     

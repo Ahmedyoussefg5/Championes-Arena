@@ -53,6 +53,7 @@ class ApiMethods {
                     if let api_token = json["api_token"].string {
                         print(api_token)
                         Helper.saveIPItoken(apistring: api_token)
+                        //apiTokenMain = api_token;
                         DispatchQueue.main.async {
                             ApiMethods.RegisterUserOn_OneSignal()
                         }
@@ -137,24 +138,25 @@ class ApiMethods {
                 }
                 else {
                     /*
-                     {
-                     "api_token" : "42f9aa7888c982340532634c1c47a63fd160cae4d534861a3bee7c630df6b4bdf39ae667",
-                     "status" : true,
-                     "user" : {
-                     "email" : "a@a.aa",
-                     "id" : 8,
-                     "image" : null,
-                     "updated_at" : "2018-09-17 12:59:07",
-                     "created_at" : "2018-09-17 12:58:55",
-                     "phone" : "010412df5r6s369",
-                     "player_id" : null,
-                     "birthday" : null,
-                     "username" : "Ahmed"
-                     }
-                     }
+                        {
+                         "api_token" : "42f9aa7888c982340532634c1c47a63fd160cae4d534861a3bee7c630df6b4bdf39ae667",
+                         "status" : true,
+                         "user" : {
+                         "email" : "a@a.aa",
+                         "id" : 8,
+                         "image" : null,
+                         "updated_at" : "2018-09-17 12:59:07",
+                         "created_at" : "2018-09-17 12:58:55",
+                         "phone" : "010412df5r6s369",
+                         "player_id" : null,
+                         "birthday" : null,
+                         "username" : "Ahmed"
+                         }
+                        }
                      */
                     guard let api_Token = json["api_token"].string else { return }
                     Helper.saveIPItoken(apistring: api_Token)
+                    //apiTokenMain = api_Token;
                     DispatchQueue.main.async {
                         ApiMethods.RegisterUserOn_OneSignal()
                     }

@@ -40,79 +40,130 @@ class MAINVC: UIViewController{
         
         getCurrentselectedBTN();
         
-        gatDATA()
+        handleRefresh()
     }
-    
-    var isLoading : Bool = false
     
     lazy var refresher : UIRefreshControl = {
         let refresher = UIRefreshControl()
-        refresher.tintColor = UIColor.yellow
+        refresher.tintColor = UIColor.init(red: 201, green: 152, blue: 7)
         refresher.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         return refresher
     }()
     
-    @objc private func handleRefresh () {
+    var isLoading: Bool = false
+    var current_page = 1
+    var last_page = 1
+    @objc fileprivate func handleRefresh() {
         self.refresher.endRefreshing()
-        gatDATA()
+        guard !isLoading else { return }
+        
+        isLoading = true
+        ApiMethods.GETNEWS { (error, status, last_page) in
+            self.isLoading = false
+            if error == nil {
+                if status! {
+                    self.tableForData.reloadData()
+                    
+                    self.current_page = 1
+                    self.last_page = last_page }
+                else {
+                    ProgressHUD.showError("Network Error")
+                }
+            }
+            else {
+                ProgressHUD.showError("Network Error")
+            }
+        }
     }
+    
+    
+    fileprivate func loadMore() {
+        guard !isLoading else { return }
+        guard current_page < last_page else { return }
+        
+        isLoading = true
+        ApiMethods.GETNEWS (page: current_page + 1) { (error, status, last_page) in
+            self.isLoading = false
+            if error == nil {
+                if status! {
+                    self.tableForData.reloadData()
+                    
+                    self.current_page += 1
+                    self.last_page = last_page
+                    
+                }
+                else {
+                    ProgressHUD.showError("Network Error")
+                }
+            }
+            else {
+                ProgressHUD.showError("Network Error")
+            }
+        }
+    }
+    
     
     @IBAction func signOutBTN(_ sender: Any) {
         Helper.signOut()
     }
     
     @IBAction func newsCLK(_ sender: Any) {
-        if currentSelectedButton != 1 {
-            currentSelectedButton = 1
-            newsBTN.setBackgroundImage(UIImage(named: "Newsse.png"), for: .normal);
-            reset(btn: sender as! UIButton, img: "News.png")
-            getNewsTable()
-        } }
+        //if currentSelectedButton != 1 {
+        currentSelectedButton = 1
+        newsBTN.setBackgroundImage(UIImage(named: "Newsse.png"), for: .normal);
+        reset(btn: sender as! UIButton, img: "News.png")
+        getNewsTable()
+    } //}
     
     @IBAction func bookCLK(_ sender: Any) {
-        if currentSelectedButton != 2 {
-            currentSelectedButton = 2
-            bookBTN.setBackgroundImage(UIImage(named: "Bookse.png"), for: .normal);
-            reset(btn: sender as! UIButton, img: "Book.png")
-            getNewsTable()
-        } }
+        //if currentSelectedButton != 2 {
+        currentSelectedButton = 2
+        bookBTN.setBackgroundImage(UIImage(named: "Bookse.png"), for: .normal);
+        reset(btn: sender as! UIButton, img: "Book.png")
+        getNewsTable()
+    } //}
     
     @IBAction func facilitiesCLK(_ sender: Any) {
-        if currentSelectedButton != 3 {
-            currentSelectedButton = 3
-            facilitiesBTN.setBackgroundImage(UIImage(named: "Facse.png"), for: .normal);
-            reset(btn: sender as! UIButton, img: "Fac.png")
-            getNewsTable()
-        } }
+        //if currentSelectedButton != 3 {
+        currentSelectedButton = 3
+        facilitiesBTN.setBackgroundImage(UIImage(named: "Facse.png"), for: .normal);
+        reset(btn: sender as! UIButton, img: "Fac.png")
+        getNewsTable()
+    } //}
     
     @IBAction func settingsCLK(_ sender: Any) {
-        if currentSelectedButton != 4 {
-            currentSelectedButton = 4
-            toNewsDetails_Settings(i: 0)
-            settingsBTN.setBackgroundImage(UIImage(named: "settingsse.png"), for: .normal);
-            reset(btn: sender as! UIButton, img: "settings.png")
-        } }
+        // if currentSelectedButton != 4 {
+        currentSelectedButton = 4
+        toNewsDetails_Settings(i: 0)
+        settingsBTN.setBackgroundImage(UIImage(named: "settingsse.png"), for: .normal);
+        reset(btn: sender as! UIButton, img: "settings.png")
+    } //}
     
     @IBAction func calCLK(_ sender: Any) {
+        getBookingHistory()
+    }
+    
+    func getBookingHistory() {
         if checkIfRegistered() {
-            if currentSelectedButton != 5 {
-                currentSelectedButton = 5
-                getHistory()
-                calBTN.setBackgroundImage(UIImage(named: "calenderse.png"), for: .normal);
-                reset(btn: sender as! UIButton, img: "calender.png")
-            } }
-            else {
-                let VC2 = self.storyboard!.instantiateViewController(withIdentifier: "loginVC") as! LoginVC
-                self.navigationController!.pushViewController(VC2, animated: true)
-        } }
-        
+            //  if currentSelectedButton != 5 {
+            currentSelectedButton = 5
+            getHistory()
+            calBTN.setBackgroundImage(UIImage(named: "calenderse.png"), for: .normal);
+            reset(btn: calBTN, img: "calender.png")
+        } //}
+        else {
+            let VC2 = self.storyboard!.instantiateViewController(withIdentifier: "loginVC") as! LoginVC
+            self.navigationController!.pushViewController(VC2, animated: true)
+        }
+    }
+    
     @IBAction func billCLK(_ sender: Any) {
-        if currentSelectedButton != 6 {
-            currentSelectedButton = 6
-            getHistory();
-            billBTN.setBackgroundImage(UIImage(named: "billImgse.png"), for: .normal);
-            reset(btn: sender as! UIButton, img: "billImg.png")
-            } }
+        // if currentSelectedButton != 6 {
+        currentSelectedButton = 6
+        getHistory();
+        billBTN.setBackgroundImage(UIImage(named: "billImgse.png"), for: .normal);
+        reset(btn: sender as! UIButton, img: "billImg.png")
+    } //}
     
     public func reset(btn: UIButton, img: String) {
         let dictBTNs: [UIButton: String] = [self.newsBTN: "News.png", self.bookBTN: "Book.png", self.facilitiesBTN: "Fac.png", self.settingsBTN: "settings.png", self.calBTN: "calender.png", self.billBTN: "billImg.png"]
@@ -130,7 +181,8 @@ class MAINVC: UIViewController{
                 viewContoller.view.removeFromSuperview()
                 viewContoller.removeFromParentViewController()
             } }
-        gatDATA()
+        //MAINVC.NewsAll.removeAll()
+        handleRefresh()
     }
     
     // Click on cell on Table V
@@ -143,7 +195,7 @@ class MAINVC: UIViewController{
             NewsDetails = detailsVCsStoryB.instantiateViewController(withIdentifier: "newsDetails") as! NewsDetailsVC
             NewsDetailsVC.NewsAll.removeAll()
             NewsDetailsVC.NewsAll.append(MAINVC.NewsAll[i])
-            //print(a.indexx)
+        //print(a.indexx)
         case 2:
             NewsDetails = detailsVCsStoryB.instantiateViewController(withIdentifier: "bookDetails") as! ReservationDetails
             ReservationDetails.NewsAll.removeAll()
@@ -169,7 +221,8 @@ class MAINVC: UIViewController{
     
     func getHistory()
     {
-        let historyVC = storyboard!.instantiateViewController(withIdentifier: "historyVC") as! HistoryVC //mainVC
+        let historyVC = UIStoryboard.init(name: "tableFor-History-Notification", bundle: nil).instantiateViewController(withIdentifier: "historyVC") as! HistoryVC
+        //storyboard!.instantiateViewController(withIdentifier: "historyVC") as! HistoryVC //mainVC
         
         if checkIfRegistered() {
             switch currentSelectedButton {
@@ -203,18 +256,7 @@ class MAINVC: UIViewController{
             return
         } } //getCurrentselectedBTN
     
-    func gatDATA()  {
-        ApiMethods.GETNEWS(x: currentSelectedButton) { (error, status) in
-            if error == nil {
-                if status == true {
-                    self.tableForData.reloadData()
-                } else {
-                    Alert.showNotice(messagesArray: nil, stringMSG: "Network Error")
-                    
-                }
-            } else {
-                Alert.showNotice(messagesArray: nil, stringMSG: "Network Error")
-            } } }
+    
     
     func checkIfRegistered () -> Bool {
         
@@ -265,8 +307,17 @@ extension MAINVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+        if indexPath.row == MAINVC.NewsAll.count - 1 {
+            // on the last row
+            
+            self.loadMore()
+        }
+    }
+    
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-        Alert.showNotice(messagesArray: nil, stringMSG: "I was shaked! Hold your phone.")
+        //Alert.showNotice(messagesArray: nil, stringMSG: "I was shaked! Hold your phone.")
     }
 }
 

@@ -13,30 +13,40 @@ class HistoryVC: UIViewController {
     var type: Int = 0
     var dataModel = [Booking]()
     var dataNotifications = [Datum]()
-
+    
+    lazy var refresher : UIRefreshControl = {
+        let refresher = UIRefreshControl()
+        refresher.tintColor = UIColor.init(red: 201, green: 152, blue: 7)
+        if type == 1 {
+            refresher.addTarget(self, action: #selector(get_History_Now), for: .valueChanged) }
+        if type == 2 {
+            refresher.addTarget(self, action: #selector(get_Notifications_Now), for: .valueChanged) }
+        return refresher
+    }()
+    
     @IBOutlet weak var tableForHistory: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableForHistory.backgroundColor = UIColor.clear
         tableForHistory.isOpaque = false
         tableForHistory.backgroundView = nil
-        
-//        tableForHistory.tableFooterView = UIView()
-//        tableForHistory.separatorInset = .zero
-//        tableForHistory.contentInset = .zero
+        tableForHistory.tableFooterView = UIView()
+        tableForHistory.separatorInset = .zero
+        tableForHistory.contentInset = .zero
+        tableForHistory.addSubview(refresher)
         
         if type == 1 {
-            Get_History_Now()
+            get_History_Now()
         }
         else if type == 2 {
-            Get_Notifications_Now()
+            get_Notifications_Now()
         }
         print(type)
     }
     
-    func Get_History_Now()
+    @objc fileprivate func get_History_Now()
     {
         ApiMethods.getHistory() { (error, status, messagesArray, history) in
             if error == nil {
@@ -45,64 +55,118 @@ class HistoryVC: UIViewController {
                     self.dataModel = self.dataModel.sorted(by: { $0.createdAt > $1.createdAt })
                     DispatchQueue.main.async {
                         self.tableForHistory.reloadData()
+                        self.refresher.endRefreshing()
                     }
                 }
                 else {
-                    Alert.showNotice(messagesArray: messagesArray, stringMSG: nil) }
+                    self.refresher.endRefreshing()
+                    ProgressHUD.showError(Helper.getMessage(messages: messagesArray))
+                }
             } else {
-                Alert.showNotice(messagesArray: messagesArray, stringMSG: nil) }
+                self.refresher.endRefreshing()
+                ProgressHUD.showError(Helper.getMessage(messages: messagesArray))
+            }
         } }
     
-    func Get_Notifications_Now()
-    {
-        ApiMethods.getNotifications() { (error, status, notifications) in
+
+    
+    
+    var isLoading: Bool = false
+    var current_page = 1
+    var last_page = 1
+    @objc fileprivate func get_Notifications_Now() {
+        self.refresher.endRefreshing()
+        guard !isLoading else { return }
+        
+        isLoading = true
+        ApiMethods.getNotifications { (error, status, notifications, last_page)  in
+            self.isLoading = false
             if error == nil {
-                if status == true {
+                if status! {
                     self.dataNotifications = notifications!
                     //self.dataNotifications = self.dataNotifications.sorted(by: { $0.createdAt > $1.createdAt })
                     DispatchQueue.main.async {
                         self.tableForHistory.reloadData()
                     }
+                    self.current_page = 1
+                    self.last_page = last_page }
+                else {
+                    ProgressHUD.showError("Network Error")
+                }
+            }
+            else {
+                ProgressHUD.showError("Network Error")
+            }
+        }
+    }
+    
+    
+    fileprivate func loadMoreNotifications() {
+        guard !isLoading else { return }
+        guard current_page < last_page else { return }
+        
+        isLoading = true
+        ApiMethods.getNotifications(page: current_page + 1) { (error, status, notifications, last_page) in
+            self.isLoading = false
+            if error == nil {
+                if status! {
+                    for element in notifications! {
+                        self.dataNotifications.append(element)
+                    }
+                    //print(self.dataNotifications)
+                    //self.dataNotifications.append(notifications)
+                    DispatchQueue.main.async {
+                        self.tableForHistory.reloadData()
+                    }
+                    
+                    self.current_page += 1
+                    self.last_page = last_page
                 }
                 else {
-                    Alert.showNotice(messagesArray: nil, stringMSG: "Error Happened, Try Again Later.") }
-            } else {
-                Alert.showNotice(messagesArray: nil, stringMSG: "Error With Connection, Try Again Later.") }
-        } }
-    
-    func toNewsDetails_Settings(i: Int)
-    {
-        let NewsDetails: UIViewController
-        let detailsVCsStoryB = UIStoryboard.init(name: "DetailsVCsStoryB", bundle: nil)
-        switch currentSelectedButton {
-        case 1:
-            NewsDetails = detailsVCsStoryB.instantiateViewController(withIdentifier: "newsDetails") as! NewsDetailsVC
-            NewsDetailsVC.NewsAll.removeAll()
-            NewsDetailsVC.NewsAll.append(MAINVC.NewsAll[i])
-        //print(a.indexx)
-        case 2:
-            NewsDetails = detailsVCsStoryB.instantiateViewController(withIdentifier: "bookDetails") as! ReservationDetails
-            ReservationDetails.NewsAll.removeAll()
-            ReservationDetails.NewsAll.append(MAINVC.NewsAll[i])
-            ReservationDetails.id = i
-        case 3:
-            NewsDetails = detailsVCsStoryB.instantiateViewController(withIdentifier: "facDetails") as! FacDetailsVC
-            FacDetailsVC.NewsAll.removeAll()
-            FacDetailsVC.NewsAll.append(MAINVC.NewsAll[i])
-        case 4:
-            NewsDetails = (storyboard?.instantiateViewController(withIdentifier: "settingsVC"))! //as! TableViewVC
-        default:
-            return }
-        
-        addChildViewController(NewsDetails)
-        self.view.addSubview(NewsDetails.view)
-        NewsDetails.view.frame = view.bounds
-        NewsDetails.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        NewsDetails.didMove(toParentViewController: self)
-        
-        currentSelectedButton = 0
+                    ProgressHUD.showError("Network Error")
+                }
+            }
+            else {
+                ProgressHUD.showError("Network Error")
+            }
+        }
     }
+    
+    
 
+    
+    
+    func getDataForNews(i: Int) {
+        ApiMethods.getNotificationsContentForOneNews(id: i) { (error, status, newsData) in
+            if error == nil {
+                if status == true {
+                    //print(newsData!)
+                    let NewsDetails: UIViewController
+                    let detailsVCsStoryB = UIStoryboard.init(name: "DetailsVCsStoryB", bundle: nil)
+                    NewsDetails = detailsVCsStoryB.instantiateViewController(withIdentifier: "newsDetails") as! NewsDetailsVC
+                    NewsDetailsVC.dataNotifications.removeAll()
+                    NewsDetailsVC.path = 1
+                    NewsDetailsVC.dataNotifications.append(newsData![0])
+                    currentSelectedButton = 0
+                    
+                    DispatchQueue.main.async {
+                        self.addChildViewController(NewsDetails)
+                        self.view.addSubview(NewsDetails.view)
+                        NewsDetails.view.frame = self.view.bounds
+                        NewsDetails.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                        NewsDetails.didMove(toParentViewController: self)
+                    }
+                }
+                else {
+                    ProgressHUD.showError("Network Error")
+                }
+            }
+            else {
+                ProgressHUD.showError("Network Error")
+            } }  }
+    
+   
+    
 } // Class HistoryVC
 
 extension HistoryVC: UITableViewDelegate, UITableViewDataSource{
@@ -111,14 +175,14 @@ extension HistoryVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         if type == 1 { return dataModel.count }
-         else { return dataNotifications.count }
+        if type == 1 { return dataModel.count }
+        else { return dataNotifications.count }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if type == 1 {
             return 140.00 }
-        else { return 125 }
+        else { return 115 }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -139,12 +203,31 @@ extension HistoryVC: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { tableView.deselectRow(at: indexPath, animated: true)
         
-        // call api
-
+        if type == 2 {
+            guard let type_News_History = dataNotifications[indexPath.row].type else {
+                return  }
+            if type_News_History == "news"
+            {
+                type = 0
+                getDataForNews(i: dataNotifications[indexPath.row].typeID!)
+            }
+            else { type = 1;
+                get_History_Now() }
+        }
+        
     }
     
-
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if type == 2 {
+        if indexPath.row == dataNotifications.count - 1 {
+            // on the last row
+            print("dataNotifications.count",dataNotifications.count)
+            self.loadMoreNotifications()
+            } }
+    }
+    
+    
 }

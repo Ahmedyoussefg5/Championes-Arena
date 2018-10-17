@@ -24,22 +24,16 @@ import UIKit
 
 class Alert {
     
-    static func getMessage(messages : [String]!) -> String {
-        var MessageContent = ""
-        for message in messages {
-            MessageContent += message + "\n"
-        }
-        return MessageContent;
-    }
+
     
-    class func showNotice(messagesArray: [String]!, stringMSG: String!) {
-        if messagesArray != nil {
-            let myString = getMessage(messages: messagesArray)
-            SwiftNotice.showText(myString, autoClear: true, autoClearTime: 1)
-        }
-        else
-        {
-            SwiftNotice.showText(stringMSG, autoClear: true, autoClearTime: 1)
-        }
-    }
+    //class func showNotice(messagesArray: [String]!, stringMSG: String!) {
+//        if messagesArray != nil {
+//            let myString = getMessage(messages: messagesArray)
+//            SwiftNotice.showText(myString, autoClear: true, autoClearTime: 1)
+//        }
+//        else
+//        {
+//            SwiftNotice.showText(stringMSG, autoClear: true, autoClearTime: 1)
+//        }
+//    }
 }

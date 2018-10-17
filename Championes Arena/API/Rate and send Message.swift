@@ -17,7 +17,7 @@ extension ApiMethods {
             "api_token" : Helper.getAPIToken()!,
             "message" : message
         ]
-        //print (parameters)
+        print (parameters)
         Alamofire.request(messageUrl, method: .post, parameters: parameters,encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
             switch response.result {

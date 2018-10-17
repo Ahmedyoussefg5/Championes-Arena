@@ -60,8 +60,8 @@ class ReservationDetails: UIViewController {
     func datePickerTapped() {
         let currentDate = Date()
         var dateComponents = DateComponents()
-        dateComponents.month = 1
-        let threeMonth = Calendar.current.date(byAdding: dateComponents, to: currentDate)
+        dateComponents.year = 5
+        let aYear = Calendar.current.date(byAdding: dateComponents, to: currentDate)
         
         let datePicker = DatePickerDialog(textColor: UIColor.init(red: 201, green: 152, blue: 7),
                                           buttonColor: UIColor.init(red: 201, green: 152, blue: 7),
@@ -71,7 +71,7 @@ class ReservationDetails: UIViewController {
                         doneButtonTitle: "Pick",
                         cancelButtonTitle: "Cancel",
                         minimumDate: currentDate,
-                        maximumDate: threeMonth,
+                        maximumDate: aYear,
                         datePickerMode: .date) { (date) in
                             if let dt = date {
                                 self.day = dt
@@ -96,9 +96,10 @@ class ReservationDetails: UIViewController {
                     }
                 }
                 else {
-                    Alert.showNotice(messagesArray: messagesArray, stringMSG: nil) }
+                    ProgressHUD.showError(Helper.getMessage(messages: messagesArray))
+                }
             } else {
-                Alert.showNotice(messagesArray: messagesArray, stringMSG: nil) }
+                ProgressHUD.showError(Helper.getMessage(messages: messagesArray)) }
         }
     }
     
@@ -106,7 +107,7 @@ class ReservationDetails: UIViewController {
         
         if selectedCells11.count == 0 {
             if selectedCells22.count == 0 {
-                Alert.showNotice(messagesArray: nil, stringMSG: "Choose Times first!")
+                ProgressHUD.showError("Choose Times first!")
                 return; } }
         
         selectedTimes.removeAll()

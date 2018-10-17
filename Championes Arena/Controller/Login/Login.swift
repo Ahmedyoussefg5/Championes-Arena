@@ -19,16 +19,16 @@ extension LoginVC {
         ApiMethods.LoginUser(password: password, email: emailorphone) { (error, status, messagesArray) in
             if error == nil {
                 if status == true {
-                    Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)
+                    ProgressHUD.showSuccess(Helper.getMessage(messages: messagesArray))
                     Helper.restartApp();
                 }
                 else {
-                    Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)
+                    ProgressHUD.showError(Helper.getMessage(messages: messagesArray))
                 }
             }
             else {
                 //self.alertshow(title: "Error", messages: messagesArray)
-                Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)
+                ProgressHUD.showError(Helper.getMessage(messages: messagesArray))
             }
         }
     

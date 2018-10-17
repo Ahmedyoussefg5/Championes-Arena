@@ -5,13 +5,14 @@
 import Foundation
 
 struct HistoryNoti: Codable {
-    let status, apiTokenStatus: Bool?
+    let status: Bool?
+    let apiTokenStatus: Bool?
     let notifications: Notifications?
     
     enum CodingKeys: String, CodingKey {
-        case status
+        case status = "status"
         case apiTokenStatus = "api_token_status"
-        case notifications
+        case notifications = "notifications"
     }
 }
 
@@ -19,41 +20,188 @@ struct Notifications: Codable {
     let currentPage: Int?
     let data: [Datum]?
     let firstPageURL: String?
-    let from, lastPage: Int?
+    let from: Int?
+    let lastPage: Int?
     let lastPageURL: String?
-    let nextPageURL: JSONNull?
+    let nextPageURL: String?
     let path: String?
     let perPage: Int?
-    let prevPageURL: JSONNull?
-    let to, total: Int?
+    let prevPageURL: String?
+    let to: Int?
+    let total: Int?
     
     enum CodingKeys: String, CodingKey {
         case currentPage = "current_page"
-        case data
+        case data = "data"
         case firstPageURL = "first_page_url"
-        case from
+        case from = "from"
         case lastPage = "last_page"
         case lastPageURL = "last_page_url"
         case nextPageURL = "next_page_url"
-        case path
+        case path = "path"
         case perPage = "per_page"
         case prevPageURL = "prev_page_url"
-        case to, total
+        case to = "to"
+        case total = "total"
     }
 }
 
 struct Datum: Codable {
     let id: Int?
-    let title, content, createdAt, updatedAt: String?
+    let title: String?
+    let content: String?
+    let createdAt: String?
+    let updatedAt: String?
     let type: String?
     let typeID: Int?
     
     enum CodingKeys: String, CodingKey {
-        case id, title, content
+        case id = "id"
+        case title = "title"
+        case content = "content"
         case createdAt = "created_at"
         case updatedAt = "updated_at"
-        case type
+        case type = "type"
         case typeID = "type_id"
+    }
+}
+
+// MARK: Convenience initializers and mutators
+
+extension HistoryNoti {
+    init(data: Data) throws {
+        self = try newJSONDecoder().decode(HistoryNoti.self, from: data)
+    }
+    
+    init(_ json: String, using encoding: String.Encoding = .utf8) throws {
+        guard let data = json.data(using: encoding) else {
+            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
+        }
+        try self.init(data: data)
+    }
+    
+    init(fromURL url: URL) throws {
+        try self.init(data: try Data(contentsOf: url))
+    }
+    
+    func with(
+        status: Bool?? = nil,
+        apiTokenStatus: Bool?? = nil,
+        notifications: Notifications?? = nil
+        ) -> HistoryNoti {
+        return HistoryNoti(
+            status: status ?? self.status,
+            apiTokenStatus: apiTokenStatus ?? self.apiTokenStatus,
+            notifications: notifications ?? self.notifications
+        )
+    }
+    
+    func jsonData() throws -> Data {
+        return try newJSONEncoder().encode(self)
+    }
+    
+    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
+        return String(data: try self.jsonData(), encoding: encoding)
+    }
+}
+
+extension Notifications {
+    init(data: Data) throws {
+        self = try newJSONDecoder().decode(Notifications.self, from: data)
+    }
+    
+    init(_ json: String, using encoding: String.Encoding = .utf8) throws {
+        guard let data = json.data(using: encoding) else {
+            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
+        }
+        try self.init(data: data)
+    }
+    
+    init(fromURL url: URL) throws {
+        try self.init(data: try Data(contentsOf: url))
+    }
+    
+    func with(
+        currentPage: Int?? = nil,
+        data: [Datum]?? = nil,
+        firstPageURL: String?? = nil,
+        from: Int?? = nil,
+        lastPage: Int?? = nil,
+        lastPageURL: String?? = nil,
+        nextPageURL: String?? = nil,
+        path: String?? = nil,
+        perPage: Int?? = nil,
+        prevPageURL: String?? = nil,
+        to: Int?? = nil,
+        total: Int?? = nil
+        ) -> Notifications {
+        return Notifications(
+            currentPage: currentPage ?? self.currentPage,
+            data: data ?? self.data,
+            firstPageURL: firstPageURL ?? self.firstPageURL,
+            from: from ?? self.from,
+            lastPage: lastPage ?? self.lastPage,
+            lastPageURL: lastPageURL ?? self.lastPageURL,
+            nextPageURL: nextPageURL ?? self.nextPageURL,
+            path: path ?? self.path,
+            perPage: perPage ?? self.perPage,
+            prevPageURL: prevPageURL ?? self.prevPageURL,
+            to: to ?? self.to,
+            total: total ?? self.total
+        )
+    }
+    
+    func jsonData() throws -> Data {
+        return try newJSONEncoder().encode(self)
+    }
+    
+    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
+        return String(data: try self.jsonData(), encoding: encoding)
+    }
+}
+
+extension Datum {
+    init(data: Data) throws {
+        self = try newJSONDecoder().decode(Datum.self, from: data)
+    }
+    
+    init(_ json: String, using encoding: String.Encoding = .utf8) throws {
+        guard let data = json.data(using: encoding) else {
+            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
+        }
+        try self.init(data: data)
+    }
+    
+    init(fromURL url: URL) throws {
+        try self.init(data: try Data(contentsOf: url))
+    }
+    
+    func with(
+        id: Int?? = nil,
+        title: String?? = nil,
+        content: String?? = nil,
+        createdAt: String?? = nil,
+        updatedAt: String?? = nil,
+        type: String?? = nil,
+        typeID: Int?? = nil
+        ) -> Datum {
+        return Datum(
+            id: id ?? self.id,
+            title: title ?? self.title,
+            content: content ?? self.content,
+            createdAt: createdAt ?? self.createdAt,
+            updatedAt: updatedAt ?? self.updatedAt,
+            type: type ?? self.type,
+            typeID: typeID ?? self.typeID
+        )
+    }
+    
+    func jsonData() throws -> Data {
+        return try newJSONEncoder().encode(self)
+    }
+    
+    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
+        return String(data: try self.jsonData(), encoding: encoding)
     }
 }
 
@@ -84,13 +232,25 @@ class JSONNull: Codable, Hashable {
     }
 }
 
+func newJSONDecoder() -> JSONDecoder {
+    let decoder = JSONDecoder()
+    if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
+        decoder.dateDecodingStrategy = .iso8601
+    }
+    return decoder
+}
+
+func newJSONEncoder() -> JSONEncoder {
+    let encoder = JSONEncoder()
+    if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
+        encoder.dateEncodingStrategy = .iso8601
+    }
+    return encoder
+}
 
 
 
-
-
-
-
+// MARK: Encode/decode helpers
 
 
 /*
@@ -128,10 +288,10 @@ class JSONNull: Codable, Hashable {
 
 extension ApiMethods {
     
-    class func getNotifications(complation : @escaping (_ error : Error? , _ status : Bool? , _ noty: [Datum]?)->Void) {
+    class func getNotifications(page: Int = 1, complation : @escaping (_ error : Error? , _ status : Bool? , _ noty: [Datum]?, _ last_page: Int)->Void) {
         guard let api_T = Helper.getAPIToken() else { return }
-        let urll = "\(notificationsUrl)api_token=\(api_T)"
-        /// http://192.168.0.27/champile/public/api/notifications?api_token=073346d8d4d66ebbb6eb0848f010a30597c51132ce4b9b3e73fdcb33a22e02d9c9abe743
+        let urll = "\(notificationsUrl)api_token=\(api_T)&page=\(page)"
+        //http://192.168.0.27/champile/public/api/notifications?api_token=3f946b1884bcfd7cdc594dba8ccf5df4019f189bd2e7e33026b9e61977330e7ee14a51eb&page=1
         //var messageArray = [String?]()
         guard let url = URL(string: urll) else { return }
         print(url)
@@ -139,20 +299,21 @@ extension ApiMethods {
             guard let data = data else { return }
             do
             {
+                ///print(data)
                 let historyNoti = try JSONDecoder().decode(HistoryNoti.self, from: data)
                 if historyNoti.status! {
                     //print(times.status)
-                    complation(error, true, historyNoti.notifications?.data)
+                    complation(error, true, historyNoti.notifications?.data, (historyNoti.notifications?.lastPage)!)
                 }
                 else {
                     //print(times.status)
                     //messageArray.append(times.message?.date[0])
-                    complation(error, false, nil)
+                    complation(error, false, nil, page)
                 }
             }
             catch let jsonError {
                 //messageArray.append("Something gone wrong, please check your internet connection")
-                complation(error , false, nil)
+                complation(error , false, nil, page)
                 print("§§Error JSONSerialization ", jsonError)    }
             }.resume()
     }

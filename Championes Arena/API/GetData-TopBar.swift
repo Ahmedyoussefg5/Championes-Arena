@@ -12,10 +12,10 @@ import SwiftyJSON
 extension ApiMethods {
     
     // MARK: - API GET NEWS
-    class func GETNEWS(x: Int, complation : @escaping (_ error : Error?, _ status : Bool?)->Void) {
+    class func GETNEWS(page: Int = 1, complation : @escaping (_ error : Error?, _ status : Bool?, _ last_page: Int)->Void) {
         
         let UsedURL: String
-        switch x {
+        switch currentSelectedButton {
         case 1:
             UsedURL = newsURL;
         case 2:
@@ -25,14 +25,20 @@ extension ApiMethods {
         default:
             return
         }
-        Alamofire.request(UsedURL, method: .get, parameters: nil,encoding: JSONEncoding.default, headers: nil).responseJSON {
+//        let parameters: [String: Any] = [
+//            "page": page
+//        ]
+        let urll = "\(UsedURL)page=\(page)"
+        guard let url = URL(string: urll) else { return }
+        print(url)
+        Alamofire.request(url, method: .get, parameters: nil,encoding: JSONEncoding.default, headers: nil).responseJSON {
             response in
             switch response.result {
             case .failure(let error) :
                 let json = JSON(error)
                 let status = json["status"].bool
                 print("failure")
-                complation(error , status)
+                complation(error , status, page)
                 return
             case .success(let value):
                 print("success")
@@ -49,7 +55,7 @@ extension ApiMethods {
                     /*
 
                      */
-                    complation(nil, status);
+                    complation(nil, status, page);
                 }
                 else {
                     /*
@@ -62,7 +68,7 @@ extension ApiMethods {
                      {
                      "id": 2,
                      "title": "The standard chunk of",
-                     "content": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>",
+                     "content": "bdf.</p>",
                      "image": "40db33947d7cb910abccf4c0e8d6cff3f613a3ad3Art.jpg",
                      "club_id": 1,
                      "created_at": "2018-09-17 01:32:17",
@@ -87,7 +93,7 @@ extension ApiMethods {
                      {
                      "id": 1,
                      "title": "Where can I get some?",
-                     "content": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary</p>",
+                     "content": "cxvbc",
                      "image": "71cdd327e293bf1deb120ff03fd4b246ffcda34b18.jpg",
                      "club_id": 1,
                      "created_at": "2018-09-17 01:31:09",
@@ -131,17 +137,19 @@ extension ApiMethods {
                                 //print("Object" , obj)
                                 if let obj = obj.dictionary {
                                     let news = NewsModel(List: obj)
-                                    //print(trip)
                                     News.append(news)
-                                    //print(News)
-                                    MAINVC.NewsAll = News
-                                    //print("trips",tripss)
+                                    //MAINVC.NewsAll = News
                                 }
-                                //print("trips",tripss)
                             }
+                            if page == 1 {
+                                
+                                MAINVC.NewsAll.removeAll()
+                            }
+                            MAINVC.NewsAll.append(contentsOf: News)
                         }
+                        let last_page = data["last_page"]?.int ?? page
+                        complation(nil, status, last_page)
                     }
-                    complation(nil, status);
                 }
             }
         }

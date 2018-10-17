@@ -18,17 +18,20 @@ class Rigister {
                 if status == true {
                     //self.toVerify();
                     //self.alertshow(title: "Registered successfully", messages: ["Now verify your phone number by the code you will receive soon."])
-                    Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)
+                    ProgressHUD.showSuccess(Helper.getMessage(messages: messagesArray))
+
                     Helper.restartApp()
 
                 } else {
                     //self.alertshow(title: "Error", messages: messagesArray)
-                    Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)
+                    ProgressHUD.showError(Helper.getMessage(messages: messagesArray))
+
 
                 }
             } else {
                 //self.alertshow(title: "Error", messages: messagesArray)
-                Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)
+                ProgressHUD.showError(Helper.getMessage(messages: messagesArray))
+
 
             }
         }

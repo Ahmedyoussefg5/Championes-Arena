@@ -38,11 +38,13 @@ class LoginVC: UIViewController {
     
     @IBAction func loginBTN(_ sender: Any) {
         guard let mailORuser = mainORuser.text, !mailORuser.isEmpty, Helper.isValidEmail(usermail: mailORuser) else {
-            Alert.showNotice(messagesArray: nil, stringMSG: "Enter A Valid E-Mail")
+            ProgressHUD.showError("Enter A Valid E-Mail")
+            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter A Valid E-Mail")
             return;
         }
         guard let pass = pass.text, !pass.isEmpty, pass.count > 5 else {
-            Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Password")
+            ProgressHUD.showError("Enter Your Password")
+            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Password")
             return
         }
         

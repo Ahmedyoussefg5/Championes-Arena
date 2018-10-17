@@ -103,7 +103,7 @@ extension ApiMethods {
             case .success(let value):
                 print("Successfully")
                 let json = JSON(value)
-                //print(json)
+                print(json)
                 guard let api_token_status = json["api_token_status"].bool, api_token_status == true else {
                     Helper.signOut()
                     messageArray.append("Something gone wrong, please check your internet connection")

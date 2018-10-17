@@ -17,15 +17,13 @@
 		E887FADF215AD5270071A15D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FADE215AD5270071A15D /* AppDelegate.swift */; };
 		E887FAE6215AD5280071A15D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E887FAE5215AD5280071A15D /* Assets.xcassets */; };
 		E887FAF8215AD7690071A15D /* BookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FAF1215AD7680071A15D /* BookAPI.swift */; };
-		E887FAF9215AD7690071A15D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FAF2215AD7680071A15D /* Constants.swift */; };
-		E887FAFA215AD7690071A15D /* GetDataToButtomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FAF3215AD7680071A15D /* GetDataToButtomBar.swift */; };
+		E887FAF9215AD7690071A15D /* Constants API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FAF2215AD7680071A15D /* Constants API.swift */; };
 		E887FAFB215AD7690071A15D /* GetData-TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FAF4215AD7680071A15D /* GetData-TopBar.swift */; };
 		E887FAFC215AD7690071A15D /* getTimesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FAF5215AD7680071A15D /* getTimesAPI.swift */; };
 		E887FAFD215AD7690071A15D /* GetData-BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FAF6215AD7680071A15D /* GetData-BottomBar.swift */; };
 		E887FAFE215AD7690071A15D /* LoginAndRegMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FAF7215AD7680071A15D /* LoginAndRegMethods.swift */; };
 		E887FB00215AD7990071A15D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E887FAFF215AD7990071A15D /* Main.storyboard */; };
 		E887FB02215AD7C90071A15D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E887FB01215AD7C90071A15D /* LaunchScreen.storyboard */; };
-		E887FB09215AD7D60071A15D /* APIMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB04215AD7D60071A15D /* APIMethods.swift */; };
 		E887FB0A215AD7D60071A15D /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB05215AD7D60071A15D /* HistoryModel.swift */; };
 		E887FB0C215AD7D60071A15D /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB07215AD7D60071A15D /* NewsModel.swift */; };
 		E887FB0D215AD7D60071A15D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB08215AD7D60071A15D /* UserModel.swift */; };
@@ -49,7 +47,6 @@
 		E887FB48215AD81F0071A15D /* CellForNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB37215AD81F0071A15D /* CellForNews.swift */; };
 		E887FB4A215AD81F0071A15D /* CoutomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB3A215AD81F0071A15D /* CoutomAlert.swift */; };
 		E887FB4B215AD81F0071A15D /* PopupDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB3B215AD81F0071A15D /* PopupDatePicker.swift */; };
-		E887FB4C215AD81F0071A15D /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB3C215AD81F0071A15D /* SwiftNotice.swift */; };
 		E887FB4D215AD81F0071A15D /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB3E215AD81F0071A15D /* CosmosDistrib.swift */; };
 		E887FB4E215AD81F0071A15D /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB3F215AD81F0071A15D /* RatingViewController.swift */; };
 		E887FB4F215AD81F0071A15D /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E887FB40215AD81F0071A15D /* RatingViewController.xib */; };
@@ -59,6 +56,9 @@
 		E8BAC6162174B77200B83F52 /* DetailsVCsStoryB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8BAC6152174B77200B83F52 /* DetailsVCsStoryB.storyboard */; };
 		E8BAC6182174DB5B00B83F52 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BAC6172174DB5B00B83F52 /* Notifications.swift */; };
 		E8BAC61A2175036B00B83F52 /* Date Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BAC6192175036B00B83F52 /* Date Converter.swift */; };
+		E8BAC61C21751F8000B83F52 /* NotificationsONENEWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BAC61B21751F7F00B83F52 /* NotificationsONENEWS.swift */; };
+		E8BAC61E2176120F00B83F52 /* Constants For App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BAC61D2176120F00B83F52 /* Constants For App.swift */; };
+		E8BAC62021763AEB00B83F52 /* tableFor-History-Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8BAC61F21763AEB00B83F52 /* tableFor-History-Notification.storyboard */; };
 		E8CC2D292173DCA000221278 /* Rate and send Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CC2D282173DCA000221278 /* Rate and send Message.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,7 +108,7 @@
 		E887FAE5215AD5280071A15D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E887FAEA215AD5280071A15D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E887FAF1215AD7680071A15D /* BookAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookAPI.swift; sourceTree = "<group>"; };
-		E887FAF2215AD7680071A15D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E887FAF2215AD7680071A15D /* Constants API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constants API.swift"; sourceTree = "<group>"; };
 		E887FAF3215AD7680071A15D /* GetDataToButtomBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDataToButtomBar.swift; sourceTree = "<group>"; };
 		E887FAF4215AD7680071A15D /* GetData-TopBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GetData-TopBar.swift"; sourceTree = "<group>"; };
 		E887FAF5215AD7680071A15D /* getTimesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getTimesAPI.swift; sourceTree = "<group>"; };
@@ -116,7 +116,6 @@
 		E887FAF7215AD7680071A15D /* LoginAndRegMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAndRegMethods.swift; sourceTree = "<group>"; };
 		E887FAFF215AD7990071A15D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E887FB01215AD7C90071A15D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E887FB04215AD7D60071A15D /* APIMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMethods.swift; sourceTree = "<group>"; };
 		E887FB05215AD7D60071A15D /* HistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		E887FB07215AD7D60071A15D /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		E887FB08215AD7D60071A15D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -151,6 +150,9 @@
 		E8BAC6152174B77200B83F52 /* DetailsVCsStoryB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailsVCsStoryB.storyboard; sourceTree = "<group>"; };
 		E8BAC6172174DB5B00B83F52 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		E8BAC6192175036B00B83F52 /* Date Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Converter.swift"; sourceTree = "<group>"; };
+		E8BAC61B21751F7F00B83F52 /* NotificationsONENEWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsONENEWS.swift; sourceTree = "<group>"; };
+		E8BAC61D2176120F00B83F52 /* Constants For App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants For App.swift"; sourceTree = "<group>"; };
+		E8BAC61F21763AEB00B83F52 /* tableFor-History-Notification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "tableFor-History-Notification.storyboard"; sourceTree = "<group>"; };
 		E8CC2D282173DCA000221278 /* Rate and send Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate and send Message.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				E8E35729215CFAE300087165 /* old */,
-				E887FAF2215AD7680071A15D /* Constants.swift */,
+				E887FAF2215AD7680071A15D /* Constants API.swift */,
 				E887FAF7215AD7680071A15D /* LoginAndRegMethods.swift */,
 				E887FAF4215AD7680071A15D /* GetData-TopBar.swift */,
 				E887FAF6215AD7680071A15D /* GetData-BottomBar.swift */,
@@ -261,6 +263,7 @@
 				E887FAF1215AD7680071A15D /* BookAPI.swift */,
 				E8CC2D282173DCA000221278 /* Rate and send Message.swift */,
 				E8BAC6172174DB5B00B83F52 /* Notifications.swift */,
+				E8BAC61B21751F7F00B83F52 /* NotificationsONENEWS.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 		E887FB17215AD8190071A15D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E8BAC61D2176120F00B83F52 /* Constants For App.swift */,
 				E887FB20215AD8190071A15D /* Register */,
 				E887FB1A215AD8190071A15D /* Login */,
 				E887FB26215AD8190071A15D /* THEMainVC.swift */,
@@ -330,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				E887FAFF215AD7990071A15D /* Main.storyboard */,
+				E8BAC61F21763AEB00B83F52 /* tableFor-History-Notification.storyboard */,
 				E8BAC6152174B77200B83F52 /* DetailsVCsStoryB.storyboard */,
 				E8BAC613217497B300B83F52 /* Login_Regster_SB.storyboard */,
 				E887FB01215AD7C90071A15D /* LaunchScreen.storyboard */,
@@ -375,7 +380,6 @@
 		E8E35729215CFAE300087165 /* old */ = {
 			isa = PBXGroup;
 			children = (
-				E887FB04215AD7D60071A15D /* APIMethods.swift */,
 				E887FAF3215AD7680071A15D /* GetDataToButtomBar.swift */,
 			);
 			path = old;
@@ -487,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8446A96215BDB4B00ECF0BF /* ProgressHUD.bundle in Resources */,
+				E8BAC62021763AEB00B83F52 /* tableFor-History-Notification.storyboard in Resources */,
 				E887FB02215AD7C90071A15D /* LaunchScreen.storyboard in Resources */,
 				E8BAC614217497B300B83F52 /* Login_Regster_SB.storyboard in Resources */,
 				E887FB4F215AD81F0071A15D /* RatingViewController.xib in Resources */,
@@ -586,7 +591,6 @@
 				E887FB13215AD80C0071A15D /* Helper.swift in Sources */,
 				E887FAF8215AD7690071A15D /* BookAPI.swift in Sources */,
 				E887FADF215AD5270071A15D /* AppDelegate.swift in Sources */,
-				E887FB09215AD7D60071A15D /* APIMethods.swift in Sources */,
 				E8446A97215BDB4B00ECF0BF /* ProgressHUD.m in Sources */,
 				E887FAFE215AD7690071A15D /* LoginAndRegMethods.swift in Sources */,
 				E887FB0D215AD7D60071A15D /* UserModel.swift in Sources */,
@@ -597,7 +601,6 @@
 				E839A07B216D2A8400455E55 /* LocalNotificationsPushing.swift in Sources */,
 				E887FB47215AD81F0071A15D /* CellForHistory.swift in Sources */,
 				E887FB4E215AD81F0071A15D /* RatingViewController.swift in Sources */,
-				E887FB4C215AD81F0071A15D /* SwiftNotice.swift in Sources */,
 				E887FB2F215AD8190071A15D /* Rigister.swift in Sources */,
 				E8BAC6182174DB5B00B83F52 /* Notifications.swift in Sources */,
 				E887FB48215AD81F0071A15D /* CellForNews.swift in Sources */,
@@ -608,17 +611,18 @@
 				E887FB27215AD8190071A15D /* FacDetailsVC.swift in Sources */,
 				E887FB4B215AD81F0071A15D /* PopupDatePicker.swift in Sources */,
 				E887FB4D215AD81F0071A15D /* CosmosDistrib.swift in Sources */,
-				E887FAFA215AD7690071A15D /* GetDataToButtomBar.swift in Sources */,
 				E887FB2B215AD8190071A15D /* MAINVC.swift in Sources */,
 				E887FB2E215AD8190071A15D /* RegisterVC.swift in Sources */,
 				E887FB16215AD80C0071A15D /* CustomButton.swift in Sources */,
 				E887FB2D215AD8190071A15D /* PassReset.swift in Sources */,
 				E887FB33215AD8190071A15D /* THEMainVC.swift in Sources */,
-				E887FAF9215AD7690071A15D /* Constants.swift in Sources */,
+				E887FAF9215AD7690071A15D /* Constants API.swift in Sources */,
+				E8BAC61C21751F8000B83F52 /* NotificationsONENEWS.swift in Sources */,
 				E8BAC61A2175036B00B83F52 /* Date Converter.swift in Sources */,
 				E887FB32215AD8190071A15D /* SettingsVC.swift in Sources */,
 				E8B65E80216EDA30008BBD3B /* StringExtension.swift in Sources */,
 				E887FB4A215AD81F0071A15D /* CoutomAlert.swift in Sources */,
+				E8BAC61E2176120F00B83F52 /* Constants For App.swift in Sources */,
 				E8CC2D292173DCA000221278 /* Rate and send Message.swift in Sources */,
 				E887FB15215AD80C0071A15D /* Alert.swift in Sources */,
 				E887FAFD215AD7690071A15D /* GetData-BottomBar.swift in Sources */,
@@ -815,7 +819,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Championes Arena/Views/OutScorce/ProgressHUD/Championes Arena-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -839,7 +843,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Championes Arena/Views/OutScorce/ProgressHUD/Championes Arena-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

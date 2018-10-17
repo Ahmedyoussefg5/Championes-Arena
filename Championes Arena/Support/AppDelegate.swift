@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    class func getUserIdOneSignal(){
+    class func getUserIdOneSignal() {
         let status: OSPermissionSubscriptionState = OneSignal.getPermissionSubscriptionState()
         let userID = status.subscriptionStatus.userId
         print("userID = \(userID ?? "None")")

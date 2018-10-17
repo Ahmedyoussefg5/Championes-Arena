@@ -48,7 +48,7 @@ class DateConverter: NSObject{
         let year = calendar.component(.year, from: D)
         let month = calendar.component(.month, from: D)
         let day = calendar.component(.day, from: D)
-        return "\(day):\(month):\(year)"
+        return "\(year):\(month):\(day)"
     }
 }
 

@@ -154,44 +154,50 @@ class SettingsVC: UIViewController {
     func updateData()
     {
         guard let name = nameTXT.text, !name.isEmpty else {
-            Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Name" )
+            ProgressHUD.showError("Enter Your Name")
+            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Name" )
             return;
         }
         guard let email = mailTXT.text, !email.isEmpty, Helper.isValidEmail(usermail: email) else {
-            Alert.showNotice(messagesArray: nil, stringMSG: "Enter Valid E-Mail" )
+            ProgressHUD.showError("Enter Valid E-Mail")
+            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter Valid E-Mail" )
             return;
         }
         guard let mobile = phoneTXT.text, !mobile.isEmpty else {
-            Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Mobile" )
+            ProgressHUD.showError("Enter Your Mobile")
+            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Mobile" )
             return;
         }
         guard let pass = passTXT.text, !pass.isEmpty, pass.count > 5 else {
-            Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Password more than 5 chars" )
+            ProgressHUD.showError("Enter Your Password more than 5 chars")
+            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Password more than 5 chars" )
             return;
         }
         
         ApiMethods.UpdateUser(email: email, phone: mobile, userName: name, password: pass) { (error, status, messagesArray) in
             if error == nil {
                 if status == true {
-                    Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)
+                    ProgressHUD.showSuccess(Helper.getMessage(messages: messagesArray))
+                    //Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)
                     
                 } else {
-                    Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)
+                    ProgressHUD.showError(Helper.getMessage(messages: messagesArray))
+                    //Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)
                 }
             } else {
-                Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)
-                
-            }
-        }
-    }
+                ProgressHUD.showError(Helper.getMessage(messages: messagesArray))
+                //Alert.showNotice(messagesArray: messagesArray, stringMSG: nil)
+            } } }
     
     func login_now()
     {
         guard let mailORuser = nameTXT.text, !mailORuser.isEmpty, Helper.isValidEmail(usermail: mailORuser) else {
-            Alert.showNotice(messagesArray: nil, stringMSG: "Enter A Valid E-Mail")
+            ProgressHUD.showError("Enter A Valid E-Mail")
+            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter A Valid E-Mail")
             return }
         guard let pass = mailTXT.text, !pass.isEmpty, pass.count > 5 else {
-            Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Password")
+            ProgressHUD.showError("Enter Your Password")
+            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Password")
             return;
         }
         LoginVC.online_Login(emailorphone: mailORuser, password: pass)
@@ -212,6 +218,7 @@ class SettingsVC: UIViewController {
             
             self.submitRate(rate: Int(ratingVC.cosmosStarRating.rating), comment: ratingVC.commentTextField.text!)
         }
+        buttonTwo.titleColor = UIColor.init(red: 201, green: 152, blue: 7)
         popup.addButtons([buttonOne, buttonTwo])
         
         present(popup, animated: animated, completion: nil)

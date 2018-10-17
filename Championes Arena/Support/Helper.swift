@@ -53,7 +53,13 @@ class Helper: NSObject{
         //restartApp();
     }
     
-
+    class func getMessage(messages : [String]!) -> String {
+        var MessageContent = ""
+        for message in messages {
+            MessageContent += message + "\n"
+        }
+        return MessageContent;
+    }
     
     class func saveUserData(key: String, value: String) {
         let def = UserDefaults.standard
