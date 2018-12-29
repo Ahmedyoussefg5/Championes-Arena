@@ -36,7 +36,7 @@ class CellForHistory: UITableViewCell {
         case "confirmed":
             img.image = UIImage(named: "confirmed")
         default:
-            return
+            img.image = UIImage(named: "wait")
         } //"Status Booking:
       //  unconfirmed, canceled, confirmed"
     }

@@ -41,6 +41,7 @@ class ReservationDetails: UIViewController {
         tableForTimes2.delegate = self
         tableForTimes2.dataSource = self
         
+        img.kf.indicatorType = .activity
         let imgUrl = imgURLplay + ReservationDetails.NewsAll[0].image
         let url = URL(string: imgUrl)
         img.kf.setImage(with: url)
@@ -91,6 +92,8 @@ class ReservationDetails: UIViewController {
                     //print("-------------",self.availableTimes)
                     self.unconfirmedTimes = unconfirmedTimes!
                     DispatchQueue.main.async {
+                        
+                    
                         self.tableForTimes.reloadData()
                         self.tableForTimes2.reloadData()
                     }
@@ -162,7 +165,7 @@ class ReservationDetails: UIViewController {
                    // _ = SweetAlert().showAlert("Booked", subTitle: messagesArray![0], style: AlertStyle.success)
                     
                     ProgressHUD.showSuccess("Booked successfully, please confirm your booking by actual payment.")
-
+                    self.Get_Times_Now()
                 }
                 else {
                    // _ = SweetAlert().showAlert("Error happend", subTitle: messagesArray![0], style: AlertStyle.success)
@@ -210,7 +213,6 @@ extension ReservationDetails: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {  return 40.00  }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
         
         if tableView == tableForTimes {
@@ -255,16 +257,39 @@ extension ReservationDetails: UITableViewDelegate, UITableViewDataSource {
             if selectedCells22.contains(indexPath.row) {
                 accessory = .checkmark
             }; cell.accessoryType = accessory }
-        
+        //*****************************************************
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
         if tableView == tableForTimes {
-            cell.textLabel?.text = availableTimes[indexPath.row]
+            dateFormatter.dateFormat = "H:mm"
+            let date12 = dateFormatter.date(from: availableTimes[indexPath.row])!
+            dateFormatter.dateFormat = "h:mm a"
+            let date22 = dateFormatter.string(from: date12)
+            
+            
+            cell.textLabel?.text = date22
             return cell
         }
         else if tableView == tableForTimes2 {
-            cell.textLabel?.text = unconfirmedTimes[indexPath.row]
-            //print(unconfirmedTimes)
+            dateFormatter.dateFormat = "H:mm"
+            let date12 = dateFormatter.date(from: unconfirmedTimes[indexPath.row])!
+            dateFormatter.dateFormat = "h:mm a"
+            let date22 = dateFormatter.string(from: date12)
+            
+            
+            
+            cell.textLabel?.text = date22
             return cell
         }
         return cell
     }
 }
+
+
+
+
+
+
+
+
+

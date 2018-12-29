@@ -62,7 +62,10 @@ class MAINVC: UIViewController{
             self.isLoading = false
             if error == nil {
                 if status! {
-                    self.tableForData.reloadData()
+                    let rang = NSMakeRange(0, self.tableForData.numberOfSections)
+                    let sections = NSIndexSet(indexesIn: rang)
+                    
+                    self.tableForData.reloadSections(sections as IndexSet, with: .fade)
                     
                     self.current_page = 1
                     self.last_page = last_page }
@@ -195,7 +198,6 @@ class MAINVC: UIViewController{
             NewsDetails = detailsVCsStoryB.instantiateViewController(withIdentifier: "newsDetails") as! NewsDetailsVC
             NewsDetailsVC.NewsAll.removeAll()
             NewsDetailsVC.NewsAll.append(MAINVC.NewsAll[i])
-        //print(a.indexx)
         case 2:
             NewsDetails = detailsVCsStoryB.instantiateViewController(withIdentifier: "bookDetails") as! ReservationDetails
             ReservationDetails.NewsAll.removeAll()
@@ -206,7 +208,8 @@ class MAINVC: UIViewController{
             FacDetailsVC.NewsAll.removeAll()
             FacDetailsVC.NewsAll.append(MAINVC.NewsAll[i])
         case 4:
-            NewsDetails = (storyboard?.instantiateViewController(withIdentifier: "settingsVC"))! //as! TableViewVC
+            NewsDetails = UIStoryboard.init(name: "BottomBarSB", bundle: nil).instantiateViewController(withIdentifier: "settingsVC") as! SettingsVC
+            //NewsDetails = (storyboard?.instantiateViewController(withIdentifier: "settingsVC"))! //as! TableViewVC
         default:
             return }
         
@@ -221,7 +224,7 @@ class MAINVC: UIViewController{
     
     func getHistory()
     {
-        let historyVC = UIStoryboard.init(name: "tableFor-History-Notification", bundle: nil).instantiateViewController(withIdentifier: "historyVC") as! HistoryVC
+        let historyVC = UIStoryboard.init(name: "BottomBarSB", bundle: nil).instantiateViewController(withIdentifier: "historyVC") as! HistoryVC
         //storyboard!.instantiateViewController(withIdentifier: "historyVC") as! HistoryVC //mainVC
         
         if checkIfRegistered() {
@@ -315,7 +318,7 @@ extension MAINVC: UITableViewDelegate, UITableViewDataSource {
             self.loadMore()
         }
     }
-    
+        
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         //Alert.showNotice(messagesArray: nil, stringMSG: "I was shaked! Hold your phone.")
     }

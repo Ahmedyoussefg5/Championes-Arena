@@ -1,7 +1,7 @@
 import Foundation
 
-//let ServerUrl = "http://tech.techno-hat.com/champions_arena/public/"
-let ServerUrl = "http://192.168.0.27/champile/public/"
+let ServerUrl = "http://tech.techno-hat.com/champions_arena/public/"
+//let ServerUrl = "http://192.168.0.27/champile/public/"
 let MainUrl = ServerUrl + "api/"
 
 // MARK: - URL FOR REGISTER

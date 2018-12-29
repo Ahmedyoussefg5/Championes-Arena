@@ -117,6 +117,7 @@ class ApiMethods {
                 //print("failure")
                 messageArray.append("Something gone wrong, please check your internet connection")
                 complation(error , status , messageArray as! [String])
+                print(messageArray)
                 return
             case .success(let value):
                 //print("success")
@@ -166,7 +167,7 @@ class ApiMethods {
                     ReservationDetails.USERDATA = [userModel]
                     //print(userModel.email, userModel.api_token)
                     complation(nil , status , messageArray as! [String]);
-                    
+                    print(messageArray)
                 }
             }
         }
@@ -192,6 +193,7 @@ class ApiMethods {
                 //print("failure", json)
                 messageArray.append("Something gone wrong, please check your internet connection")
                 complation(error, status, messageArray as! [String])
+                //print(messageArray)
                 return
             case .success(let value):
                 print("Successfully")

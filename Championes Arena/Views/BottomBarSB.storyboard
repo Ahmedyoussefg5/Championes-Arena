@@ -146,9 +146,161 @@
             </objects>
             <point key="canvasLocation" x="1309" y="-409"/>
         </scene>
+        <!--SettingsVC-->
+        <scene sceneID="Rhw-RO-Dss">
+            <objects>
+                <viewController storyboardIdentifier="settingsVC" id="Jz8-3m-H5J" customClass="SettingsVC" customModule="Championes_Arena" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QX4-wU-VS5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05-News" translatesAutoresizingMaskIntoConstraints="NO" id="D3r-7H-AKv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2l-aY-3EV">
+                                <rect key="frame" x="18.5" y="50" width="338" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kyv-74-yMG"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hXX-V5-x3X">
+                                <rect key="frame" x="18.5" y="87" width="338" height="29.5"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fzd-hD-J0s">
+                                <rect key="frame" x="18.5" y="123.5" width="338" height="29.5"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="tel"/>
+                            </textField>
+                            <textField opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j31-p7-YLd">
+                                <rect key="frame" x="18.5" y="160" width="338" height="29.5"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqt-bg-ImY">
+                                <rect key="frame" x="18.5" y="209.5" width="338" height="29.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Save" backgroundImage="button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveBTN:" destination="Jz8-3m-H5J" eventType="touchUpInside" id="h4u-9D-E1q"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zat-oo-SFr">
+                                <rect key="frame" x="19" y="518" width="337.5" height="129"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdW-hg-tmV">
+                                        <rect key="frame" x="0.0" y="0.0" width="337.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Contact Us">
+                                            <color key="titleColor" red="0.78823529410000004" green="0.59607843140000005" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="contactUsBTN:" destination="Jz8-3m-H5J" eventType="touchUpInside" id="p1X-FN-LIU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKw-84-m0W">
+                                        <rect key="frame" x="0.0" y="35" width="337.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Send Us Msg">
+                                            <color key="titleColor" red="0.78791832920000004" green="0.59670126440000004" blue="0.02655840479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendMsg:" destination="Jz8-3m-H5J" eventType="touchUpInside" id="UXr-71-GxV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH2-bC-re4">
+                                        <rect key="frame" x="0.0" y="69.5" width="337.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Rate Us">
+                                            <color key="titleColor" red="0.78791832920000004" green="0.59670126440000004" blue="0.02655840479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rateUSBTN:" destination="Jz8-3m-H5J" eventType="touchUpInside" id="GhA-Rm-aKv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6j-Hy-2Aa">
+                                        <rect key="frame" x="0.0" y="104.5" width="337.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Sign Out">
+                                            <color key="titleColor" red="0.78791832920000004" green="0.59670126440000004" blue="0.02655840479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signOtuBTN_Register:" destination="Jz8-3m-H5J" eventType="touchUpInside" id="LZW-gY-N9w"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pqt-bg-ImY" firstAttribute="centerX" secondItem="j31-p7-YLd" secondAttribute="centerX" id="1MQ-vu-4xK"/>
+                            <constraint firstItem="pqt-bg-ImY" firstAttribute="height" secondItem="j31-p7-YLd" secondAttribute="height" id="3nZ-tV-dwD"/>
+                            <constraint firstItem="zat-oo-SFr" firstAttribute="width" secondItem="QX4-wU-VS5" secondAttribute="width" multiplier="0.9" id="6zH-JY-L7o"/>
+                            <constraint firstItem="Fzd-hD-J0s" firstAttribute="top" secondItem="hXX-V5-x3X" secondAttribute="bottom" constant="7" id="7Fl-5R-4fF"/>
+                            <constraint firstItem="6aq-pn-MX1" firstAttribute="bottom" secondItem="D3r-7H-AKv" secondAttribute="bottom" id="DDi-ur-vhV"/>
+                            <constraint firstItem="j31-p7-YLd" firstAttribute="top" secondItem="Fzd-hD-J0s" secondAttribute="bottom" constant="7" id="DeC-kK-S3t"/>
+                            <constraint firstItem="6aq-pn-MX1" firstAttribute="bottom" secondItem="zat-oo-SFr" secondAttribute="bottom" constant="20" id="GoY-Ok-axm"/>
+                            <constraint firstItem="hXX-V5-x3X" firstAttribute="centerX" secondItem="Z2l-aY-3EV" secondAttribute="centerX" id="IMo-AK-fpQ"/>
+                            <constraint firstItem="D3r-7H-AKv" firstAttribute="top" secondItem="6aq-pn-MX1" secondAttribute="top" id="K85-bw-vgv"/>
+                            <constraint firstItem="j31-p7-YLd" firstAttribute="centerX" secondItem="Z2l-aY-3EV" secondAttribute="centerX" id="KNA-Ne-WaV"/>
+                            <constraint firstItem="D3r-7H-AKv" firstAttribute="centerY" secondItem="6aq-pn-MX1" secondAttribute="centerY" id="NYB-Dy-C95"/>
+                            <constraint firstItem="hXX-V5-x3X" firstAttribute="top" secondItem="Z2l-aY-3EV" secondAttribute="bottom" constant="7" id="QWb-46-O59"/>
+                            <constraint firstItem="hXX-V5-x3X" firstAttribute="width" secondItem="Z2l-aY-3EV" secondAttribute="width" id="RUF-Yq-Wd5"/>
+                            <constraint firstItem="j31-p7-YLd" firstAttribute="height" secondItem="Z2l-aY-3EV" secondAttribute="height" id="Rj4-KL-rxa"/>
+                            <constraint firstItem="zat-oo-SFr" firstAttribute="height" secondItem="D3r-7H-AKv" secondAttribute="height" multiplier="0.2" id="TMw-4e-QQW"/>
+                            <constraint firstItem="D3r-7H-AKv" firstAttribute="width" secondItem="QX4-wU-VS5" secondAttribute="width" id="WvU-y4-9US"/>
+                            <constraint firstItem="Z2l-aY-3EV" firstAttribute="centerX" secondItem="D3r-7H-AKv" secondAttribute="centerX" id="XOH-Dk-x1Y"/>
+                            <constraint firstItem="zat-oo-SFr" firstAttribute="centerX" secondItem="6aq-pn-MX1" secondAttribute="centerX" id="c20-3d-b85"/>
+                            <constraint firstItem="pqt-bg-ImY" firstAttribute="top" secondItem="hXX-V5-x3X" secondAttribute="bottom" constant="20" id="dLh-Ff-lgh"/>
+                            <constraint firstItem="Fzd-hD-J0s" firstAttribute="centerX" secondItem="Z2l-aY-3EV" secondAttribute="centerX" id="h6j-KV-XIg"/>
+                            <constraint firstItem="Fzd-hD-J0s" firstAttribute="width" secondItem="Z2l-aY-3EV" secondAttribute="width" id="hAA-Ba-ZSb"/>
+                            <constraint firstItem="j31-p7-YLd" firstAttribute="width" secondItem="Z2l-aY-3EV" secondAttribute="width" id="jeH-cN-dgB"/>
+                            <constraint firstItem="Fzd-hD-J0s" firstAttribute="height" secondItem="Z2l-aY-3EV" secondAttribute="height" id="ogy-5B-Zvp"/>
+                            <constraint firstItem="Z2l-aY-3EV" firstAttribute="width" secondItem="D3r-7H-AKv" secondAttribute="width" multiplier="0.9" id="q8u-fH-4iB"/>
+                            <constraint firstItem="pqt-bg-ImY" firstAttribute="width" secondItem="j31-p7-YLd" secondAttribute="width" id="u68-HR-D5h"/>
+                            <constraint firstItem="D3r-7H-AKv" firstAttribute="centerX" secondItem="6aq-pn-MX1" secondAttribute="centerX" id="wBL-3e-wcE"/>
+                            <constraint firstItem="pqt-bg-ImY" firstAttribute="top" secondItem="j31-p7-YLd" secondAttribute="bottom" constant="20" id="wjL-p2-H4P"/>
+                            <constraint firstItem="Z2l-aY-3EV" firstAttribute="top" secondItem="6aq-pn-MX1" secondAttribute="top" constant="30" id="x1h-5R-S5f"/>
+                            <constraint firstItem="hXX-V5-x3X" firstAttribute="height" secondItem="Z2l-aY-3EV" secondAttribute="height" id="x7K-gc-Lv8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6aq-pn-MX1"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dLh-Ff-lgh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="bottomStack" destination="zat-oo-SFr" id="655-Kp-M1A"/>
+                        <outlet property="mailTXT" destination="hXX-V5-x3X" id="Dds-yq-rCq"/>
+                        <outlet property="nameTXT" destination="Z2l-aY-3EV" id="9FF-gL-4p1"/>
+                        <outlet property="passTXT" destination="j31-p7-YLd" id="2Ap-WB-6Bb"/>
+                        <outlet property="phoneTXT" destination="Fzd-hD-J0s" id="1hs-A1-dl7"/>
+                        <outlet property="rate_BTN" destination="WH2-bC-re4" id="DO0-SP-uCr"/>
+                        <outlet property="saveBTN" destination="pqt-bg-ImY" id="xJr-O2-7OI"/>
+                        <outlet property="saveconstrant" destination="wjL-p2-H4P" id="cnx-UN-upl"/>
+                        <outlet property="send_msgBTN" destination="hKw-84-m0W" id="7bm-1R-UfH"/>
+                        <outlet property="signoutBTN" destination="M6j-Hy-2Aa" id="R8x-fL-j3t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8h-4b-GBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="-434"/>
+        </scene>
     </scenes>
     <resources>
         <image name="05-News" width="640" height="711"/>
+        <image name="button" width="566" height="51"/>
         <image name="confirmed" width="38" height="40"/>
         <image name="downshadow" width="571" height="46"/>
     </resources>

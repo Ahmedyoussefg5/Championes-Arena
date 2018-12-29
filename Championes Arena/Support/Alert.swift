@@ -21,19 +21,3 @@ import UIKit
 //        self.present(alert, animated: true)
 //    }
 // }
-
-class Alert {
-    
-
-    
-    //class func showNotice(messagesArray: [String]!, stringMSG: String!) {
-//        if messagesArray != nil {
-//            let myString = getMessage(messages: messagesArray)
-//            SwiftNotice.showText(myString, autoClear: true, autoClearTime: 1)
-//        }
-//        else
-//        {
-//            SwiftNotice.showText(stringMSG, autoClear: true, autoClearTime: 1)
-//        }
-//    }
-}

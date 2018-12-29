@@ -21,6 +21,7 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
+    
 //    
 //    @IBAction func faceBookBTN(_ sender: Any) {
 //        let loginManager = LoginManager()

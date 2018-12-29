@@ -19,6 +19,7 @@ class CellForNews: UITableViewCell {
     @IBOutlet weak var img: UIImageView!
     
     func ConfigureCellforNews(index: Int)  {
+        img.kf.indicatorType = .activity
         let imgUrl = imgURLnews + MAINVC.NewsAll[index].image
         let url = URL(string: imgUrl)
         img.kf.setImage(with: url)
@@ -30,7 +31,8 @@ class CellForNews: UITableViewCell {
         lableDetails.text = content //MAINVC.NewsAll[index].content
     }
     
-    func ConfigureCellforBook(index: Int)  {
+    func ConfigureCellforBook(index: Int) {
+        img.kf.indicatorType = .activity
         let imgUrl = imgURLplay + MAINVC.NewsAll[index].image
         let url = URL(string: imgUrl)
         img.kf.setImage(with: url)
@@ -44,6 +46,7 @@ class CellForNews: UITableViewCell {
     }
         
         func ConfigureCellforFac(index: Int)  {
+            img.kf.indicatorType = .activity
             let imgUrl = imgURLfac + MAINVC.NewsAll[index].image
             let url = URL(string: imgUrl)
             img.kf.setImage(with: url)

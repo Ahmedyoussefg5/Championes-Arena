@@ -24,6 +24,7 @@ class FacDetailsVC: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        img.kf.indicatorType = .activity
         let imgUrl = imgURLfac + FacDetailsVC.NewsAll[0].image
         let url = URL(string: imgUrl)
         img.kf.setImage(with: url)
@@ -70,8 +71,7 @@ class FacDetailsVC: UIViewController, WKNavigationDelegate {
             return;
         default:
             return
-        }
-    }
+        } }
     
     func add5Actions(count: Int)
     {

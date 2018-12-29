@@ -58,7 +58,7 @@
 		E8BAC61A2175036B00B83F52 /* Date Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BAC6192175036B00B83F52 /* Date Converter.swift */; };
 		E8BAC61C21751F8000B83F52 /* NotificationsONENEWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BAC61B21751F7F00B83F52 /* NotificationsONENEWS.swift */; };
 		E8BAC61E2176120F00B83F52 /* Constants For App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BAC61D2176120F00B83F52 /* Constants For App.swift */; };
-		E8BAC62021763AEB00B83F52 /* tableFor-History-Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8BAC61F21763AEB00B83F52 /* tableFor-History-Notification.storyboard */; };
+		E8BAC62021763AEB00B83F52 /* BottomBarSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8BAC61F21763AEB00B83F52 /* BottomBarSB.storyboard */; };
 		E8CC2D292173DCA000221278 /* Rate and send Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CC2D282173DCA000221278 /* Rate and send Message.swift */; };
 /* End PBXBuildFile section */
 
@@ -152,7 +152,7 @@
 		E8BAC6192175036B00B83F52 /* Date Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Converter.swift"; sourceTree = "<group>"; };
 		E8BAC61B21751F7F00B83F52 /* NotificationsONENEWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsONENEWS.swift; sourceTree = "<group>"; };
 		E8BAC61D2176120F00B83F52 /* Constants For App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants For App.swift"; sourceTree = "<group>"; };
-		E8BAC61F21763AEB00B83F52 /* tableFor-History-Notification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "tableFor-History-Notification.storyboard"; sourceTree = "<group>"; };
+		E8BAC61F21763AEB00B83F52 /* BottomBarSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BottomBarSB.storyboard; sourceTree = "<group>"; };
 		E8CC2D282173DCA000221278 /* Rate and send Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate and send Message.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -298,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				E8BAC61D2176120F00B83F52 /* Constants For App.swift */,
+				E887FB35215AD81F0071A15D /* Cells For Table */,
 				E887FB20215AD8190071A15D /* Register */,
 				E887FB1A215AD8190071A15D /* Login */,
 				E887FB26215AD8190071A15D /* THEMainVC.swift */,
@@ -334,12 +335,11 @@
 			isa = PBXGroup;
 			children = (
 				E887FAFF215AD7990071A15D /* Main.storyboard */,
-				E8BAC61F21763AEB00B83F52 /* tableFor-History-Notification.storyboard */,
-				E8BAC6152174B77200B83F52 /* DetailsVCsStoryB.storyboard */,
 				E8BAC613217497B300B83F52 /* Login_Regster_SB.storyboard */,
+				E8BAC6152174B77200B83F52 /* DetailsVCsStoryB.storyboard */,
+				E8BAC61F21763AEB00B83F52 /* BottomBarSB.storyboard */,
 				E887FB01215AD7C90071A15D /* LaunchScreen.storyboard */,
 				E887FAE5215AD5280071A15D /* Assets.xcassets */,
-				E887FB35215AD81F0071A15D /* Cells For Table */,
 				E887FB39215AD81F0071A15D /* OutScorce */,
 				E887FB3D215AD81F0071A15D /* Rate */,
 			);
@@ -349,8 +349,8 @@
 		E887FB35215AD81F0071A15D /* Cells For Table */ = {
 			isa = PBXGroup;
 			children = (
-				E887FB36215AD81F0071A15D /* CellForHistory.swift */,
 				E887FB37215AD81F0071A15D /* CellForNews.swift */,
+				E887FB36215AD81F0071A15D /* CellForHistory.swift */,
 			);
 			path = "Cells For Table";
 			sourceTree = "<group>";
@@ -491,7 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8446A96215BDB4B00ECF0BF /* ProgressHUD.bundle in Resources */,
-				E8BAC62021763AEB00B83F52 /* tableFor-History-Notification.storyboard in Resources */,
+				E8BAC62021763AEB00B83F52 /* BottomBarSB.storyboard in Resources */,
 				E887FB02215AD7C90071A15D /* LaunchScreen.storyboard in Resources */,
 				E8BAC614217497B300B83F52 /* Login_Regster_SB.storyboard in Resources */,
 				E887FB4F215AD81F0071A15D /* RatingViewController.xib in Resources */,

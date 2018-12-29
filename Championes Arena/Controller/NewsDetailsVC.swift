@@ -28,11 +28,22 @@ class NewsDetailsVC: UIViewController {
         let news2 = NewsDetailsVC.dataNotifications
         let path = NewsDetailsVC.path
         
+        self.img.kf.indicatorType = .activity
+
         if path == 0 {
             if news1.count > 0 {
                 let imgUrl = imgURLnews + NewsDetailsVC.NewsAll[0].image
                 let url = URL(string: imgUrl)
-                img.kf.setImage(with: url)
+                img.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "insideIMG"), options: [.transition(.fade(0.5))], progressBlock: nil) { (image, error, cach, url) in
+                    if error == nil
+                    {
+                        self.img.image = image
+                    }
+                    else {
+                        self.img.image = #imageLiteral(resourceName: "insideIMG")
+                    
+                }
+                }
                 
                 titleTXT.text = NewsDetailsVC.NewsAll[0].title
                 date.text = NewsDetailsVC.NewsAll[0].created_at
@@ -46,7 +57,7 @@ class NewsDetailsVC: UIViewController {
         
         if path == 1 {
         if news2.count > 0 {
-            
+            img.kf.indicatorType = .activity
             let imgUrl = imgURLnews + news2[0].image!
             let url = URL(string: imgUrl)
             img.kf.setImage(with: url)

@@ -21,11 +21,14 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var phoneTXT: UITextField!
     @IBOutlet weak var passTXT: UITextField!
     
+    
+    
     @IBOutlet var saveconstrant: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         printData()
+
     }
     
     @IBAction func contactUsBTN(_ sender: Any) {
@@ -86,19 +89,30 @@ class SettingsVC: UIViewController {
         SaveNow()
     }
     
-    @IBAction func signOtuBTN(_ sender: Any) {
+    @IBAction func signOtuBTN_Register(_ sender: Any) {
         if checkIfRegistered() {
-            Helper.signOut()
+            //Helper.signOut()
+            UserDefaults.standard.removeObject(forKey: "api_token")
+            UIView.animate(withDuration: 0.8, delay: 0, options: .curveEaseIn, animations: {
+                self.viewDidLoad()
+            })
         }
         else {
-            let VC2 = self.storyboard!.instantiateViewController(withIdentifier: "registerVC") as! RegisterVC
-            self.navigationController!.pushViewController(VC2, animated: true)
+            let loginSP = UIStoryboard.init(name: "Login_Regster_SB", bundle: nil)
+            let VC1 = loginSP.instantiateViewController(withIdentifier: "registerVC") as! RegisterVC
+            self.navigationController!.pushViewController(VC1, animated: true)
+            
+            //let VC2 = self.storyboard!.instantiateViewController(withIdentifier: "registerVC") as! RegisterVC
+            //self.navigationController!.pushViewController(VC2, animated: true)
         } }
     
+    @IBOutlet var bottomStack: UIStackView!
     func printData() {
         if !checkIfRegistered() {
             //Alert.showNotice(messagesArray: nil, stringMSG: "Your Are Not Signed in")
+            nameTXT.text = ""
             nameTXT.placeholder = "E-mail"
+            mailTXT.text = ""
             mailTXT.placeholder = "Password"
             mailTXT.isSecureTextEntry = true
             phoneTXT.isHidden = true
@@ -107,7 +121,6 @@ class SettingsVC: UIViewController {
             signoutBTN.setTitle("Register", for: .normal)
             rate_BTN.isHidden = true
             send_msgBTN.isHidden = true
-            
             saveconstrant.constant = -55
             
             /// Top stackHight.multiplier = 0.17
@@ -193,11 +206,9 @@ class SettingsVC: UIViewController {
     {
         guard let mailORuser = nameTXT.text, !mailORuser.isEmpty, Helper.isValidEmail(usermail: mailORuser) else {
             ProgressHUD.showError("Enter A Valid E-Mail")
-            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter A Valid E-Mail")
             return }
-        guard let pass = mailTXT.text, !pass.isEmpty, pass.count > 5 else {
+        guard let pass = mailTXT.text?.trimmedOutput, !pass.isEmpty, pass.count > 5 else {
             ProgressHUD.showError("Enter Your Password")
-            //Alert.showNotice(messagesArray: nil, stringMSG: "Enter Your Password")
             return;
         }
         LoginVC.online_Login(emailorphone: mailORuser, password: pass)
